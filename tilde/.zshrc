@@ -6,7 +6,7 @@ export ZSH=/home/jthegedus/.oh-my-zsh
 
 
 # Export path to root of dotfiles repo
-export DOTFILES=${DOTFILES:-"~/Projects/Personal/dotfiles"}
+export DOTFILES=${DOTFILES:-"$HOME/Projects/Personal/dotfiles"}
 
 
 ### You may need to manually set your language environment

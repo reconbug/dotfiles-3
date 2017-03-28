@@ -14,6 +14,15 @@ alias q="~ && clear"
 alias uu='sudo apt-get update && sudo apt-get upgrade -y'
 alias uua='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove -y'
 
+### Avoid stupidity with trash-cli: using https://github.com/sindresorhus/trash-cli
+# or use default rm -i if trash is not installed
+#
+if type trash &>/dev/null; then
+	alias rm='trash'
+else
+	alias rm='rm -i'
+fi
+
 ### Folders Shortcuts
 #
 [ -d ~/Dropbox ]              && alias dr='cd ~/Dropbox'

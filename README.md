@@ -19,6 +19,10 @@ Where this ``dotfiles`` repo is cloned to ``~/Projects/Personal/``, resulting in
 *   /zsh: the zsh $custom folder. Holds aliases etc for zsh
 
 ## Terminal Setup
+*   create the terminal profile with the Atom One-Dark theme from /scripts/one-dark.sh: run
+```shell
+bash ./scripts/one-dark.sh
+```
 *   install ZSH:
 ```shell
 sudo apt-get update && sudo apt-get upgrade && sudo apt-get install zsh
@@ -27,21 +31,13 @@ sudo apt-get update && sudo apt-get upgrade && sudo apt-get install zsh
 ```shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
-*   add zsh theme:
-```shell
-curl -o - https://raw.githubusercontent.com/denysdovhan/spaceship-zsh-theme/master/install.sh | zsh
-```
-*   create the terminal profile with the Atom One-Dark theme from /scripts/one-dark.sh: run
-```shell
-bash ./scripts/one-dark.sh
-```
-*   add symlink between zshrc and /tilde/.zshrc:
-```shell
-ln -sv ~/Projects/Personal/dotfiles/tilde/.zshrc ~/.zshrc
-```
 *   Add Zgen for zsh plugin management:
 ```shell
 git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
+```
+*   add symlink between ``~/.zshrc`` and ``/tilde/.zshrc``:
+```shell
+ln -sv ~/Projects/Personal/dotfiles/tilde/.zshrc ~/.zshrc
 ```
 
 # To do:

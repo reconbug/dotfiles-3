@@ -21,7 +21,7 @@ Where this ``dotfiles`` repo is cloned to ``~/Projects/Personal/``, resulting in
 *   /zsh: the zsh $custom folder. Holds aliases etc for zsh
 
 ## Terminal Setup
-*   create the terminal profile with the Atom One-Dark theme from /scripts/one-dark.sh: run
+*   create the terminal profile with the Atom One-Dark theme from ``/scripts/one-dark.sh``: run
 ```shell
 bash ./scripts/one-dark.sh
 ```

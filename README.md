@@ -23,9 +23,13 @@ bash ./scripts/one-dark.sh
 ```shell
 ln -sv ~/Projects/Personal/dotfiles/tilde/.zshrc ~/.zshrc
 ```
+*   Add Zgen for zsh plugin management:
+```shell
+git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
+```
 
 # To do:
 -   [ ] create install script for automated setup
--   [ ] create separate symlinking process
--   [ ] add support for Web Development tools
--   [ ] add ZSH plugins through zgen
+-   [ ] create separate automated symlinking process
+-   [x] add support for Web Development tools
+-   [x] add ZSH plugins through zgen

@@ -19,6 +19,10 @@ curl -o - https://raw.githubusercontent.com/denysdovhan/spaceship-zsh-theme/mast
 ```shell
 bash ./scripts/one-dark.sh
 ```
+*   add symlink between zshrc and /tilde/.zshrc:
+```shell
+ln -sv ~/Projects/Personal/dotfiles/tilde/.zshrc ~/.zshrc
+```
 
 # To do:
 -   [ ] create install script for automated setup

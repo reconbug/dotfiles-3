@@ -2,9 +2,20 @@
 
 A collection of dotfiles and scripts for customizing Ubuntu to my liking.
 
-## Structure
+## Your Repo Structure
+This project assumes a repository folder structure like the following:
+```
+~/Projects
+~/Projects/Forks
+~/Projects/Job
+~/Projects/Personal
+~/Projects/Playground
+```
+Where this ``dotfiles`` repo is cloned to ``~/Projects/Personal/``, resulting in ``~/Projects/Personal/dotfiles/``. If you wish to use a different folder structure, do a **search and replace** on ``/Projects/Personal``. Other Zsh installs recommend putting the ``/Dotfiles/`` folder in your user Home folder ``~/``
+
+## This Repo's Structure
 *   /scripts: useful scripts used in the setup process
-*   /tilde: files that symlinked to user home ~/
+*   /tilde: files that symlinked to user Home ~/
 *   /zsh: the zsh $custom folder. Holds aliases etc for zsh
 
 ## Terminal Setup

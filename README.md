@@ -13,7 +13,7 @@ This project assumes a repository folder structure like the following:
 ~/Projects/Personal
 ~/Projects/Playground
 ```
-Where this ``dotfiles`` repo is cloned to ``~/Projects/Personal/``, resulting in ``~/Projects/Personal/dotfiles/``. If you wish to use a different folder structure, do a **search and replace** on ``/Projects/Personal``. Other Zsh installs recommend putting the ``/Dotfiles/`` folder in your user Home folder ``~/``
+Where this ``dotfiles`` repo is cloned to ``~/Projects/Personal/``, resulting in ``~/Projects/Personal/dotfiles/``. If you wish to use a different folder structure, do a **search and replace** on ``/Projects/Personal``. Other Zsh install guides recommend putting the ``/Dotfiles/`` folder in your user Home folder ``~/``
 
 ## This Repo's Structure
 *   /scripts: useful scripts used in the setup process

@@ -1,6 +1,6 @@
 # Dotfiles
 
-A collection of dotfiles and scripts for customizing Ubuntu to my liking.
+A collection of dotfiles and scripts for customizing Ubuntu to my liking. heavily inspired by https://github.com/denysdovhan/dotfiles.
 
 ## Your Repo Structure
 This project assumes a repository folder structure like the following:

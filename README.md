@@ -2,6 +2,11 @@
 
 A collection of dotfiles and scripts for customizing Ubuntu to my liking.
 
+## Structure
+*   /scripts: useful scripts used in the setup process
+*   /tilde: files that symlinked to user home ~/
+*   /zsh: the zsh $custom folder. Holds aliases etc for zsh
+
 ## Terminal Setup
 *   install ZSH:
 ```shell

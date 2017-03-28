@@ -5,7 +5,7 @@ A collection of dotfiles and scripts for customizing Ubuntu to my liking.
 Heavily inspired by https://github.com/denysdovhan/dotfiles.
 
 ## Your Repo Structure
-This project assumes a repository folder structure like the following:
+This project assumes a local repository folder structure like the following:
 ```
 ~/Projects
 ~/Projects/Forks

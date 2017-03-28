@@ -46,7 +46,7 @@ ZSH_CUSTOM="$DOTFILES/zsh"
 
 ### Z
 #
-. /path/to/z.sh
+. "$HOME/z.sh"
 
 
 ### ZGEN

@@ -45,5 +45,6 @@ ln -sv ~/Projects/Personal/dotfiles/tilde/.zshrc ~/.zshrc
 # To do:
 -   [ ] create install script for automated setup
 -   [ ] create separate automated symlinking process
+-   [ ] add script to automatically run ``nvm use``, ``rvm use`` etc on folder change to an repo
 -   [x] add support for Web Development tools
 -   [x] add ZSH plugins through zgen

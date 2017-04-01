@@ -8,7 +8,7 @@ Heavily inspired by https://github.com/denysdovhan/dotfiles.
 *   [Repo Structure](#Your Repo Structure)
 *   [Unix machine setup](# Terminal Setup (Unix Machine))
 *   [Bash on Windows setup](# Terminal Setup (Bash on Windows))
-*   [To do](# To do:)
+*   [To do](#To-do:)
 
 ## Your Repo Structure
 This project assumes a local repository folder structure like the following:

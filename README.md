@@ -4,6 +4,12 @@ A collection of dotfiles and scripts for customizing Ubuntu to my liking.
 
 Heavily inspired by https://github.com/denysdovhan/dotfiles.
 
+## TOC
+*   [Repo Structure](##Your Repo Structure)
+*   [Unix machine setup](## Terminal Setup (Unix Machine))
+*   [Bash on Windows setup](## Terminal Setup (Bash on Windows))
+*   [To do](## To do:)
+
 ## Your Repo Structure
 This project assumes a local repository folder structure like the following:
 ```

@@ -27,6 +27,8 @@ Where this ``dotfiles`` repo is cloned to ``~/Projects/Personal/``, resulting in
 *   /zsh: the zsh $custom folder. Holds aliases etc for zsh
 
 ## Terminal Setup (Unix Machine)
+**Tested on Ubuntu 16.04** (no MacOS testing performed)
+
 *   Install ZSH:
 ```shell
 sudo apt-get update && sudo apt-get upgrade && sudo apt-get install zsh
@@ -52,8 +54,9 @@ ln -sv ~/Projects/Personal/dotfiles/tilde/.zshrc ~/.zshrc
 bash ./scripts/one-dark.sh
 ```
 ## Terminal Setup (Bash on Windows)
+**Tested on Windows 10 Insider Preview Version 1703 - Build 15063.11**
 
-**Warning - 01/04/2017** I've experienced issues with Bash on Windows when using [yarn](https://github.com/yarnpkg/yarn). The following instructions were tested on a *Slow Ring* installation of the Windows Insider build as of this warning's date. The *Windows 10 Creators Update* should have fixed these issues. The specific issue related to connecting to Webpack development servers in the system default browser when started in Bash on Windows.
+**Warning - 01/04/2017** I've experienced issues with Bash on Windows when using [yarn](https://github.com/yarnpkg/yarn). The following instructions were tested on a *Slow Ring* installation of the Windows Insider build as of this warning's date. The *Windows 10 Creators Update* should have fixed these issues. The specific issue related to connecting to Webpack Development Servers in the system default browser when started in Bash on Windows.
 
 *   Install ZSH:
 ```shell

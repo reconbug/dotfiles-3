@@ -75,25 +75,27 @@ bash ./scripts/one-dark.sh
 
 **Warning - 01/04/2017** I've experienced issues with Bash on Windows when using [yarn](https://github.com/yarnpkg/yarn). The following instructions were tested on a *Slow Ring* installation of the Windows Insider build as of this warning's date. The *Windows 10 Creators Update* should have fixed these issues. The specific issue related to connecting to Webpack Development Servers in the system default browser when started in Bash on Windows.
 
+*   Open Bash on Windows (this guide assumes you have this installed, if not follow this [Microsoft guide](https://msdn.microsoft.com/en-au/commandline/wsl/install_guide))
 *   Install ZSH:
 ```shell
 sudo apt-get update && sudo apt-get upgrade && sudo apt-get install zsh
 ```
-*   (For Bash on Windows) Add the following to the top of ``.bashrc`` to launch ZSH on start of the Bash app
+*   (For Bash on Windows) Add the following to the top of ``.bashrc`` to launch ZSH on start of the Bash on Windows app
 ```shell
 # Switch to ZSH shell
 if test -t 1; then
   exec zsh
 fi
 ```
-*   Add symlink for Ubuntu user-space ``Projects`` directories and Windows user ``Projects`` directories
+*   Assuming the folder structure outlined [here](#your-repo-structure) is present in your Windows user folder, add a symlink for the Ubuntu user-space ``Projects`` directories and the Windows ``Projects`` directories
+
+**NB**: This creates the ``Projects`` folder in the Ubuntu user-space.
 ```shell
 ln -sv /mnt/c/Users/<username>/Projects ~/Projects
 ```
-NB: This creates the ``Projects`` folder in the Ubuntu user-space.
     *   Check the above with ``ls -la``. Symlinks render as the local folder/file name followed by ``->`` and then the linked directory/file path.
 
-          Eg: ``Projects -> /mnt/c/Users/<username>/Projects``
+Eg: ``Projects -> /mnt/c/Users/<username>/Projects``
 
 *   Install oh-my-zsh:
 ```shell
@@ -130,15 +132,15 @@ source ~/.zshrc
 NB: Bash on Windows has trouble rendering some of the special characters used by this Zsh theme. Follow the instructions below to fix this and have additional Terminal superpowers!
 
 ### Styling your Terminal (Not prompt)
-Zsh themes modify your **prompt**, but we would like to have a nice Terminal application theme. Since Bash on Windows does not have a very powerfull theme/preference manager you will have to use an alternative application to achieve complete terminal zen.
+Zsh themes modify your **prompt**, but we would like to have a nice Terminal application theme. Since Bash on Windows does not have a very powerfull theme/preference manager we will have to use an alternative application to achieve complete terminal zen.
 
 *   Ditch Bash on Windows Terminal application.
-*   Download and install [hyper](https://hyper.is) (The GitHub repo here: (Hyper Terminal)[https://github.com/zeit/hyper]). Hyper is a cross platform Terminal application that can run any shell.
+*   Download and install [hyper](https://hyper.is) (The GitHub repo here: [Hyper Terminal](https://github.com/zeit/hyper)). Hyper is a cross platform Terminal application that can run any shell.
 *   Backup existing ``.hyper.js`` config file.
 ```shell
 mv /mnt/c/Users/<username>/.hyper.js /mnt/c/Users/<username>/.hyper.js.orig
 ```
-*   Copy for new ``.hyper.js`` config file
+*   Copy the new ``.hyper.js`` config file
 ```shell
 cp ~/Projects/Personal/dotfiles/windows/.hyper.js /mnt/c/Users/<username>/.hyper.js
 ```

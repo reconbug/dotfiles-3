@@ -13,7 +13,7 @@ Credit where credit is due:
     *   <https://github.com/webpro/awesome-dotfiles>
     *   <https://github.com/denysdovhan/dotfiles>
 
-## TOC
+## Contents
 *   [Repo Structure](#your-repo-structure)
 *   [Bash on Unix Setup](#bash-on-unix-setup)
     *   [Terminal App Theming](#terminal-app-styling)

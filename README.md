@@ -36,8 +36,7 @@ Where this ``dotfiles`` repo is cloned to ``~/Projects/Personal/``, resulting in
 
 *   To create the folder structure run this command in Bash:
 ```shell
-cd ~
-mkdir -p Projects/Forks Projects/Job Projects/Personal Projects/Playground
+cd ~ && mkdir -p Projects/Forks Projects/Job Projects/Personal Projects/Playground
 ```
 
 ## This Repo's Structure

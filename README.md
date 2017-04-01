@@ -87,15 +87,16 @@ if test -t 1; then
   exec zsh
 fi
 ```
+
 *   Assuming the folder structure outlined [here](#your-repo-structure) is present in your Windows user folder, add a symlink for the Ubuntu user-space ``Projects`` directories and the Windows ``Projects`` directories
 
-**NB**: This creates the ``Projects`` folder in the Ubuntu user-space.
+    **NB**: This creates the ``Projects`` folder in the Ubuntu user-space.
 ```shell
 ln -sv /mnt/c/Users/<username>/Projects ~/Projects
 ```
-    *   Check the above with ``ls -la``. Symlinks render as the local folder/file name followed by ``->`` and then the linked directory/file path.
+Check the above with ``ls -la``. Symlinks are render as the local folder/file name followed by ``->`` and then the linked directory/file path.
 
-Eg: ``Projects -> /mnt/c/Users/<username>/Projects``
+    Eg: ``Projects -> /mnt/c/Users/<username>/Projects``
 
 *   Install oh-my-zsh:
 ```shell

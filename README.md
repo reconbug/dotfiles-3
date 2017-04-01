@@ -2,6 +2,8 @@
 
 A collection of dotfiles and scripts for customizing Unix Terminal and Bash on Windows to my liking (use [zsh](http://www.zsh.org) with [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) ;) ).
 
+This README is intended for first time Zsh users and so I tried to be as verbose as possible with the instructions. Also Bash on Windows with Zsh is not very well documented, the articles I could find on Google did not outline the entire process. Again, I tried to be as verbose as possible.
+
 Credit where credit is due:
 *   It was this Zsh theme that inspired me to try Zsh <https://github.com/denysdovhan/spaceship-zsh-theme>
 *   Of course <https://github.com/robbyrussell/oh-my-zsh>

@@ -29,6 +29,10 @@ bash ./scripts/one-dark.sh
 ```shell
 sudo apt-get update && sudo apt-get upgrade && sudo apt-get install zsh
 ```
+*   make ZSH the default shell (you must lougout or restart for this to take effect)
+```shell
+chsh -s $(which zsh)
+```
 *   install oh-my-zsh:
 ```shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

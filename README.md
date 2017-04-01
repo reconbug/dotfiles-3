@@ -47,7 +47,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 ```shell
 git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
 ```
-*   Add [z](https://github.com/rupa/z) for Terminal navigation. It's a supercharged ``cd``! Video \#10 in [this series](https://commandlinepoweruser.com) by [Wes Bos](https://twitter.com/@wesbos) covers ``z`` very well.
+*   Add [z](https://github.com/rupa/z) for Terminal navigation. It's a supercharged ``cd``! Video \#10 in [this series](https://commandlinepoweruser.com) by [Wes Bos](https://twitter.com/@wesbos) covers the power of ``z`` pretty well.
 ```shell
 wget https://raw.githubusercontent.com/rupa/z/master/z.sh
 ```
@@ -107,7 +107,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 ```shell
 git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
 ```
-*   Add [z](https://github.com/rupa/z) for Terminal navigation. It's a supercharged ``cd``! Video \#10 in [this series](https://commandlinepoweruser.com) by [Wes Bos](https://twitter.com/@wesbos) covers ``z`` very well.
+*   Add [z](https://github.com/rupa/z) for Terminal navigation. It's a supercharged ``cd``! Video \#10 in [this series](https://commandlinepoweruser.com) by [Wes Bos](https://twitter.com/@wesbos) covers the power of ``z`` pretty well.
 ```shell
 wget https://raw.githubusercontent.com/rupa/z/master/z.sh
 ```
@@ -136,7 +136,7 @@ NB: Bash on Windows has trouble rendering some of the special characters used by
 ### Styling your Terminal (Not prompt)
 Zsh themes modify your **prompt**, but we would like to have a nice Terminal application theme. Since Bash on Windows does not have a very powerfull theme/preference manager we will have to use an alternative application to achieve complete terminal zen.
 
-*   Ditch Bash on Windows Terminal application.
+*   Ditch the Bash on Windows Terminal application.
 *   Download and install [hyper](https://hyper.is) (The GitHub repo here: [Hyper Terminal](https://github.com/zeit/hyper)). Hyper is a cross platform Terminal application that can run any shell.
 *   Backup existing ``.hyper.js`` config file.
 ```shell

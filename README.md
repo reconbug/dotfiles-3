@@ -42,6 +42,7 @@ cd ~ && mkdir -p Projects/Forks Projects/Job Projects/Personal Projects/Playgrou
 ## This Repo's Structure
 *   /scripts: useful scripts used in the setup process
 *   /tilde: files that symlinked to user Home ~/
+*   /windows: files specific to the windows installation instructions. Used in /mnt/c/Users/<username>/ folder on Bash on Windows.
 *   /zsh: the zsh $custom folder. Holds aliases etc for zsh
 
 ## Bash on Unix Setup

@@ -34,6 +34,12 @@ This project assumes a local repository folder structure like the following:
 ```
 Where this ``dotfiles`` repo is cloned to ``~/Projects/Personal/``, resulting in ``~/Projects/Personal/dotfiles/``. If you wish to use a different folder structure, do a **search and replace** on ``/Projects/Personal``. Other Zsh install guides recommend putting the ``/Dotfiles/`` folder in your user Home folder ``~/``
 
+*   To create the folder structure run this command in Bash:
+```shell
+cd ~
+mkdir -p Projects/Forks Projects/Job Projects/Personal Projects/Playground
+```
+
 ## This Repo's Structure
 *   /scripts: useful scripts used in the setup process
 *   /tilde: files that symlinked to user Home ~/
@@ -134,9 +140,10 @@ git clone https://github.com/jthegedus/dotfiles.git "~/Projects/Personal"
 ```shell
 ln -sv ~/Projects/Personal/dotfiles/tilde/.zshrc ~/.zshrc
 ```
-    * Check this is a symlink with ``ls -la``.
+Check this is a symlink with ``ls -la``.
 
-        EG: ``.zshrc -> /home/<username>/Projects/Personal/dotfiles/tilde/.zshrc``
+EG: ``.zshrc -> /home/<username>/Projects/Personal/dotfiles/tilde/.zshrc``
+
 *   Apply new ``.zshrc`` and install plugins (as specified in ``.zshrc``)
 ```shell
 source ~/.zshrc

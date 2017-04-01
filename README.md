@@ -2,7 +2,16 @@
 
 A collection of dotfiles and scripts for customizing Unix Terminal and Bash on Windows to my liking (use [zsh](http://www.zsh.org) with [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) ;) ).
 
-Heavily inspired by https://github.com/denysdovhan/dotfiles.
+Credit where credit is due:
+*   It was this Zsh theme that inspired me to try Zsh <https://github.com/denysdovhan/spaceship-zsh-theme>
+*   Of course <https://github.com/robbyrussell/oh-my-zsh>
+*   The [Hyper terminal app](https://hyper.is) fixes many of the issues encountered with using Bash on Windows
+*   [Awesome Hyper](https://github.com/bnb/awesome-hyper)
+*   The power of [z](https://github.com/rupa/z/) makes you feel like a true terminal super user, thanks [Wes Bos](https://twitter.com/@wesbos)
+*   Some dotfiles resources:
+    *   <https://dotfiles.github.io>
+    *   <https://github.com/webpro/awesome-dotfiles>
+    *   <https://github.com/denysdovhan/dotfiles>
 
 ## TOC
 *   [Repo Structure](#your-repo-structure)

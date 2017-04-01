@@ -5,10 +5,10 @@ A collection of dotfiles and scripts for customizing Ubuntu to my liking.
 Heavily inspired by https://github.com/denysdovhan/dotfiles.
 
 ## TOC
-*   [Repo Structure](#Your Repo Structure)
-*   [Unix machine setup](# Terminal Setup (Unix Machine))
-*   [Bash on Windows setup](# Terminal Setup (Bash on Windows))
-*   [To do](#To-do:)
+*   [Repo Structure](#your-repo-structure)
+*   [Unix machine setup](#terminal-setup-unix-machine)
+*   [Bash on Windows setup](#terminal-setup-bash-on-windows)
+*   [To do](#to-do:)
 
 ## Your Repo Structure
 This project assumes a local repository folder structure like the following:
@@ -78,6 +78,7 @@ NB: This creates the ``Projects`` folder in the Ubuntu user-space.
 *   Install oh-my-zsh:
 ```shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
 
 ## To do:
 -   [ ] create install script for automated setup

@@ -1,6 +1,6 @@
 # Dotfiles
 
-A collection of dotfiles and scripts for customizing Ubuntu to my liking.
+A collection of dotfiles and scripts for customizing Unix Terminal and Bash on Windows to my liking (use [zsh](http://www.zsh.org) with [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) ;) ).
 
 Heavily inspired by https://github.com/denysdovhan/dotfiles.
 
@@ -8,6 +8,7 @@ Heavily inspired by https://github.com/denysdovhan/dotfiles.
 *   [Repo Structure](#your-repo-structure)
 *   [Unix machine setup](#terminal-setup-unix-machine)
 *   [Bash on Windows setup](#terminal-setup-bash-on-windows)
+    *   [Windows Terminal Theming](#styling-your-terminal-not-prompt)
 *   [To do](#to-do)
 
 ## Your Repo Structure
@@ -45,11 +46,27 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 ```shell
 git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
 ```
+*   Add [z](https://github.com/rupa/z) for Terminal navigation. It's a supercharged ``cd``! Video \#10 in [this series](https://commandlinepoweruser.com) by [Wes Bos](https://twitter.com/@wesbos) covers ``z`` very well.
+```shell
+wget https://raw.githubusercontent.com/rupa/z/master/z.sh
+```
+*   Backup existing .zshrc
+```shell
+mv ~/.zshrc ~/.zshrc.orig
+```
+*   Clone this repo to ``~/Projects/Personal/``
+```shell
+git clone https://github.com/jthegedus/dotfiles.git "~/Projects/Personal"
+```
 *   Add symlink between ``~/.zshrc`` and ``/tilde/.zshrc``:
 ```shell
 ln -sv ~/Projects/Personal/dotfiles/tilde/.zshrc ~/.zshrc
 ```
-*   Create the terminal profile with the Atom One-Dark theme from ``/scripts/one-dark.sh``: run
+
+### Terminal Styling
+Now that our prompt is configured, let's style our Terminal application too!
+
+*   Create the Terminal profile with the Atom One-Dark theme from ``/scripts/one-dark.sh``: run
 ```shell
 bash ./scripts/one-dark.sh
 ```
@@ -75,15 +92,65 @@ ln -sv /mnt/c/Users/<username>/Projects ~/Projects
 ```
 NB: This creates the ``Projects`` folder in the Ubuntu user-space.
     *   Check the above with ``ls -la``. Symlinks render as the local folder/file name followed by ``->`` and then the linked directory/file path.
+
+          Eg: ``Projects -> /mnt/c/Users/<username>/Projects``
+
 *   Install oh-my-zsh:
 ```shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
+*   Add Zgen for zsh plugin management:
+```shell
+git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
+```
+*   Add [z](https://github.com/rupa/z) for Terminal navigation. It's a supercharged ``cd``! Video \#10 in [this series](https://commandlinepoweruser.com) by [Wes Bos](https://twitter.com/@wesbos) covers ``z`` very well.
+```shell
+wget https://raw.githubusercontent.com/rupa/z/master/z.sh
+```
+*   Backup existing .zshrc
+```shell
+mv ~/.zshrc ~/.zshrc.orig
+```
+*   Clone this repo to ``~/Projects/Personal/``
+```shell
+git clone https://github.com/jthegedus/dotfiles.git "~/Projects/Personal"
+```
+*   Add symlink between ``~/.zshrc`` and ``/home/<username>/Projects/Personal/dotfiles/tilde/.zshrc``:
+```shell
+ln -sv ~/Projects/Personal/dotfiles/tilde/.zshrc ~/.zshrc
+```
+    * Check this is a symlink with ``ls -la``.
+
+        EG: ``.zshrc -> /home/<username>/Projects/Personal/dotfiles/tilde/.zshrc``
+*   Apply new ``.zshrc`` and install plugins (as specified in ``.zshrc``)
+```shell
+source ~/.zshrc
+```
+
+NB: Bash on Windows has trouble rendering some of the special characters used by this Zsh theme. Follow the instructions below to fix this and have additional Terminal superpowers!
+
+### Styling your Terminal (Not prompt)
+Zsh themes modify your **prompt**, but we would like to have a nice Terminal application theme. Since Bash on Windows does not have a very powerfull theme/preference manager you will have to use an alternative application to achieve complete terminal zen.
+
+*   Ditch Bash on Windows Terminal application.
+*   Download and install [hyper](https://hyper.is) (The GitHub repo here: (Hyper Terminal)[https://github.com/zeit/hyper]). Hyper is a cross platform Terminal application that can run any shell.
+*   Backup existing ``.hyper.js`` config file.
+```shell
+mv /mnt/c/Users/<username>/.hyper.js /mnt/c/Users/<username>/.hyper.js.orig
+```
+*   Copy for new ``.hyper.js`` config file
+```shell
+cp ~/Projects/Personal/dotfiles/windows/.hyper.js /mnt/c/Users/<username>/.hyper.js
+```
+*   Launch Hyper and all the plugins will be installed and loaded automatically (Windows notifications may go crazy for a while)
+
+NB: To add plugins or modify the theme in Hyper Terminal modify the ``.hyper.js`` file plugins section. You can find the Awesome collection at <https://github.com/bnb/awesome-hyper>
+
 
 ## To do:
 -   [ ] create install script for automated setup
 -   [ ] create separate automated symlinking process
 -   [ ] add script to automatically run ``nvm use``, ``rvm use`` etc on folder change to an repo
--   [ ] add Bash on Windows instructions
+-   [x] add Bash on Windows instructions
 -   [x] add support for Web Development tools
 -   [x] add ZSH plugins through zgen

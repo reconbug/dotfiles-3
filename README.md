@@ -164,6 +164,7 @@ mv /mnt/c/Users/<username>/.hyper.js /mnt/c/Users/<username>/.hyper.js.orig
 ```shell
 cp ~/Projects/Personal/dotfiles/windows/.hyper.js /mnt/c/Users/<username>/.hyper.js
 ```
+*   Next, since Hyper is built on [Electron](https://electron.atom.io/) it requires [NodeJS](https://nodejs.org/) to be installed as the packages are managed by npm.
 *   Launch Hyper and all the plugins will be installed and loaded automatically (Windows notifications may go crazy for a while)
 
 NB: To add plugins or modify the theme in Hyper Terminal modify the ``.hyper.js`` file plugins section. You can find the Awesome collection at <https://github.com/bnb/awesome-hyper>

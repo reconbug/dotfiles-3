@@ -45,7 +45,7 @@ cd ~ && mkdir -p Projects/Forks Projects/Job Projects/Personal Projects/Playgrou
 *   /windows: files specific to the windows installation instructions. Used in /mnt/c/Users/<username>/ folder on Bash on Windows.
 *   /zsh: the zsh $custom folder. Holds aliases etc for zsh
 
-## Bash on Unix Setup
+## ZSH on Unix Setup
 **Tested on Ubuntu 16.04** (no MacOS testing performed)
 
 *   Install ZSH:
@@ -86,9 +86,9 @@ Now that our prompt is configured, let's style our Terminal application too!
 
 *   Create the Terminal profile with the Atom One-Dark theme from ``/scripts/one-dark.sh``: run
 ```shell
-bash ./scripts/one-dark.sh
+bash ./Projects/Personal/dotfiles/scripts/one-dark.sh
 ```
-## Bash on Windows Setup
+## ZSH on Bash on Windows Setup
 **Tested on Windows 10 Insider Preview Version 1703 - Build 15063.11**
 
 **Warning - 01/04/2017** I've experienced issues with Bash on Windows when using [yarn](https://github.com/yarnpkg/yarn). The following instructions were tested on a *Slow Ring* installation of the Windows Insider build as of this warning's date. The *Windows 10 Creators Update* should have fixed these issues. The specific issue related to connecting to Webpack Development Servers in the system default browser when started in Bash on Windows.

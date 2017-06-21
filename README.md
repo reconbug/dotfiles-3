@@ -48,11 +48,16 @@ cd ~ && mkdir -p Projects/Forks Projects/Job Projects/Personal Projects/Playgrou
 ## ZSH on Unix Setup
 **Tested on Ubuntu 16.04** (no MacOS testing performed)
 
+* Install required applications: Git and Curl
+```shell
+sudo apt-get install git curl
+```
+
 *   Install ZSH:
 ```shell
 sudo apt-get update && sudo apt-get upgrade && sudo apt-get install zsh
 ```
-*   Make ZSH the default shell (you must lougout or restart for this to take effect)
+*   Make ZSH the default shell (**you must logout or restart for this to take effect**)
 ```shell
 chsh -s $(which zsh)
 ```

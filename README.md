@@ -85,7 +85,7 @@ cd ~ && git clone https://github.com/jthegedus/dotfiles "Projects/Personal/dotfi
 ```shell
 ln -sv ~/Projects/Personal/dotfiles/tilde/.zshrc ~/.zshrc
 ```
-
+*   Close and re-open your Terminal app to initiate the ZSH plugins installation.
 ### Terminal App Styling
 Now that our prompt is configured, let's style our Terminal application too!
 
@@ -93,6 +93,9 @@ Now that our prompt is configured, let's style our Terminal application too!
 ```shell
 bash ./Projects/Personal/dotfiles/scripts/one-dark.sh
 ```
+*   Open the Terminal app preferences through `Edit -> preferences` and navigate to the `Profiles` tab. From the `Profile used when launching a new terminal` drop-down, select the `One Dark` profile.
+*   Close and re-open your Terminal app to see the new theme!
+
 ## ZSH on Bash on Windows Setup
 **Tested on Windows 10 Insider Preview Version 1703 - Build 15063.11**
 

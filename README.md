@@ -79,7 +79,7 @@ mv ~/.zshrc ~/.zshrc.orig
 ```
 *   Clone this repo to ``~/Projects/Personal/``
 ```shell
-git clone https://github.com/jthegedus/dotfiles.git "~/Projects/Personal"
+cd ~ && git clone https://github.com/jthegedus/dotfiles "Projects/Personal/dotfiles"
 ```
 *   Add symlink between ``~/.zshrc`` and ``/tilde/.zshrc``:
 ```shell

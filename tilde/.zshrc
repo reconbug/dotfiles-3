@@ -70,6 +70,16 @@ ZSH_CUSTOM="$DOTFILES/zsh"
 . "$HOME/z.sh"
 
 
+### avn
+#
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
+
+### direnv
+#
+eval "$(direnv hook zsh)"
+
+
 ### ZGEN
 #
 # load zgen
@@ -92,6 +102,7 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/gitignore
   # development: web
   zgen oh-my-zsh plugins/nvm
+  zgen oh-my-zsh plugins/nvm-auto
   zgen oh-my-zsh plugins/node
   zgen oh-my-zsh plugins/npm
   zgen oh-my-zsh plugins/yarn
@@ -211,3 +222,10 @@ SPACESHIP_PYENV_SYMBOL='🐍'
 SPACESHIP_VI_MODE_SHOW=true
 SPACESHIP_VI_MODE_INSERT="[I]"
 SPACESHIP_VI_MODE_NORMAL="[N]"
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /home/james/Projects/Job/school/backend/services/subscriptions/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/james/Projects/Job/school/backend/services/subscriptions/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /home/james/Projects/Job/school/backend/services/subscriptions/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/james/Projects/Job/school/backend/services/subscriptions/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh

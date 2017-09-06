@@ -126,6 +126,13 @@ asdf global python 3.6.0
 asdf global nodejs 6.11.3
 ```
 
+[Install Pip](http://docs.aws.amazon.com/cli/latest/userguide/awscli-install-linux.html#awscli-install-linux-pip):
+```shell
+curl -O https://bootstrap.pypa.io/get-pip.py
+python get-pip.py --user
+pip --version
+```
+
 ## Terminal Theming
 Now that our prompt is configured, let's style our Terminal application too!
 

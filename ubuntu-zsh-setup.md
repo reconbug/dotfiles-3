@@ -122,7 +122,7 @@ asdf install python 3.6.0
 
 Set the global versions (used when no local version specified in a project):
 ```shell
-asdf global python 3.6.0
+asdf global python 2.7.13
 asdf global nodejs 6.11.3
 ```
 

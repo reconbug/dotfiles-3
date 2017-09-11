@@ -62,8 +62,6 @@ Change the setting to `false` to reverse the above effect.
 ## Programs
 *   [Chrome](https://www.google.com.au/chrome/browser/desktop/index.html)
 *   [Vivaldi](https://vivaldi.com/download/)
-*   [VSCode](https://code.visualstudio.com/download)
-*   [Atom](https://atom.io/)
 *   [Slack](https://slack.com/downloads/linux)
 *   [VLC](https://www.videolan.org/vlc/#download)
 ```shell

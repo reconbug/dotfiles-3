@@ -37,6 +37,13 @@ To create the folder structure run this command in Bash:
 cd ~ && mkdir -p Projects/Forks Projects/Job Projects/Personal Projects/Playground
 ```
 
+This setup also assumes you store your ssh keys in `~/.ssh`:
+```shell
+cd ~ && mkdir ~/.ssh
+```
+
+If you're a GitHub user follow [this guide to setup SSH access](https://help.github.com/articles/connecting-to-github-with-ssh/).
+
 ## Zsh & Environment Setup
 
 ### Prerequisites

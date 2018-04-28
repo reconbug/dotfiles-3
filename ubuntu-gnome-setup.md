@@ -28,21 +28,13 @@ Double-click the file to install
 Now open Gnome Tweak Tool -> Appearance and set the Theme to 
 
 ## Gnome Extensions
-*   [Extensions](https://extensions.gnome.org/extension/1036/extensions/)
-*   [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
 *   [ShellTile](https://extensions.gnome.org/extension/657/shelltile/)
-*   [BackSlide](https://extensions.gnome.org/extension/543/backslide/)
 *   [Impatience](https://extensions.gnome.org/extension/277/impatience/)
-*   [TopIcons Plus](https://extensions.gnome.org/extension/1031/topicons/)
 *   [Alternate Tab](https://extensions.gnome.org/extension/15/alternatetab/)
-*   [Removable Drive Menu](https://extensions.gnome.org/extension/7/removable-drive-menu/)
 *   [Sound Input & Output Device Chooser](https://extensions.gnome.org/extension/906/sound-output-device-chooser/)
 
 ### Tweak Tool Settings
 *   Extensions -> ShellTile Settings -> Size of the gaps between windows. Set this  to 0.
-*   Extensions -> Dash to dock Settings -> Position and size. Check 'Panel mode: extend to the screen edge'.
-*   Extensions -> Dash to dock Settings -> Appearance. Toggle 'Use built-in theme'. 
-*   Extensions -> BackSlide Settings. Click the `+` and add a folder with some high-res images. Get some [here](https://www.producthunt.com/search/posts?q=stock). 
 *   Windows -> Titlebar Buttons -> Maximize
 *   Windows -> Titlebar Buttons -> Minimize
 
@@ -61,10 +53,40 @@ Change the setting to `false` to reverse the above effect.
 
 ## Programs
 *   [Chrome](https://www.google.com.au/chrome/browser/desktop/index.html)
+*   [Brave](https://brave.com/download/)
 *   [Vivaldi](https://vivaldi.com/download/)
+*   [Discord](https://discordapp.com/download)
 *   [Slack](https://slack.com/downloads/linux)
-*   [VLC](https://www.videolan.org/vlc/#download)
+*   [Signal](https://signal.org/download/)
+*   [Mailspring](https://getmailspring.com/)
+*   [Gimp](https://www.gimp.org/downloads/)
+*   [Google Play Music](https://www.googleplaymusicdesktopplayer.com/)
+*   [Spotify](https://www.spotify.com/au/download/linux/)
+*   [Headset](https://headsetapp.co/)
+
+### Programming
+*   [VSCode](https://code.visualstudio.com/download)
+*   [GitKraken](https://www.gitkraken.com/)
+*   [Sublime Text 3](https://www.sublimetext.com/docs/3/linux_repositories.html)
+*   [Postman](https://www.getpostman.com/apps)
+*   [Graphql Playground](https://github.com/graphcool/graphql-playground/releases)
+
+### Utils
+*   [Etcher](https://etcher.io)
+*   [Private Internet Access](https://www.privateinternetaccess.com/pages/client-support/)
+*   [Solaar](https://pwr.github.io/Solaar/)
+*   [Synergy](https://symless.com/synergy)
+
+### Chrome apps
+*   [Authy](https://chrome.google.com/webstore/detail/authy/gaedmjdfmmahhbjefcbgaolhhanlaolb?hl=en)
+*   [Kindle](https://chrome.google.com/webstore/detail/kindle-cloud-reader/icdipabjmbhpdkjaihfjoikhjjeneebd?hl=en-US)
+
 ```shell
 sudo apt install vlc browser-plugin-vlc -y
 ```
+
+## Fonts
+*   [Fira Code](https://github.com/tonsky/FiraCode)
+*   [Hack](https://github.com/source-foundry/Hack)
+*   [Dank Mono](https://dank.sh/)
 

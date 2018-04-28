@@ -29,6 +29,15 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 ```
 
+**pip on python3**
+
+assuming python 3 is installed and currently selected:
+
+```
+curl -O https://bootstrap.pypa.io/get-pip.py
+python3 get-pip.py --user
+```
+
 **applications**
 
 * VSCode
@@ -43,3 +52,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 osx-arc-collection
 **font**
 firacode
+
+**increase watchers**
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+sysctl --system

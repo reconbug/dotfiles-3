@@ -19,6 +19,9 @@ PATH="$PATH:/opt/yarn-[version]/bin"
 PATH="$PATH:$(yarn global bin)"
 export PATH
 
+### z
+source "$HOME/z.sh"
+
 ### aliases
 if [ -f "$HOME/.aliases" ]; then
     source "$HOME/.aliases"

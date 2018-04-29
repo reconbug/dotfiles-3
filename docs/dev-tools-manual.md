@@ -18,7 +18,7 @@ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.4.3
 <details>
 <summary>git</summary>
 
-```shell
+```markdown
 # git config --global user.name john
 git config --global user.name <username>
 
@@ -31,7 +31,7 @@ git config --global core.editor <editor>
 
 </details>
 
-### Language/Tool level dependencies
+## Language/Tool level dependencies
 
 <details>
 <summary>Nodejs</summary>
@@ -160,7 +160,7 @@ By now you surely get the idea for [setting up another lang or tool](https://git
 
 </details>
 
-### Tools (built on the now installed languages)
+## Tools (depending on the now installed languages)
 
 **[trash-cli](https://github.com/sindresorhus/trash-cli)**
 
@@ -170,7 +170,17 @@ yarn global add trash-cli
 
 ensure `alias rm=trash` is in your `.bashrc` or `.zshrc`.
 
-**[fzf](https://github.com/junegunn/fzf#using-git)**
+## Terminal mastery
+
+**[z](https://github.com/rupa/z) - terminal nav via fuzzy finding [frecency](https://en.wikipedia.org/wiki/Frecency)**
+
+```markdown
+cd ~ && wget https://raw.githubusercontent.com/rupa/z/master/z.sh
+```
+
+ensure `source "$HOME/z.sh"` is in your `.bashrc` or `.zshrc`.
+
+**[fzf](https://github.com/junegunn/fzf#using-git) - terminal command fuzzy finder**
 
 ```markdown
 # download

@@ -1,3 +1,5 @@
+#! bin/bash
+
 ### ~/.zhsrc
 #
 
@@ -22,16 +24,19 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 #
 # hyphen-insensitive completion: sensitive completion must be off. _ and - will be interchangeable.
 HYPHEN_INSENSITIVE="true"
+export HYPHEN_INSENSITIVE
 
 ### ASDF
 #
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
+. "$HOME/.asdf/asdf.sh"
+. "$HOME/.asdf/completions/asdf.bash"
 
 ### Yarn
 #
-export PATH="$PATH:/opt/yarn-[version]/bin"
-export PATH="$PATH:`yarn global bin`"
+PATH="$PATH:/opt/yarn-[version]/bin"
+PATH="$PATH:$(yarn global bin)"
+export PATH
+
 
 
 ### Extend $NODE_PATH
@@ -51,15 +56,16 @@ eval "$(direnv hook zsh)"
 export PATH=~/.local/bin:$PATH
 
 # ssh
-export SSH_KEY_PATH="~/.ssh/rsa_id"
+export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 HIST_STAMPS="dd.mm.yyyy"
-
+export HIST_STAMPS
 
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM="$DOTFILES/zsh"
+export ZSH_CUSTOM
 
 ### Z
 #

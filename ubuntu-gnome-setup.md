@@ -1,31 +1,70 @@
 # Ubuntu Gnome Setup
 Steps to setup a slick Ubuntu UI and UX.
 
-## Installing Ubuntu Gnome on XPS15 9560
-*   Erase Disk and Install Ubuntu Gnome from a USB
-*   on first login to user the login screen will hang. To fix this, before typing the password and logging in, select the settings cog next to the sign-in button and change to "Gnome on Wayland". This will then login as you would expect.
+## Ubuntu 18.04 on XPS15 9560
+On login the OS will hang. [To fix this follow these instructions: Ubuntu 18.04 on XPS 15 9560](https://medium.com/@jthegedus/ubuntu-18-04-lts-on-a-dell-xps-db4dcee9a2f9)
 
 ## Required for Setup
-**Install git**
 
 ```shell
-sudo apt install git -y
+sudo apt install git curl -y
 ```
+## Programs
+
+**Available on Ubuntu Software**
+
+|App  |Description  |
+|---------|---------|
+| Brave | Browse faster by blocking ads and trackers that violate your privacy and cost you time and money. |
+| Discord | All-in-one voice and text chat for gamers |
+| GitKraken | Git GUI |
+| [Gimp](https://www.gimp.org/downloads/) | GNU Image Manipulation Program |
+| GNOME Tweaks | Gnome GUI Tweaks |
+| [Mailspring](https://getmailspring.com/) | Free, cross-platform email client |
+| Signal | Signal Private Messenger for Windows, Mac, and Linux |
+| Slack | Team communication and collaboration |
+| [Solaar](https://pwr.github.io/Solaar/) | Browse faster by blocking ads and trackers that violate your privacy and cost you time and money. |
+| Spotify | Music |
+| [Synergy](https://symless.com/synergy) |Share one mouse and keyboard between multiple computers |
+| Sublime Text 3 | Code Editor |
+| VLC | Media player | 
+| VSCode | Code Editor |
+
+**Other**
+
+|App  |Description  |
+|---------|---------|
+|[Chrome](https://www.google.com.au/chrome/browser/desktop/index.html)     |        Google's web browser |
+|[Etcher](https://etcher.io)     |  Flash OS images to SD cards & USB drives, safely and easily.       |
+| [Google Play Music](https://www.googleplaymusicdesktopplayer.com/) | Music |
+| [Graphql Playground](https://github.com/graphcool/graphql-playground/releases) | GraphQL IDE for better development workflows |
+| [Headset](https://headsetapp.co/) | Crowd-sourced playlists from the world’s largest music library |
+|[Postman](https://www.getpostman.com/apps)| API IDE |
+|[Private Internet Access](https://www.privateinternetaccess.com/pages/client-support/) | VPN |
+| [Vivaldi](https://vivaldi.com/download/) | Fast, customisable web browser |
+
+
+
+**Chrome Apps**
+
+|App  | Description  |
+|---------|---------|
+| [Authy](https://chrome.google.com/webstore/detail/authy/gaedmjdfmmahhbjefcbgaolhhanlaolb?hl=en) | Single 2FA app running on all your devices |
+| [Kindle](https://chrome.google.com/webstore/detail/kindle-cloud-reader/icdipabjmbhpdkjaihfjoikhjjeneebd?hl=en-US) | Read your Kindle titles anywhere |
+
 
 ## UI
 **[La-Capitaine Icons](https://github.com/keeferrourke/la-capitaine-icon-theme#preview)**
 
 ```shell
-cd ~/.icons/
+mkdir ~/.icons && cd ~/.icons/
 git clone https://github.com/keeferrourke/la-capitaine-icon-theme.git
 ```
-Now open Gnome Tweak Tool -> Appearance and set the Icons to La-capitaine-icon-theme
+Now open Gnome Tweak Tool :arrow_right: Appearance and set the Icons to La-capitaine-icon-theme
 
-**[OSX Arc Darker](https://github.com/LinxGem33/OSX-Arc-Darker/releases/latest/)**
+**[OSX Arc White/Darker](https://github.com/LinxGem33/OSX-Arc-Darker/releases/latest/)**
 
-Download the amd64.deb file.
-Double-click the file to install
-Now open Gnome Tweak Tool -> Appearance and set the Theme to 
+Download the `amd64.deb` file. After installing, open Gnome Tweak Tool :arrow_right: Appearance :arrow_right: Themes :arrow_right: click the Applications dropdown :arrow_right: OSX-Arc-*
 
 ## Gnome Extensions
 *   [ShellTile](https://extensions.gnome.org/extension/657/shelltile/)
@@ -34,59 +73,17 @@ Now open Gnome Tweak Tool -> Appearance and set the Theme to
 *   [Sound Input & Output Device Chooser](https://extensions.gnome.org/extension/906/sound-output-device-chooser/)
 
 ### Tweak Tool Settings
-*   Extensions -> ShellTile Settings -> Size of the gaps between windows. Set this  to 0.
-*   Windows -> Titlebar Buttons -> Maximize
-*   Windows -> Titlebar Buttons -> Minimize
 
-If you like using your desktop for files etc: Desktop -> Icons on Desktop.
+|Feature  | Instructions  |
+|---------|---------|
+|0 gap in shelltile     |Extensions :arrow_right: ShellTile Settings :arrow_right: Size of the gaps between windows :arrow_right: 0 |
+|Battery Percentage     |Top Bar :arrow_right: Battery Percentage :arrow_right: ON|
+|Show date next to time     |Top Bar :arrow_right: Clock :arrow_right: Date :arrow_right: ON         |
+| Window controls like macOS | Windows :arrow_right: Titlebar Buttons :arrow_right: Placement :arrow_right: Left |
+
 
 ## Settings
-**Tap to Click**
 
-Go to "Mouse and Touchpad" settings and turn on "Tap to Click".
-
-**Battery % Indicator**
-```shell
-gsettings set org.gnome.desktop.interface show-battery-percentage true
-```
-Change the setting to `false` to reverse the above effect.
-
-## Programs
-*   [Chrome](https://www.google.com.au/chrome/browser/desktop/index.html)
-*   [Brave](https://brave.com/download/)
-*   [Vivaldi](https://vivaldi.com/download/)
-*   [Discord](https://discordapp.com/download)
-*   [Slack](https://slack.com/downloads/linux)
-*   [Signal](https://signal.org/download/)
-*   [Mailspring](https://getmailspring.com/)
-*   [Gimp](https://www.gimp.org/downloads/)
-*   [Google Play Music](https://www.googleplaymusicdesktopplayer.com/)
-*   [Spotify](https://www.spotify.com/au/download/linux/)
-*   [Headset](https://headsetapp.co/)
-
-### Programming
-*   [VSCode](https://code.visualstudio.com/download)
-*   [GitKraken](https://www.gitkraken.com/)
-*   [Sublime Text 3](https://www.sublimetext.com/docs/3/linux_repositories.html)
-*   [Postman](https://www.getpostman.com/apps)
-*   [Graphql Playground](https://github.com/graphcool/graphql-playground/releases)
-
-### Utils
-*   [Etcher](https://etcher.io)
-*   [Private Internet Access](https://www.privateinternetaccess.com/pages/client-support/)
-*   [Solaar](https://pwr.github.io/Solaar/)
-*   [Synergy](https://symless.com/synergy)
-
-### Chrome apps
-*   [Authy](https://chrome.google.com/webstore/detail/authy/gaedmjdfmmahhbjefcbgaolhhanlaolb?hl=en)
-*   [Kindle](https://chrome.google.com/webstore/detail/kindle-cloud-reader/icdipabjmbhpdkjaihfjoikhjjeneebd?hl=en-US)
-
-```shell
-sudo apt install vlc browser-plugin-vlc -y
-```
-
-## Fonts
-*   [Fira Code](https://github.com/tonsky/FiraCode)
-*   [Hack](https://github.com/source-foundry/Hack)
-*   [Dank Mono](https://dank.sh/)
-
+|Feature  |Instructions  |
+|---------|---------|
+|Night Light (Flux)     |Devices :arrow_right: Screen Display :arrow_right: Night Light :arrow_right: On|

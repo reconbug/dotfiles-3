@@ -4,8 +4,15 @@
 *   [VSCode](https://code.visualstudio.com/download)
 *   [Atom](https://atom.io/)
 
-## Font - Get dem ligatures
-Download [FiraCode](https://github.com/tonsky/FiraCode/releases/). Extract it, open the ttf/ directory and double-click on each of the .ttf files to install.
+## Fonts
+Download, extract, open `ttf/` and double-click on each `.ttf` file to install.
+
+*   [Hack](https://github.com/source-foundry/Hack)
+
+**Get dem ligatures**
+
+*   [Fira Code](https://github.com/tonsky/FiraCode)
+*   [Dank Mono](https://dank.sh/)
 
 ## Extensions
 

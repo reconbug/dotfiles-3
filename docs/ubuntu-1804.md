@@ -99,3 +99,11 @@ sudo apt-get install chrome-gnome-shell
 | Feature            | Instructions                                                                    |
 | ------------------ | ------------------------------------------------------------------------------- |
 | Night Light (Flux) | Devices :arrow_right: Screen Display :arrow_right: Night Light :arrow_right: On |
+
+
+#### increase watchers
+
+```shell
+echo fs.inotify.max_user_watches=524288 | sudo tee -a \ /etc/sysctl.conf && sudo sysctl -p
+sysctl --system
+```

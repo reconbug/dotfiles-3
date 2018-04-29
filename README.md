@@ -1,4 +1,4 @@
-<h1 align="center">os, apps, dotfiles & dev env</h1>
+<h1 align="center">my os, apps, dotfiles & dev env</h1>
 
 <p align="center">ubuntu 18.04lts, apps & vscode setup with bash & zsh dotfiles<br/>install scripts for the lazy or manual instructions for terminal beginners included!</p>
 

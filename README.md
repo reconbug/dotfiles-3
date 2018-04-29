@@ -16,7 +16,6 @@
     :zap: tools for superpowers :zap:<br/>
     <em>
       <a href="https://github.com/asdf-vm/asdf">asdf</a>
-      · <a href="https://yarnpkg.com/en/docs/install">yarn</a>
       · <a href="https://github.com/koalaman/shellcheck">shellcheck</a>
       · <a href="https://github.com/junegunn/fzf">fzf</a>
       · <a href="https://github.com/rupa/z">z</a>

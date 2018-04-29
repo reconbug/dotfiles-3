@@ -94,11 +94,19 @@ sudo apt-get install chrome-gnome-shell
 | Show date next to time     | Top Bar :arrow_right: Clock :arrow_right: Date :arrow_right: ON                                            |
 | Window controls like macOS | Windows :arrow_right: Titlebar Buttons :arrow_right: Placement :arrow_right: Left                          |
 
-### Ubuntu Settings
+### Ubuntu
+
+#### Settings
 
 | Feature            | Instructions                                                                    |
 | ------------------ | ------------------------------------------------------------------------------- |
 | Night Light (Flux) | Devices :arrow_right: Screen Display :arrow_right: Night Light :arrow_right: On |
+
+#### exfat support
+
+```shell
+sudo apt-get install exfat-fuse exfat-utils
+```
 
 #### increase watchers
 

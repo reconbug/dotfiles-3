@@ -100,7 +100,6 @@ sudo apt-get install chrome-gnome-shell
 | ------------------ | ------------------------------------------------------------------------------- |
 | Night Light (Flux) | Devices :arrow_right: Screen Display :arrow_right: Night Light :arrow_right: On |
 
-
 #### increase watchers
 
 ```shell

@@ -20,12 +20,15 @@ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.4.3
 
 ```markdown
 # git config --global user.name john
+
 git config --global user.name <username>
 
 # git config --global user.email john@gmail.com
+
 git config --global user.email <email>
 
 # git config --global core.editor code
+
 git config --global core.editor <editor>
 ```
 
@@ -121,13 +124,18 @@ asdf install python 3.6.0
 asdf global python 3.6.0
 ```
 
-**pip on python3**
+ensure `export PATH=~/.local/bin:$PATH` is in your `.bashrc` or `.zshrc`. Then reload your session: `source ~/.bashrc` or `.zshrc`
 
-assuming python 3 is installed and currently selected:
+**pip with asdf**
 
-```
-curl -O https://bootstrap.pypa.io/get-pip.py
-python3 get-pip.py --user
+```shell
+asdf reshim python
+
+pip --version
+
+pip install --upgrade pip
+
+pip --version
 ```
 
 </details>
@@ -169,6 +177,22 @@ yarn global add trash-cli
 ```
 
 ensure `alias rm=trash` is in your `.bashrc` or `.zshrc`.
+
+**[aws cli](http://docs.aws.amazon.com/cli/latest/userguide/awscli-install-linux.html#awscli-install-linux-pip)**
+
+```shell
+# install
+pip install awscli --upgrade --user
+aws --version
+
+# setup
+aws configure
+
+# upgrade
+pip install awscli --upgrade --user
+```
+
+**gcp cli**
 
 ## Terminal mastery
 

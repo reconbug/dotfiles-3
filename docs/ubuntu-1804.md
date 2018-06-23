@@ -111,6 +111,12 @@ sudo apt-get install exfat-fuse exfat-utils
 #### increase watchers
 
 ```shell
-echo fs.inotify.max_user_watches=524288 | sudo tee -a \ /etc/sysctl.conf && sudo sysctl -p
-sysctl --system
+sudo nano /etc/sysctl.conf
+```
+
+paste `fs.inotify.max_user_watches=524288` at the bottom of the file. Then run:
+
+```shell
+sudo sysctl -p
+sudo sysctl --system
 ```

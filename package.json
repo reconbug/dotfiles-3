@@ -6,7 +6,7 @@
   "author": "James Hegedus",
   "license": "MIT",
   "scripts": {
-    "format": "prettier --write {*,*/*,*/**/*}.{json,md}"
+    "format": "prettier --write **/*.{json,md}"
   },
   "husky": {
     "hooks": {

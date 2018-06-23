@@ -4,11 +4,32 @@
 
 ## Fonts
 
-| Font                                            | Ligatures                     | Free                          | Installation                                                                    |
-| ----------------------------------------------- | ----------------------------- | ----------------------------- | ------------------------------------------------------------------------------- |
-| [Hack](https://github.com/source-foundry/Hack)  | :negative_squared_cross_mark: | :ballot_box_with_check:       | <pre><code>sudo apt install fonts-hack-ttf -y</code></pre>                      |
-| [Fira Code](https://github.com/tonsky/FiraCode) | :ballot_box_with_check:       | :ballot_box_with_check:       | Download, extract, open `ttf/` and double-click on each `.ttf` file to install. |
-| [Dank Mono](https://dank.sh/)                   | :ballot_box_with_check:       | :negative_squared_cross_mark: | Purchase, then same as above.                                                   |
+1.  Install font-manager:
+
+```shell
+sudo aptitude install font-manager
+```
+
+2.  Create fonts dir:
+
+```shell
+mkdir ~/.fonts
+```
+
+3.  Get fonts:
+
+| Font                                            | Ligatures                     | Free                          | Installation                                               |
+| ----------------------------------------------- | ----------------------------- | ----------------------------- | ---------------------------------------------------------- |
+| [Roboto]()                                      | :negative_squared_cross_mark: | :ballot_box_with_check:       | <pre><code>sudo apt-get install fonts-roboto</code></pre>  |
+| [Hack](https://github.com/source-foundry/Hack)  | :negative_squared_cross_mark: | :ballot_box_with_check:       | <pre><code>sudo apt install fonts-hack-ttf -y</code></pre> |
+| [Fira Code](https://github.com/tonsky/FiraCode) | :ballot_box_with_check:       | :ballot_box_with_check:       | Download, extract, copy `ttf/` contents to `~/.fonts`.     |
+| [Dank Mono](https://dank.sh/)                   | :ballot_box_with_check:       | :negative_squared_cross_mark: | Purchase, then same as above.                              |
+
+4.  Update your font cache:
+
+```shell
+fc-cache -f -v
+```
 
 ## Extensions
 

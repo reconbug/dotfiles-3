@@ -14,7 +14,8 @@ sudo apt install git curl -y
 
 ## Programs
 
-**Available on Ubuntu Software**
+<details>
+<summary><b>Available on Ubuntu Software</b></summary>
 
 | App                                      | Description                                                                                       |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------- |
@@ -31,7 +32,10 @@ sudo apt install git curl -y
 | VLC                                      | Media player                                                                                      |
 | VSCode                                   | Code Editor                                                                                       |
 
-**Other**
+</details>
+
+<details>
+<summary><b>Other</b></summary>
 
 | App                                                                                    | Description                                                    |
 | -------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
@@ -41,12 +45,17 @@ sudo apt install git curl -y
 | [Private Internet Access](https://www.privateinternetaccess.com/pages/client-support/) | VPN                                                            |
 | [Vivaldi](https://vivaldi.com/download/)                                               | Fast, customisable web browser                                 |
 
-**Chrome Apps**
+</details>
+
+<details>
+<summary><b>Chrome Apps</b></summary>
 
 | App                                                                                                               | Description                                |
 | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
 | [Authy](https://chrome.google.com/webstore/detail/authy/gaedmjdfmmahhbjefcbgaolhhanlaolb?hl=en)                   | Single 2FA app running on all your devices |
 | [Kindle](https://chrome.google.com/webstore/detail/kindle-cloud-reader/icdipabjmbhpdkjaihfjoikhjjeneebd?hl=en-US) | Read your Kindle titles anywhere           |
+
+</details>
 
 ## UI
 

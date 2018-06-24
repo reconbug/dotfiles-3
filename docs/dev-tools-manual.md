@@ -66,7 +66,7 @@ asdf global nodejs 8.11.3
 </details>
 
 <details>
-<summary>Yarn <a href="https://yarnpkg.com/en/docs/install">docs</a></summary>
+<summary>Yarn - <a href="https://yarnpkg.com/en/docs/install">docs</a></summary>
 
 ```markdown
 # add sources
@@ -106,7 +106,7 @@ export PATH
 </details>
 
 <details>
-<summary>Shellcheck <a href="https://github.com/koalaman/shellcheck#installing">docs</a></summary>
+<summary>Shellcheck - <a href="https://github.com/koalaman/shellcheck#installing">docs</a></summary>
 
 ```shell
 sudo apt install shellcheck -y
@@ -188,7 +188,8 @@ By now you surely get the idea for [setting up another lang or tool](https://git
 
 ## Tools (depending on the now installed languages)
 
-**[trash-cli](https://github.com/sindresorhus/trash-cli)**
+<details>
+<summary>trash-cli - <a href="https://github.com/sindresorhus/trash-cli">docs</a></summary>
 
 ```shell
 yarn global add trash-cli
@@ -201,9 +202,13 @@ ensure `alias rm=trash` is in your `.bashrc` or `.zshrc`.
 
 </details>
 
+---
+
+</details>
 
 
-**[aws cli](http://docs.aws.amazon.com/cli/latest/userguide/awscli-install-linux.html#awscli-install-linux-pip)**
+<details>
+<summary>aws cli - <a href="http://docs.aws.amazon.com/cli/latest/userguide/awscli-install-linux.html#awscli-install-linux-pip">docs</a></summary>
 
 ```markdown
 # install
@@ -217,7 +222,7 @@ aws configure
 pip install awscli --upgrade --user
 ```
 
-**gcp cli**
+</details>
 
 ## Terminal mastery
 
@@ -237,6 +242,7 @@ ensure `source "$HOME/z.sh"` is in your `.bashrc` or `.zshrc`.
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 # install
+# when prompt, do not update your shell configuration files.
 
 ~/.fzf/install
 ```

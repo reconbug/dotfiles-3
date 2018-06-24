@@ -87,13 +87,16 @@ TBD - currently a wip.
 
 <h3 id="dotfiles_manual">manual installation</h3>
 
-<details>
-<summary>bash</summary>
+:warning: before resourcing or rebooting you should complete the installation of the <a href="#development_tools">development tools</a> section as your shell now depends on some other tools.
+
+#### common
 
 * add symlink between `~/.aliases` and `/common/.aliases`
     ```shell
     ln -sv ~/Projects/Personal/dotfiles/common/.aliases ~/.aliases
     ```
+
+#### bash
 
 * backup existing `.bashrc`
     ```shell
@@ -111,11 +114,7 @@ TBD - currently a wip.
     ln -sv ~/Projects/Personal/dotfiles/bash/.bashrc ~/.bashrc
     ```
 
-
-</details>
-
-<details>
-<summary>zsh</summary>
+#### zsh
 
 * backup existing `.zshrc`
     ```shell
@@ -128,10 +127,6 @@ TBD - currently a wip.
     ln -sv ~/Projects/Personal/dotfiles/zsh/.zshrc ~/.zshrc
     ```
 
-</details>
-
-:warning: before resourcing or rebooting you should complete the installation of the <a href="#development_tools">development tools</a> section as your shell now depends on some other tools.
-
 <h2 id="development_tools">development tools</h2>
 
 <h3 id="dev_tools_automatic">automatic installation</h3>
@@ -143,6 +138,8 @@ TBD - currently a wip.
 ```
 
 <h3 id="dev_tools_manual">manual installation</h3>
+
+[Instructions can be found here](/docs/dev-tools-manual.md).
 
 ---
 

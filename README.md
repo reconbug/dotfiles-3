@@ -87,10 +87,15 @@ TBD - currently a wip.
     mv ~/.bashrc ~/.bashrc.orig
     ```
 
-* Add symlink between `~/.bashrc` and `/tilde/.bashrc`:
+* add a default `.bashrc` to extend by symlinking between `~/.default_bashrc` and `/bash/.default_bashrc`
+    ```shell
+    ln -sv ~/Projects/Personal/dotfiles/bash/.default_bashrc ~/.default_bashrc
+    ```
+
+* add symlink between `~/.bashrc` and `/bash/.bashrc`:
 
     ```shell
-    ln -sv ~/Projects/Personal/dotfiles/tilde/.bashrc ~/.bashrc
+    ln -sv ~/Projects/Personal/dotfiles/bash/.bashrc ~/.bashrc
     ```
 
 </details>

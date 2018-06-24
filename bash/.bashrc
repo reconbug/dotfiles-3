@@ -22,6 +22,9 @@ export PATH
 ### z
 source "$HOME/z.sh"
 
+### fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 ### aliases
 if [ -f "$HOME/.aliases" ]; then
     source "$HOME/.aliases"

@@ -67,6 +67,8 @@ cd ~ && git clone https://github.com/jthegedus/dotfiles "Projects/Personal/dotfi
 
 <h3 id="dotfiles_automatic">automatic</h3>
 
+TBD - currently a wip.
+
 <h3 id="dotfiles_manual">manual</h3>
 
 <h2 id="dev_tools">development tools</h2>

@@ -104,6 +104,8 @@ TBD - currently a wip.
     ln -sv ~/Projects/Personal/dotfiles/bash/.bashrc ~/.bashrc
     ```
 
+:warning: before resourcing or rebooting you should complete the installation of the <a href="#dev_tools">development tools</a> section as your shell noe depends on some other tools :warning:
+
 </details>
 
 <details>

@@ -137,17 +137,22 @@ asdf install python 3.6.0
 asdf global python 3.6.0
 ```
 
-ensure `export PATH=~/.local/bin:$PATH` is in your `.bashrc` or `.zshrc`. Then reload your session: `source ~/.bashrc` or `.zshrc`
+Ensure `export PATH=~/.local/bin:$PATH` is in your `.bashrc` or `.zshrc`. 
+
+Reload your session: `source ~/.bashrc` or `.zshrc`
 
 **pip with asdf**
 
-```shell
+```markdown
+# required
 asdf reshim python
 
+# note the version and the path is within .asdf/installs/
 pip --version
 
 pip install --upgrade pip
 
+# ensure the path is still under .asdf/installs/
 pip --version
 ```
 

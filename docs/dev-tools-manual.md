@@ -88,13 +88,18 @@ sudo apt-get install yarn -y
 yarn --version
 ```
 
-add to `.*rc`
+<details>
+<summary>If you are not using the provided `.bashrc` or `.zshrc`:</summary>
+
+add the following to your `.*rc`
 
 ```shell
 PATH="$PATH:/opt/yarn-[version]/bin"
 PATH="$PATH:$(yarn global bin)"
 export PATH
 ```
+
+</details>
 
 </details>
 

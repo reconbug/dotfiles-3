@@ -27,7 +27,7 @@
 <p align="center">
     <em>
     <a href="#dotfiles">dotfiles</a>
-    · <a href="#dev_tools">development tools</a>
+    · <a href="#development_tools">development tools</a>
     · <a href="./docs/ubuntu-1804.md">os & apps</a>
     · <a href="./docs/vscode.md">vscode & extensions</a>
     </em>
@@ -123,9 +123,9 @@ TBD - currently a wip.
 
 </details>
 
-:warning: before resourcing or rebooting you should complete the installation of the <a href="#dev_tools">development tools</a> section as your shell now depends on some other tools.
+:warning: before resourcing or rebooting you should complete the installation of the <a href="#development_tools">development tools</a> section as your shell now depends on some other tools.
 
-<h2 id="dev_tools">development tools</h2>
+<h2 id="development_tools">development tools</h2>
 
 <h3 id="dev_tools_automatic">automatic installation</h3>
 

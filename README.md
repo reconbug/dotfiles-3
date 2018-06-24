@@ -69,9 +69,18 @@ cd ~ && git clone https://github.com/jthegedus/dotfiles "Projects/Personal/dotfi
 
 TBD - currently a wip.
 
+```markdown
+# for bash users
+...
+
+# for zsh users
+...
+```
+
 <h3 id="dotfiles_manual">manual installation</h3>
 
-#### bash
+<details>
+<summary>bash</summary>
 
 * backup existing `.bashrc`
     ```shell
@@ -84,13 +93,33 @@ TBD - currently a wip.
     ln -sv ~/Projects/Personal/dotfiles/tilde/.bashrc ~/.bashrc
     ```
 
-#### zsh
+</details>
+
+<details>
+<summary>zsh</summary>
+
+* backup existing `.zshrc`
+    ```shell
+    mv ~/.zshrc ~/.zshrc.orig
+    ```
+
+* Add symlink between `~/.zshrc` and `/tilde/.zshrc`:
+
+    ```shell
+    ln -sv ~/Projects/Personal/dotfiles/tilde/.zshrc ~/.zshrc
+    ```
+
+</details>
 
 <h2 id="dev_tools">development tools</h2>
 
 <h3 id="dev_tools_automatic">automatic installation</h3>
 
 TBD - currently a wip.
+
+```markdown
+...
+```
 
 <h3 id="dev_tools_manual">manual installation</h3>
 

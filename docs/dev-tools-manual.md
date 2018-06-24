@@ -11,8 +11,14 @@ libssl-dev libyaml-dev libxslt-dev libffi-dev libtool unixodbc-dev -y
 
 [asdf](https://github.com/asdf-vm/asdf) for language management:
 
-```shell
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.4.3
+```markdown
+# clone asdf
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+
+cd ~/.asdf
+
+# checkout latest branch
+git checkout $(git describe --abbrev=0 --tags)
 ```
 
 <details>

@@ -7,7 +7,7 @@
 1.  Install font-manager:
 
 ```shell
-sudo aptitude install font-manager
+sudo apt install font-manager -y
 ```
 
 2.  Create fonts dir:

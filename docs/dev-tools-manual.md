@@ -186,7 +186,7 @@ ensure `alias rm=trash` is in your `.bashrc` or `.zshrc`.
 
 **[aws cli](http://docs.aws.amazon.com/cli/latest/userguide/awscli-install-linux.html#awscli-install-linux-pip)**
 
-```shell
+```markdown
 # install
 pip install awscli --upgrade --user
 aws --version

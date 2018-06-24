@@ -44,6 +44,10 @@
 
 <h2 id="dev_env">vscode & extensions</h2>
 
+---
+
+---
+
 ## DEPRECATED Dotfiles. new instructions are in docs/ and readme is currently a WIP
 
 A collection of dotfiles and scripts for customizing Unix Terminal and Bash on Windows to my liking (use [zsh](http://www.zsh.org) with [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) ;) ).

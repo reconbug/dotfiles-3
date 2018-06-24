@@ -35,6 +35,12 @@
 
 <h2 id="installation">installation</h2>
 
+```markdown
+# required dependencies
+
+sudo apt install git curl -y
+```
+
 <h3 id="repo_folder_structure">repo folder structure</h3>
 
 This project assumes a local repository folder structure like the following:

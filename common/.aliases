@@ -22,7 +22,7 @@ fi
 
 ### git
 #
-alias lg -> git log --all --decorate --oneline --graph
+alias lg='git log --all --decorate --oneline --graph'
 
 ### navigation
 #

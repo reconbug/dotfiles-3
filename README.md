@@ -69,6 +69,8 @@ Clone this repo to `~/Projects/Personal/`
 cd ~ && git clone https://github.com/jthegedus/dotfiles "Projects/Personal/dotfiles"
 ```
 
+Now follow either the automated or manual instructions in dotfiles and development tools sections.
+
 <h2 id="dotfiles">dotfiles</h2>
 
 <h3 id="dotfiles_automatic">automatic installation</h3>

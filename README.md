@@ -120,10 +120,10 @@ TBD - currently a wip.
     mv ~/.zshrc ~/.zshrc.orig
     ```
 
-* Add symlink between `~/.zshrc` and `/tilde/.zshrc`:
+* Add symlink between `~/.zshrc` and `/zsh/.zshrc`:
 
     ```shell
-    ln -sv ~/Projects/Personal/dotfiles/tilde/.zshrc ~/.zshrc
+    ln -sv ~/Projects/Personal/dotfiles/zsh/.zshrc ~/.zshrc
     ```
 
 </details>

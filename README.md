@@ -65,19 +65,34 @@ cd ~ && git clone https://github.com/jthegedus/dotfiles "Projects/Personal/dotfi
 
 <h2 id="dotfiles">dotfiles</h2>
 
-<h3 id="dotfiles_automatic">automatic</h3>
+<h3 id="dotfiles_automatic">automatic installation</h3>
 
 TBD - currently a wip.
 
-<h3 id="dotfiles_manual">manual</h3>
+<h3 id="dotfiles_manual">manual installation</h3>
+
+#### bash
+
+* backup existing `.bashrc`
+    ```shell
+    mv ~/.bashrc ~/.bashrc.orig
+    ```
+
+* Add symlink between `~/.bashrc` and `/tilde/.bashrc`:
+
+    ```shell
+    ln -sv ~/Projects/Personal/dotfiles/tilde/.bashrc ~/.bashrc
+    ```
+
+#### zsh
 
 <h2 id="dev_tools">development tools</h2>
 
-<h3 id="dev_tools_automatic">automatic</h3>
+<h3 id="dev_tools_automatic">automatic installation</h3>
 
 TBD - currently a wip.
 
-<h3 id="dev_tools_manual">manual</h3>
+<h3 id="dev_tools_manual">manual installation</h3>
 
 ---
 

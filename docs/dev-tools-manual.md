@@ -194,7 +194,14 @@ By now you surely get the idea for [setting up another lang or tool](https://git
 yarn global add trash-cli
 ```
 
+<details>
+<summary>If you are not using the provided <code>/common/.aliases</code> file:</summary>
+
 ensure `alias rm=trash` is in your `.bashrc` or `.zshrc`.
+
+</details>
+
+
 
 **[aws cli](http://docs.aws.amazon.com/cli/latest/userguide/awscli-install-linux.html#awscli-install-linux-pip)**
 

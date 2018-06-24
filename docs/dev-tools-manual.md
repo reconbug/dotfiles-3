@@ -89,7 +89,7 @@ yarn --version
 ```
 
 <details>
-<summary>If you are not using the provided `.bashrc` or `.zshrc`:</summary>
+<summary>If you are not using the provided <code>.bashrc</code> or <code>.zshrc</code>:</summary>
 
 add the following to your `.*rc`
 

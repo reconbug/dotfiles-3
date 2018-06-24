@@ -26,21 +26,52 @@
 
 <p align="center">
     <em>
-    <a href="#os_apps">os & apps</a>
-    · <a href="#dotfiles_automatic">dotfiles - automated</a>
-    · <a href="#dotfiles_manual">dotfiles - manual</a>
+    <a href="#dotfiles">dotfiles</a>
     · <a href="#dev_tools">development tools</a>
+    · <a href="#os_apps">os & apps</a>
     · <a href="#dev_env">vscode & extensions</a>
     </em>
 </p>
 
-<h2 id="os_apps">os & apps</h2>
+<h2 id="installation">installation</h2>
 
-<h2 id="dotfiles_automatic">dotfiles - automated</h2>
+<h3 id="repo_folder_structure">repo folder structure</h3>
 
-<h2 id="dotfiles_manual">dotfiles - manual</h2>
+This project assumes a local repository folder structure like the following:
+
+```
+~/Projects
+~/Projects/Forks
+~/Projects/Job
+~/Projects/Personal
+~/Projects/Playground
+```
+
+Where this `dotfiles` repo is cloned to `~/Projects/Personal/`, resulting in `~/Projects/Personal/dotfiles/`. If you wish to use a different folder structure, do a **search and replace** on `/Projects/Personal`. Other Zsh install guides recommend putting the `/Dotfiles/` folder in your user Home folder `~/`
+
+* To create the folder structure run this command in Bash:
+
+```shell
+cd ~ && mkdir -p Projects/Forks Projects/Job Projects/Personal Projects/Playground
+
+```
+<h3 id="install_dotfiles">install these dotfiles</h3>
+
+Clone this repo to `~/Projects/Personal/`
+
+```shell
+cd ~ && git clone https://github.com/jthegedus/dotfiles "Projects/Personal/dotfiles"
+```
+
+<h2 id="dotfiles">dotfiles</h2>
+
+<h3 id="dotfiles_automatic">automatic</h3>
+
+<h3 id="dotfiles_manual">manual</h3>
 
 <h2 id="dev_tools">development tools</h2>
+
+<h2 id="os_apps">os & apps</h2>
 
 <h2 id="dev_env">vscode & extensions</h2>
 

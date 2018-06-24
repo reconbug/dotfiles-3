@@ -28,8 +28,8 @@
     <em>
     <a href="#dotfiles">dotfiles</a>
     · <a href="#dev_tools">development tools</a>
-    · <a href="#os_apps">os & apps</a>
-    · <a href="#dev_env">vscode & extensions</a>
+    · <a href="./docs/ubuntu-1804.md">os & apps</a>
+    · <a href="./docs/vscode.md">vscode & extensions</a>
     </em>
 </p>
 
@@ -73,9 +73,11 @@ TBD - currently a wip.
 
 <h2 id="dev_tools">development tools</h2>
 
-<h2 id="os_apps">os & apps</h2>
+<h3 id="dev_tools_automatic">automatic</h3>
 
-<h2 id="dev_env">vscode & extensions</h2>
+TBD - currently a wip.
+
+<h3 id="dev_tools_manual">manual</h3>
 
 ---
 

@@ -88,6 +88,11 @@ TBD - currently a wip.
 <details>
 <summary>bash</summary>
 
+* add symlink between `~/.aliases` and `/common/.aliases`
+    ```shell
+    ln -sv ~/Projects/Personal/dotfiles/common/.aliases ~/.aliases
+    ```
+
 * backup existing `.bashrc`
     ```shell
     mv ~/.bashrc ~/.bashrc.orig

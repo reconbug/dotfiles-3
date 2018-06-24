@@ -66,7 +66,7 @@ asdf global nodejs 8.11.3
 </details>
 
 <details>
-<summary><a href="https://yarnpkg.com/en/docs/install">Yarn</a></summary>
+<summary>Yarn <a href="https://yarnpkg.com/en/docs/install">docs</a></summary>
 
 ```markdown
 # add sources
@@ -101,10 +101,12 @@ export PATH
 
 </details>
 
+---
+
 </details>
 
 <details>
-<summary><a href="https://github.com/koalaman/shellcheck#installing">Shellcheck</a></summary>
+<summary>Shellcheck <a href="https://github.com/koalaman/shellcheck#installing">docs</a></summary>
 
 ```shell
 sudo apt install shellcheck -y

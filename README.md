@@ -79,9 +79,8 @@ TBD - currently a wip.
 
 ---
 
----
-
-## DEPRECATED Dotfiles. new instructions are in docs/ and readme is currently a WIP
+<details>
+<summary>DEPRECATED Dotfiles. new instructions are in docs/ and readme is currently a WIP</summary>
 
 A collection of dotfiles and scripts for customizing Unix Terminal and Bash on Windows to my liking (use [zsh](http://www.zsh.org) with [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) ;) ).
 
@@ -313,11 +312,4 @@ cp ~/Projects/Personal/dotfiles/windows/.hyper.js /mnt/c/Users/<username>/.hyper
 
 NB: To add plugins or modify the theme in Hyper Terminal modify the `.hyper.js` file plugins section. You can find the Awesome collection at <https://github.com/bnb/awesome-hyper>
 
-## To do:
-
-* [ ] create install script for automated setup
-* [ ] create separate automated symlinking process
-* [ ] add script to automatically run `nvm use`, `rvm use` etc on folder change to an repo
-* [x] add Bash on Windows instructions
-* [x] add support for Web Development tools
-* [x] add ZSH plugins through zgen
+</details>

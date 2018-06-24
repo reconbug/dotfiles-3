@@ -56,11 +56,11 @@ bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 
 # nodejs LTS
 
-asdf install nodejs 8.10.0
+asdf install nodejs 8.11.3
 
 # set as global default
 
-asdf global nodejs 8.10.0
+asdf global nodejs 8.11.3
 ```
 
 </details>

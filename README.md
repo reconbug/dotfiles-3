@@ -63,7 +63,7 @@ Where this `dotfiles` repo is cloned to `~/Projects/Personal/`, resulting in `~/
 cd ~ && mkdir -p Projects/Forks Projects/Job Projects/Personal Projects/Playground
 ```
 
-<h3 id="install_dotfiles">:card_file_box: install these dotfiles</h3>
+<h3 id="install_dotfiles">install these dotfiles</h3>
 
 Clone this repo to `~/Projects/Personal/`
 
@@ -73,7 +73,7 @@ cd ~ && git clone https://github.com/jthegedus/dotfiles "Projects/Personal/dotfi
 
 Now follow either the automated or manual instructions in dotfiles and development tools sections.
 
-<h2 id="dotfiles">dotfiles</h2>
+<h2 id="dotfiles">:card_file_box: dotfiles</h2>
 
 <h3 id="dotfiles_automatic">automatic installation</h3>
 

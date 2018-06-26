@@ -1,7 +1,7 @@
 {
   "name": "dotfiles",
   "version": "2.0.0",
-  "description": "my OS & dotfile setup",
+  "description": "my os, apps, dotfiles & dev env",
   "repository": "https://github.com/jthegedus/dotfiles.git",
   "author": "James Hegedus",
   "license": "MIT",

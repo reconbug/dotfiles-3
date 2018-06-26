@@ -12,19 +12,19 @@ I've also had problems with <any-lang> version managers. MacOS machines have con
 
 To simplify, I use:
 
-* [Zsh](http://www.zsh.org/)
-* [Oh-My-Zsh](https://github.com/robbyrussell/oh-my-zsh)
-* [Zgen](https://github.com/tarjoilija/zgen) - plugin manager for Zsh
-* [asdf](https://github.com/asdf-vm/asdf) - an extendable version manager. This saves all the mess of managing and installing multiple version manangers.
-* [Yarn](https://yarnpkg.com/) - Package manager. [Multi-language support coming in the future](https://github.com/yarnpkg/yarn/issues/3644).
+- [Zsh](http://www.zsh.org/)
+- [Oh-My-Zsh](https://github.com/robbyrussell/oh-my-zsh)
+- [Zgen](https://github.com/tarjoilija/zgen) - plugin manager for Zsh
+- [asdf](https://github.com/asdf-vm/asdf) - an extendable version manager. This saves all the mess of managing and installing multiple version manangers.
+- [Yarn](https://yarnpkg.com/) - Package manager. [Multi-language support coming in the future](https://github.com/yarnpkg/yarn/issues/3644).
 
 This README is intended for first time Zsh users and so is particularly verbose.
 
 ## Contents
 
-* [Repo Structure](#repository-structure)
-* [Zsh & Environment Setup](#zsh-&-environment-setup)
-* [Terminal Theming](#terminal-theming)
+- [Repo Structure](#repository-structure)
+- [Zsh & Environment Setup](#zsh-&-environment-setup)
+- [Terminal Theming](#terminal-theming)
 
 ## Repository Structure
 
@@ -183,12 +183,12 @@ Close and re-open your Terminal app to see the new theme!
 
 ## Credit / Prior Art
 
-* It was this Zsh theme that inspired me to try Zsh <https://github.com/denysdovhan/spaceship-zsh-theme>
-* Of course <https://github.com/robbyrussell/oh-my-zsh>
-* The [Hyper terminal app](https://hyper.is) fixes many of the issues encountered with using Bash on Windows
-* [Awesome Hyper](https://github.com/bnb/awesome-hyper)
-* The power of [z](https://github.com/rupa/z/) makes you feel like a true terminal super user, thanks [Wes Bos](https://twitter.com/@wesbos)
-* Some dotfiles resources:
-  * <https://dotfiles.github.io>
-  * <https://github.com/webpro/awesome-dotfiles>
-  * <https://github.com/denysdovhan/dotfiles>
+- It was this Zsh theme that inspired me to try Zsh <https://github.com/denysdovhan/spaceship-zsh-theme>
+- Of course <https://github.com/robbyrussell/oh-my-zsh>
+- The [Hyper terminal app](https://hyper.is) fixes many of the issues encountered with using Bash on Windows
+- [Awesome Hyper](https://github.com/bnb/awesome-hyper)
+- The power of [z](https://github.com/rupa/z/) makes you feel like a true terminal super user, thanks [Wes Bos](https://twitter.com/@wesbos)
+- Some dotfiles resources:
+  - <https://dotfiles.github.io>
+  - <https://github.com/webpro/awesome-dotfiles>
+  - <https://github.com/denysdovhan/dotfiles>

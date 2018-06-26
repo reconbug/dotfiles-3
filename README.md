@@ -26,16 +26,16 @@
 
 <p align="center">
     <em>
-    <a href="#dotfiles">dotfiles</a>
-    · <a href="#development_tools">development tools</a>
-    · <a href="./docs/ubuntu-1804.md">os & apps</a>
-    · <a href="./docs/vscode.md">vscode & extensions</a>
+    :card_file_box: <a href="#dotfiles">dotfiles</a>
+    · :wrench: <a href="#development_tools">development tools</a>
+    · :computer: <a href="./docs/ubuntu-1804.md">os & apps</a>
+    · :metro: <a href="./docs/vscode.md">vscode & extensions</a>
     · :family_man_woman_girl_boy: <a href="#contribs">contributions</a>
     · :clipboard: <a href="#license">license</a>
     </em>
 </p>
 
-<h2 id="installation">installation</h2>
+<h2 id="installation">:building_construction: installation</h2>
 
 ```markdown
 # required dependencies
@@ -63,7 +63,7 @@ Where this `dotfiles` repo is cloned to `~/Projects/Personal/`, resulting in `~/
 cd ~ && mkdir -p Projects/Forks Projects/Job Projects/Personal Projects/Playground
 ```
 
-<h3 id="install_dotfiles">install these dotfiles</h3>
+<h3 id="install_dotfiles">:card_file_box: install these dotfiles</h3>
 
 Clone this repo to `~/Projects/Personal/`
 
@@ -134,7 +134,7 @@ TBD - currently a wip.
   ln -sv ~/Projects/Personal/dotfiles/zsh/.zshrc ~/.zshrc
   ```
 
-<h2 id="development_tools">development tools</h2>
+<h2 id="development_tools">:wrench: development tools</h2>
 
 <h3 id="dev_tools_automatic">automatic installation</h3>
 
@@ -147,6 +147,12 @@ TBD - currently a wip.
 <h3 id="dev_tools_manual">manual installation</h3>
 
 [Instructions can be found here](/docs/dev-tools-manual.md).
+
+<h2 id="os-and-apps">:computer: os & apps</h2>
+[Instructions can be found here](./docs/ubuntu-1804.md).
+
+<h2 id="os-and-apps">:metro: vscode & extensions</h2>
+[Instructions can be found here](./docs/vscode.md).
 
 <h2 id="contribs">:family_man_woman_girl_boy: contributions</h2>
 

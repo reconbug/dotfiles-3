@@ -89,7 +89,7 @@ TBD - currently a wip.
 
 <h3 id="dotfiles_manual">manual installation</h3>
 
-:warning: before resourcing or rebooting you should complete the installation of the <a href="#development_tools">development tools</a> section as your shell now depends on some other tools.
+:warning: before re-sourcing or rebooting you should complete the installation of the <a href="#development_tools">development tools</a> section as your shell now depends on some other tools.
 
 #### common
 

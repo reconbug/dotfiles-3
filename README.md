@@ -1,4 +1,5 @@
 <h1 align="center">my os, apps, dotfiles & dev env</h1>
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
 <p align="center">ubuntu 18.04lts, apps & vscode setup with bash & zsh dotfiles<br/>install scripts for the lazy or manual instructions for terminal beginners included!</p>
 
@@ -30,6 +31,8 @@
     · <a href="#development_tools">development tools</a>
     · <a href="./docs/ubuntu-1804.md">os & apps</a>
     · <a href="./docs/vscode.md">vscode & extensions</a>
+    · :family_man_woman_girl_boy: <a href="#contribs">contributions</a>
+    · :clipboard: <a href="#license">license</a>
     </em>
 </p>
 
@@ -55,7 +58,7 @@ This project assumes a local repository folder structure like the following:
 
 Where this `dotfiles` repo is cloned to `~/Projects/Personal/`, resulting in `~/Projects/Personal/dotfiles/`. If you wish to use a different folder structure, do a **search and replace** on `/Projects/Personal`. Other Zsh install guides recommend putting the `/Dotfiles/` folder in your user Home folder `~/`
 
-* To create the folder structure run this command in Bash:
+- To create the folder structure run this command in Bash:
 
 ```shell
 cd ~ && mkdir -p Projects/Forks Projects/Job Projects/Personal Projects/Playground
@@ -93,26 +96,26 @@ TBD - currently a wip.
 
 #### common
 
-* add symlink between `~/.aliases` and `/common/.aliases`
+- add symlink between `~/.aliases` and `/common/.aliases`
   ```shell
   ln -sv ~/Projects/Personal/dotfiles/common/.aliases ~/.aliases
   ```
 
 #### bash
 
-* backup existing `.bashrc`
+- backup existing `.bashrc`
 
   ```shell
   mv ~/.bashrc ~/.bashrc.orig
   ```
 
-* add a default `.bashrc` to extend by symlinking between `~/.default_bashrc` and `/bash/.default_bashrc`
+- add a default `.bashrc` to extend by symlinking between `~/.default_bashrc` and `/bash/.default_bashrc`
 
   ```shell
   ln -sv ~/Projects/Personal/dotfiles/bash/.default_bashrc ~/.default_bashrc
   ```
 
-* add symlink between `~/.bashrc` and `/bash/.bashrc`:
+- add symlink between `~/.bashrc` and `/bash/.bashrc`:
 
   ```shell
   ln -sv ~/Projects/Personal/dotfiles/bash/.bashrc ~/.bashrc
@@ -120,13 +123,13 @@ TBD - currently a wip.
 
 #### zsh
 
-* backup existing `.zshrc`
+- backup existing `.zshrc`
 
   ```shell
   mv ~/.zshrc ~/.zshrc.orig
   ```
 
-* Add symlink between `~/.zshrc` and `/zsh/.zshrc`:
+- Add symlink between `~/.zshrc` and `/zsh/.zshrc`:
 
   ```shell
   ln -sv ~/Projects/Personal/dotfiles/zsh/.zshrc ~/.zshrc
@@ -145,3 +148,30 @@ TBD - currently a wip.
 <h3 id="dev_tools_manual">manual installation</h3>
 
 [Instructions can be found here](/docs/dev-tools-manual.md).
+
+<h2 id="contribs">:family_man_woman_girl_boy: contributions</h2>
+
+Contributions of any kind welcome!
+
+Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+| [<img src="https://avatars2.githubusercontent.com/u/20798510?v=4" width="100px;"/><br /><sub><b>James Hegedus</b></sub>](https://medium.com/@jthegedus)<br />[📖](https://github.com/jthegedus/dotfiles/commits?author=jthegedus "Documentation") [📝](#blog-jthegedus "Blogposts") [🎨](#design-jthegedus "Design") [💻](https://github.com/jthegedus/dotfiles/commits?author=jthegedus "Code") |
+| :---: |
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+<h2 id="license">:clipboard: license</h2>
+
+MIT
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!

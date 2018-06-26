@@ -13,11 +13,13 @@ libssl-dev libyaml-dev libxslt-dev libffi-dev libtool unixodbc-dev -y
 
 ```markdown
 # clone asdf
+
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 
 cd ~/.asdf
 
 # checkout latest branch
+
 git checkout $(git describe --abbrev=0 --tags)
 ```
 
@@ -137,7 +139,7 @@ asdf install python 3.6.0
 asdf global python 3.6.0
 ```
 
-Ensure `export PATH=~/.local/bin:$PATH` is in your `.bashrc` or `.zshrc`. 
+Ensure `export PATH=~/.local/bin:$PATH` is in your `.bashrc` or `.zshrc`.
 
 Reload your session: `source ~/.bashrc` or `.zshrc`
 
@@ -145,14 +147,17 @@ Reload your session: `source ~/.bashrc` or `.zshrc`
 
 ```markdown
 # required
+
 asdf reshim python
 
 # note the version and the path is within .asdf/installs/
+
 pip --version
 
 pip install --upgrade pip
 
 # ensure the path is still under .asdf/installs/
+
 pip --version
 ```
 
@@ -206,19 +211,21 @@ ensure `alias rm=trash` is in your `.bashrc` or `.zshrc`.
 
 </details>
 
-
 <details>
 <summary>aws cli - <a href="http://docs.aws.amazon.com/cli/latest/userguide/awscli-install-linux.html#awscli-install-linux-pip">docs</a></summary>
 
 ```markdown
 # install
+
 pip install awscli --upgrade --user
 aws --version
 
 # setup
+
 aws configure
 
 # upgrade
+
 pip install awscli --upgrade --user
 ```
 
@@ -242,6 +249,7 @@ ensure `source "$HOME/z.sh"` is in your `.bashrc` or `.zshrc`.
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 # install
+
 # when prompt, do not update your shell configuration files.
 
 ~/.fzf/install

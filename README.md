@@ -59,8 +59,8 @@ Where this `dotfiles` repo is cloned to `~/Projects/Personal/`, resulting in `~/
 
 ```shell
 cd ~ && mkdir -p Projects/Forks Projects/Job Projects/Personal Projects/Playground
-
 ```
+
 <h3 id="install_dotfiles">install these dotfiles</h3>
 
 Clone this repo to `~/Projects/Personal/`
@@ -79,9 +79,11 @@ TBD - currently a wip.
 
 ```markdown
 # for bash users
+
 ...
 
 # for zsh users
+
 ...
 ```
 
@@ -92,40 +94,43 @@ TBD - currently a wip.
 #### common
 
 * add symlink between `~/.aliases` and `/common/.aliases`
-    ```shell
-    ln -sv ~/Projects/Personal/dotfiles/common/.aliases ~/.aliases
-    ```
+  ```shell
+  ln -sv ~/Projects/Personal/dotfiles/common/.aliases ~/.aliases
+  ```
 
 #### bash
 
 * backup existing `.bashrc`
-    ```shell
-    mv ~/.bashrc ~/.bashrc.orig
-    ```
+
+  ```shell
+  mv ~/.bashrc ~/.bashrc.orig
+  ```
 
 * add a default `.bashrc` to extend by symlinking between `~/.default_bashrc` and `/bash/.default_bashrc`
-    ```shell
-    ln -sv ~/Projects/Personal/dotfiles/bash/.default_bashrc ~/.default_bashrc
-    ```
+
+  ```shell
+  ln -sv ~/Projects/Personal/dotfiles/bash/.default_bashrc ~/.default_bashrc
+  ```
 
 * add symlink between `~/.bashrc` and `/bash/.bashrc`:
 
-    ```shell
-    ln -sv ~/Projects/Personal/dotfiles/bash/.bashrc ~/.bashrc
-    ```
+  ```shell
+  ln -sv ~/Projects/Personal/dotfiles/bash/.bashrc ~/.bashrc
+  ```
 
 #### zsh
 
 * backup existing `.zshrc`
-    ```shell
-    mv ~/.zshrc ~/.zshrc.orig
-    ```
+
+  ```shell
+  mv ~/.zshrc ~/.zshrc.orig
+  ```
 
 * Add symlink between `~/.zshrc` and `/zsh/.zshrc`:
 
-    ```shell
-    ln -sv ~/Projects/Personal/dotfiles/zsh/.zshrc ~/.zshrc
-    ```
+  ```shell
+  ln -sv ~/Projects/Personal/dotfiles/zsh/.zshrc ~/.zshrc
+  ```
 
 <h2 id="development_tools">development tools</h2>
 

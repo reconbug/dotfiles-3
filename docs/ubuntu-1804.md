@@ -17,33 +17,33 @@ sudo apt install git curl -y
 <details>
 <summary><b>Available on Ubuntu Software</b></summary>
 
-| App                                      | Description                                                                                       |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| Brave                                    | Browse faster by blocking ads and trackers that violate your privacy and cost you time and money. |
-| Discord                                  | All-in-one voice and text chat for gamers                                                         |
-| GitKraken                                | Git GUI                                                                                           |
-| [Gimp](https://www.gimp.org/)  | GNU Image Manipulation Program                                                                    |
-| GNOME Tweaks                             | Gnome GUI Tweaks                                                                                  |
-| Signal                                   | Signal Private Messenger for Windows, Mac, and Linux                                              |
-| Slack                                    | Team communication and collaboration                                                              |
-| [Solaar](https://pwr.github.io/Solaar/)  | Browse faster by blocking ads and trackers that violate your privacy and cost you time and money. |
-| [Synergy](https://symless.com/synergy)   | Share one mouse and keyboard between multiple computers                                           |
-| Sublime Text 3                           | Code Editor                                                                                       |
-| VLC                                      | Media player                                                                                      |
-| VSCode                                   | Code Editor                                                                                       |
+| App                                     | Description                                                                                       |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| Brave                                   | Browse faster by blocking ads and trackers that violate your privacy and cost you time and money. |
+| Discord                                 | All-in-one voice and text chat for gamers                                                         |
+| GitKraken                               | Git GUI                                                                                           |
+| [Gimp](https://www.gimp.org/)           | GNU Image Manipulation Program                                                                    |
+| GNOME Tweaks                            | Gnome GUI Tweaks                                                                                  |
+| Signal                                  | Signal Private Messenger for Windows, Mac, and Linux                                              |
+| Slack                                   | Team communication and collaboration                                                              |
+| [Solaar](https://pwr.github.io/Solaar/) | Browse faster by blocking ads and trackers that violate your privacy and cost you time and money. |
+| [Synergy](https://symless.com/synergy)  | Share one mouse and keyboard between multiple computers                                           |
+| Sublime Text 3                          | Code Editor                                                                                       |
+| VLC                                     | Media player                                                                                      |
+| VSCode                                  | Code Editor                                                                                       |
 
 </details>
 
 <details>
 <summary><b>Other</b></summary>
 
-| App                                                                                    | Description                                                    |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
-| [Chrome](https://www.google.com.au/chrome/browser/desktop/index.html)                  | Google's web browser                                           |
-| [Etcher](https://etcher.io)                                                            | Flash OS images to SD cards & USB drives, safely and easily.   |
-| [Graphql Playground](https://github.com/graphcool/graphql-playground/releases)         | GraphQL IDE for better development workflows                   |
-| [Private Internet Access](https://www.privateinternetaccess.com/pages/client-support/) | VPN                                                            |
-| [Vivaldi](https://vivaldi.com/download/)                                               | Fast, customisable web browser                                 |
+| App                                                                                    | Description                                                  |
+| -------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| [Chrome](https://www.google.com.au/chrome/browser/desktop/index.html)                  | Google's web browser                                         |
+| [Etcher](https://etcher.io)                                                            | Flash OS images to SD cards & USB drives, safely and easily. |
+| [Graphql Playground](https://github.com/graphcool/graphql-playground/releases)         | GraphQL IDE for better development workflows                 |
+| [Private Internet Access](https://www.privateinternetaccess.com/pages/client-support/) | VPN                                                          |
+| [Vivaldi](https://vivaldi.com/download/)                                               | Fast, customisable web browser                               |
 
 </details>
 
@@ -95,11 +95,11 @@ sudo apt-get install chrome-gnome-shell
 
 ### Gnome Tweak Tool
 
-| Feature                    | Instructions                                                                                               |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| Battery Percentage         | Top Bar :arrow_right: Battery Percentage :arrow_right: ON                                                  |
-| Show date next to time     | Top Bar :arrow_right: Clock :arrow_right: Date :arrow_right: ON                                            |
-| Window controls like macOS | Windows :arrow_right: Titlebar Buttons :arrow_right: Placement :arrow_right: Left                          |
+| Feature                    | Instructions                                                                      |
+| -------------------------- | --------------------------------------------------------------------------------- |
+| Battery Percentage         | Top Bar :arrow_right: Battery Percentage :arrow_right: ON                         |
+| Show date next to time     | Top Bar :arrow_right: Clock :arrow_right: Date :arrow_right: ON                   |
+| Window controls like macOS | Windows :arrow_right: Titlebar Buttons :arrow_right: Placement :arrow_right: Left |
 
 ### Ubuntu
 

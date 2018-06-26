@@ -149,10 +149,12 @@ TBD - currently a wip.
 [Instructions can be found here](/docs/dev-tools-manual.md).
 
 <h2 id="os-and-apps">:computer: os & apps</h2>
-[Instructions can be found here](./docs/ubuntu-1804.md).
+
+[Instructions can be found here](/docs/ubuntu-1804.md).
 
 <h2 id="os-and-apps">:metro: vscode & extensions</h2>
-[Instructions can be found here](./docs/vscode.md).
+
+[Instructions can be found here](/docs/vscode.md).
 
 <h2 id="contribs">:family_man_woman_girl_boy: contributions</h2>
 

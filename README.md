@@ -1,5 +1,4 @@
 <h1 align="center">my os, apps, dotfiles & dev env</h1>
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
 <p align="center">ubuntu 18.04lts, apps & vscode setup with bash & zsh dotfiles<br/>install scripts for the lazy or manual instructions for terminal beginners included!</p>
 
@@ -165,13 +164,3 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 <h2 id="license">:clipboard: license</h2>
 
 MIT
-
-## Contributors
-
-Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!

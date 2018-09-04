@@ -23,6 +23,8 @@ cd ~/.asdf
 git checkout $(git describe --abbrev=0 --tags)
 ```
 
+Close and reopen your terminal session to now use `asdf`.
+
 <details>
 <summary>git</summary>
 
@@ -58,11 +60,11 @@ bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 
 # nodejs LTS
 
-asdf install nodejs 8.11.3
+asdf install nodejs 8.11.4
 
 # set as global default
 
-asdf global nodejs 8.11.3
+asdf global nodejs 8.11.4
 ```
 
 </details>
@@ -173,11 +175,11 @@ asdf plugin-add java https://github.com/skotchpine/asdf-java
 
 # latest java version
 
-asdf install java 10.0.1
+asdf install java oracle-10.0.2
 
 # set as global default
 
-asdf global java 10.0.1
+asdf global java oracle-10.0.2
 ```
 
 Note: Maven & Gradle installed separately.
@@ -250,7 +252,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 # install
 
-# when prompt, do not update your shell configuration files.
+# WARNING!!! when prompt, do not update your shell configuration files.
 
 ~/.fzf/install
 ```

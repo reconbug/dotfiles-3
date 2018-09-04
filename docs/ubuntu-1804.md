@@ -2,6 +2,10 @@
 
 Steps to setup a slick Ubuntu UI and UX.
 
+## Ubuntu 18.04 on Lenovo ThinkPad E485/E585
+
+Ubuntu will hang on installation on a Lenovo ThinkPad E485/E585. [To solve this, follow these instructions: Ubuntu 18.04 LTS on Lenovo ThinkPad E485](https://medium.com/@jthegedus/ubuntu-18-04-lts-on-lenovo-thinkpad-e485-15e1d601473f)
+
 ## Ubuntu 18.04 on XPS15 9560
 
 On login the OS may hang. [To fix this follow these instructions: Ubuntu 18.04 on XPS 15 9560](https://medium.com/@jthegedus/ubuntu-18-04-lts-on-a-dell-xps-db4dcee9a2f9).

@@ -19,7 +19,6 @@ sudo apt install git curl -y
 
 | App                                     | Description                                                                                       |
 | --------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| Brave                                   | Browse faster by blocking ads and trackers that violate your privacy and cost you time and money. |
 | Discord                                 | All-in-one voice and text chat for gamers                                                         |
 | GitKraken                               | Git GUI                                                                                           |
 | [Gimp](https://www.gimp.org/)           | GNU Image Manipulation Program                                                                    |
@@ -41,7 +40,6 @@ sudo apt install git curl -y
 | -------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
 | [Chrome](https://www.google.com.au/chrome/browser/desktop/index.html)                  | Google's web browser                                         |
 | [Etcher](https://etcher.io)                                                            | Flash OS images to SD cards & USB drives, safely and easily. |
-| [Graphql Playground](https://github.com/graphcool/graphql-playground/releases)         | GraphQL IDE for better development workflows                 |
 | [Private Internet Access](https://www.privateinternetaccess.com/pages/client-support/) | VPN                                                          |
 | [Vivaldi](https://vivaldi.com/download/)                                               | Fast, customisable web browser                               |
 

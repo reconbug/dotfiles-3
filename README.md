@@ -48,27 +48,23 @@ sudo apt install git curl -y
 This project assumes a local repository folder structure like the following:
 
 ```
-~/Projects
-~/Projects/Forks
-~/Projects/Job
-~/Projects/Personal
-~/Projects/Playground
+~/projects
 ```
 
-Where this `dotfiles` repo is cloned to `~/Projects/Personal/`, resulting in `~/Projects/Personal/dotfiles/`. If you wish to use a different folder structure, do a **search and replace** on `/Projects/Personal`. Other Zsh install guides recommend putting the `/Dotfiles/` folder in your user Home folder `~/`
+Where this `dotfiles` repo is cloned to `~/projects/`, resulting in `~/projects/dotfiles/`. If you wish to use a different folder structure, do a **search and replace** on `/projects`. Other Zsh install guides recommend putting the `/Dotfiles/` folder in your user Home folder `~/`
 
 - To create the folder structure run this command in Bash:
 
 ```shell
-cd ~ && mkdir -p Projects/Forks Projects/Job Projects/Personal Projects/Playground
+cd ~ && mkdir -p projects
 ```
 
 <h3 id="install_dotfiles">install these dotfiles</h3>
 
-Clone this repo to `~/Projects/Personal/`
+Clone this repo to `~/projects/`
 
 ```shell
-cd ~ && git clone https://github.com/jthegedus/dotfiles "Projects/Personal/dotfiles"
+cd ~ && git clone https://github.com/jthegedus/dotfiles "projects/dotfiles"
 ```
 
 Now follow either the automated or manual instructions in dotfiles and development tools sections.
@@ -97,7 +93,7 @@ TBD - currently a wip.
 
 - add symlink between `~/.aliases` and `/common/.aliases`
   ```shell
-  ln -sv ~/Projects/Personal/dotfiles/common/.aliases ~/.aliases
+  ln -sv ~/projects/dotfiles/common/.aliases ~/.aliases
   ```
 
 #### bash
@@ -111,13 +107,13 @@ TBD - currently a wip.
 - add a default `.bashrc` to extend by symlinking between `~/.default_bashrc` and `/bash/.default_bashrc`
 
   ```shell
-  ln -sv ~/Projects/Personal/dotfiles/bash/.default_bashrc ~/.default_bashrc
+  ln -sv ~/projects/dotfiles/bash/.default_bashrc ~/.default_bashrc
   ```
 
 - add symlink between `~/.bashrc` and `/bash/.bashrc`:
 
   ```shell
-  ln -sv ~/Projects/Personal/dotfiles/bash/.bashrc ~/.bashrc
+  ln -sv ~/projects/dotfiles/bash/.bashrc ~/.bashrc
   ```
 
 #### zsh
@@ -131,7 +127,7 @@ TBD - currently a wip.
 - Add symlink between `~/.zshrc` and `/zsh/.zshrc`:
 
   ```shell
-  ln -sv ~/Projects/Personal/dotfiles/zsh/.zshrc ~/.zshrc
+  ln -sv ~/projects/dotfiles/zsh/.zshrc ~/.zshrc
   ```
 
 <h2 id="development_tools">:wrench: development tools</h2>
@@ -152,7 +148,7 @@ TBD - currently a wip.
 
 [Instructions can be found here](/docs/ubuntu-1804.md).
 
-<h2 id="os-and-apps">:metro: vscode & extensions</h2>
+<h2 id="vscode-extensions">:metro: vscode & extensions</h2>
 
 [Instructions can be found here](/docs/vscode.md).
 

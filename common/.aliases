@@ -30,10 +30,7 @@ alias lg='git log --all --decorate --oneline --graph'
 alias q="~ && clear"
 #
 [ -d ~/Pictures ]           && alias pic='cd ~/Pictures'
-[ -d ~/Projects ]           && alias pj='cd ~/Projects'
-[ -d ~/Projects/Personal ]  && alias pjp='cd ~/Projects/Personal'
-[ -d ~/Projects/Forks ]     && alias pjf='cd ~/Projects/Forks'
-[ -d ~/Projects/Job ]       && alias pjj='cd ~/Projects/Job'
+[ -d ~/projects ]           && alias pj='cd ~/projects'
 
 ### folders
 #

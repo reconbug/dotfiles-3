@@ -21,19 +21,19 @@ sudo apt install git curl -y
 <details>
 <summary><b>Available on Ubuntu Software</b></summary>
 
-| App                                     | Description                                                                                       |
-| --------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| Discord                                 | All-in-one voice and text chat for gamers                                                         |
-| GitKraken                               | Git GUI                                                                                           |
-| [Gimp](https://www.gimp.org/)           | GNU Image Manipulation Program                                                                    |
-| GNOME Tweaks                            | Gnome GUI Tweaks                                                                                  |
-| Signal                                  | Signal Private Messenger for Windows, Mac, and Linux                                              |
-| Slack                                   | Team communication and collaboration                                                              |
-| [Solaar](https://pwr.github.io/Solaar/) | Browse faster by blocking ads and trackers that violate your privacy and cost you time and money. |
-| [Synergy](https://symless.com/synergy)  | Share one mouse and keyboard between multiple computers                                           |
-| Sublime Text 3                          | Code Editor                                                                                       |
-| VLC                                     | Media player                                                                                      |
-| VSCode                                  | Code Editor                                                                                       |
+| App                                     | Description                                                                                                     |
+| --------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| Discord                                 | All-in-one voice and text chat for gamers                                                                       |
+| GitKraken                               | Git GUI. If downloaded from their website, run: `sudo apt install libgnome-keyring-common libgnome-keyring-dev` |
+| [Gimp](https://www.gimp.org/)           | GNU Image Manipulation Program                                                                                  |
+| GNOME Tweaks                            | Gnome GUI Tweaks                                                                                                |
+| Signal                                  | Signal Private Messenger for Windows, Mac, and Linux                                                            |
+| Slack                                   | Team communication and collaboration                                                                            |
+| [Solaar](https://pwr.github.io/Solaar/) | Browse faster by blocking ads and trackers that violate your privacy and cost you time and money.               |
+| [Synergy](https://symless.com/synergy)  | Share one mouse and keyboard between multiple computers                                                         |
+| Sublime Text 3                          | Code Editor                                                                                                     |
+| VLC                                     | Media player                                                                                                    |
+| VSCode                                  | Code Editor                                                                                                     |
 
 </details>
 
@@ -70,15 +70,17 @@ git clone https://github.com/keeferrourke/la-capitaine-icon-theme.git
 
 Now open Gnome Tweak Tool :arrow_right: Appearance and set the Icons to La-capitaine-icon-theme
 
-**[Communitheme](https://github.com/ubuntu/communitheme-snap-helpers/blob/master/README.md)**
+**[Communitheme](https://github.com/ubuntu/yaru#testing-yarucommunitheme-snap-on-ubuntu-1804-bionic-beaver)**
 
-Download from Gnome Software or install the snap directly:
+Install the snap:
 
 ```shell
 snap install communitheme
 ```
 
-After installing, open Gnome Tweak Tool :arrow_right: Appearance :arrow_right: Themes :arrow_right: click the Applications dropdown :arrow_right: `Communitheme`
+Restart your machine. Click the gear next to the **Sign In** button and ensure the option **Ubuntu with commnuitheme snap** is selected.
+
+If the theme is not set for the application windows, open **Gnome Tweak Tool** :arrow_right: Appearance :arrow_right: Themes :arrow_right: click the Applications dropdown :arrow_right: `Communitheme`.
 
 ## Gnome Extensions
 

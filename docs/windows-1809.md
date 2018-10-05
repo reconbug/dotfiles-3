@@ -1,12 +1,12 @@
 <h1 align="center"> Windows 10 (1809) with Windows Subsystem for Linux (WSL)</h1>
 
-<p align="center">Steps to setup Windows 10 1809 with WSL and integrate with my <a href="./dev-tools-manual.md">dev-tools</a></p>
+<p align="center">Steps to setup Windows 10 1809 with WSL and integrate it with my <a href="./dev-tools-manual.md">dev-tools</a></p>
 
 <p align="center">
     <em>
      <a href="#install-ubuntu-from-windows-store">Ubuntu on Windows</a>
     · <a href="#setup-filesystem-syncing">Setup filesystem syncing</a>
-    · <a href="#yarn-node-other-dev-tools-&-caveat-emptor">dev tools & Caveat Emptor</a>
+    · <a href="#yarn-node-other-dev-tools--caveat-emptor">dev tools & Caveat Emptor</a>
     · <a href="#wsl-within-vscode">Bash & VSCode</a>
     </em>
 </p>
@@ -32,13 +32,15 @@ Update Ubuntu deps: `sudo apt-get update && sudo apt-get upgrade`
 
 ## Setup filesystem syncing
 
-The filesystem used by the Linux shell is hidden deep in your user's AppData folder. To make developing more convenient we will setup a symlink between our `projects` folder between the two environments.
+The filesystem used by the Linux shell is hidden deep in your user's AppData folder. To make developing more convenient we will setup a symlink between our `projects` folder across the two environments.
 
 1. create a `projects` folder in your Windows user space. I like to use `C:\Users\james\projects`
 2. open Ubuntu
 3. create a symlink by linking your new projects folder from Windows to our Ubuntu user space.
-  `ln -sv /mnt/c/Users/<windows username>/projects ~/projects`.
-4. check the symlink with `ls -la` and test creating and editing a file from each user space to see that the changes are reflected correctly.
+  ```shell
+    ln -sv /mnt/c/Users/<windows username>/projects ~/projects
+  ```
+4. validate the symlink with `ls -la` and creating and editing a file from each user space to see that the changes are reflected correctly.
 
 ## Yarn, Node, other dev tools & Caveat Emptor
 

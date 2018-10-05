@@ -1,6 +1,6 @@
 <h1 align="center">my os, apps, dotfiles & dev env</h1>
 
-<p align="center">ubuntu 18.04lts, apps & vscode setup with bash & zsh dotfiles<br/>install scripts for the lazy or manual instructions for terminal beginners included!</p>
+<p align="center">ubuntu 18.04lts, apps & vscode setup with bash & zsh dotfiles<br/>install scripts for the lazy (TBD) or manual instructions for terminal beginners included!</p>
 
 <!-- badges -->
 
@@ -28,7 +28,8 @@
     <em>
     :card_file_box: <a href="#dotfiles">dotfiles</a>
     · :wrench: <a href="#development_tools">development tools</a>
-    · :computer: <a href="./docs/ubuntu-1804.md">os & apps</a>
+    · :computer: <a href="./docs/ubuntu-1804.md">ubuntu1804: os & apps</a>
+    · :computer: <a href="./docs/windows-1809.md">win10 & wsl</a>
     · :metro: <a href="./docs/vscode.md">vscode & extensions</a>
     · :family_man_woman_girl_boy: <a href="#contribs">contributions</a>
     · :clipboard: <a href="#license">license</a>

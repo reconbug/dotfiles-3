@@ -32,15 +32,16 @@ Update Ubuntu deps: `sudo apt-get update && sudo apt-get upgrade`
 
 ## Setup filesystem syncing
 
-The filesystem used by the Linux shell is hidden deep in your user's AppData folder. To make developing more convenient we will setup a symlink between our `projects` folder across the two environments.
+The filesystem used by the Linux shell is hidden deep in your user's AppData folder. To make developing more convenient we will set up a symlink between our `projects` folder across the two environments.
 
 1. create a `projects` folder in your Windows user space. I like to use `C:\Users\james\projects`
+    NB: Ubuntu will mount your `C:` drive to `/mnt/c`
 2. open Ubuntu
-3. create a symlink by linking your new projects folder from Windows to our Ubuntu user space.
+3. create a symlink by linking your new projects folder from Windows to our Ubuntu userspace.
   ```shell
     ln -sv /mnt/c/Users/<windows username>/projects ~/projects
   ```
-4. validate the symlink with `ls -la` and creating and editing a file from each user space to see that the changes are reflected correctly.
+4. validate the symlink with `ls -la` and creating and editing a file from each userspace to see that the changes are reflected correctly.
 
 ## Yarn, Node, other dev tools & Caveat Emptor
 
@@ -50,7 +51,7 @@ Now that you have a Ubuntu and Bash environment setup, you should be able to fol
 
 ## WSL within VSCode
 
-The App Store exe for Ubuntu 18.04 seems to be inaccessible to the user via the filesystem, however there is a `bash.exe` app accessible via `C:\Windows\System32\bash.exe` which appears to be the identical environment.
+The App Store exe for Ubuntu 18.04 seems to be inaccessible to the user via the filesystem, however, there is a `bash.exe` app accessible via `C:\Windows\System32\bash.exe` which appears to be the identical environment.
 
 Add this to your VSCode settings:
 
@@ -61,4 +62,4 @@ Add this to your VSCode settings:
 
 Now open your terminal and you should see that the path is the windows mounted volume is the ubuntu user space. Eg: `jt@ac:/mnt/c/Users/james/projects/<your repo>$`.
 
-If you setup the symlink as directed above you should be able to nav to `cd ~/projects/<your repo>/` and see the same reflected files reflected.
+If you set up the symlink as directed above you should be able to nav to `cd ~/projects/<your repo>/` and see the same files reflected.

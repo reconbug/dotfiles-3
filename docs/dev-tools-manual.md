@@ -58,13 +58,14 @@ asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 
 bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 
-# nodejs LTS
+# nodejs LTS & Current
 
-asdf install nodejs 8.11.4
+asdf install nodejs 8.12.0
+asdf install nodejs 10.11.0
 
 # set as global default
 
-asdf global nodejs 8.11.4
+asdf global nodejs 8.12.0
 ```
 
 </details>
@@ -112,9 +113,15 @@ export PATH
 <details>
 <summary>Shellcheck - <a href="https://github.com/koalaman/shellcheck#installing">docs</a></summary>
 
+Ubuntu:
+
 ```shell
 sudo apt install shellcheck -y
 ```
+
+Windows:
+
+Download the binary as [directed here](https://github.com/koalaman/shellcheck#installing) from <https://storage.googleapis.com/shellcheck/shellcheck-stable.zip>
 
 </details>
 
@@ -252,7 +259,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 # install
 
-# WARNING!!! when prompt, do not update your shell configuration files.
+# 🚨 WARNING!!! when prompt, do not update your shell configuration files.
 
 ~/.fzf/install
 ```

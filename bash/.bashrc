@@ -20,7 +20,9 @@ PATH="$PATH:$(yarn global bin)"
 export PATH
 
 ### z
-source "$HOME/z.sh"
+if [ -f "$HOME/z.sh" ]; then
+    source "$HOME/z.sh"
+fi
 
 ### fzf
 if [ -f "$HOME/.fzf.bash" ]; then

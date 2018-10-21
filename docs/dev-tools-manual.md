@@ -1,6 +1,15 @@
-# Dev Tools - Manual Guide
+<h1 align="center">Development Tools - Manual Guide</h1>
 
-Instructions to install the setup I use.
+<p align="center">Instructions to install the setup I use</p>
+
+<p align="center">
+    <em>
+     <a href="#os-level-dependencies">OS Level Deps</a>
+    · <a href="#terminal-mastery">Terminal Mastery</a>
+    · <a href="#languagetool-level-dependencies">Language/Tool Deps</a>
+    · <a href="#tools-depending-on-the-now-installed-languages">Lang Dependent Tools</a>
+    </em>
+</p>
 
 ## OS level dependencies
 
@@ -40,6 +49,36 @@ git config --global user.email <email>
 # git config --global core.editor code
 
 git config --global core.editor <editor>
+```
+
+</details>
+
+## Terminal mastery
+
+<details>
+<summary>z <a href="https://github.com/rupa/z">- docs</a> - terminal nav via fuzzy finding <a href="https://en.wikipedia.org/wiki/Frecency">frecency</a></summary>
+
+```markdown
+cd ~ && wget https://raw.githubusercontent.com/rupa/z/master/z.sh
+```
+
+ensure `source "$HOME/z.sh"` is in your `.bashrc` or `.zshrc`.
+
+</details>
+
+<details>
+<summary>fzf <a href="https://github.com/junegunn/fzf#using-git">- docs</a> - terminal command fuzzy finder</summary>
+
+```markdown
+# download
+
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+
+# install
+
+# 🚨 WARNING!!! when prompt, do not update your shell configuration files.
+
+~/.fzf/install
 ```
 
 </details>
@@ -240,26 +279,3 @@ pip install awscli --upgrade --user
 
 </details>
 
-## Terminal mastery
-
-**[z](https://github.com/rupa/z) - terminal nav via fuzzy finding [frecency](https://en.wikipedia.org/wiki/Frecency)**
-
-```markdown
-cd ~ && wget https://raw.githubusercontent.com/rupa/z/master/z.sh
-```
-
-ensure `source "$HOME/z.sh"` is in your `.bashrc` or `.zshrc`.
-
-**[fzf](https://github.com/junegunn/fzf#using-git) - terminal command fuzzy finder**
-
-```markdown
-# download
-
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-
-# install
-
-# 🚨 WARNING!!! when prompt, do not update your shell configuration files.
-
-~/.fzf/install
-```

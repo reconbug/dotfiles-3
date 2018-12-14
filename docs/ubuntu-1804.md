@@ -11,11 +11,13 @@
     </em>
 </p>
 
-## Ubuntu 18.04/18.10 on Lenovo ThinkPad E485/E585
+## Mobile Hardware Compat Guides
+
+### Ubuntu 18.04/18.10 on Lenovo ThinkPad E485/E585
 
 Ubuntu will hang on installation on a Lenovo ThinkPad E485/E585. [To solve this, follow these instructions: Ubuntu 18.04 LTS on Lenovo ThinkPad E485](https://medium.com/@jthegedus/ubuntu-18-04-lts-on-lenovo-thinkpad-e485-15e1d601473f)
 
-## Ubuntu 18.04/18.10 on XPS15 9560
+### Ubuntu 18.04/18.10 on XPS15 9560
 
 On login the OS may hang. [To fix this follow these instructions: Ubuntu 18.04 on XPS 15 9560](https://medium.com/@jthegedus/ubuntu-18-04-lts-on-a-dell-xps-db4dcee9a2f9).
 
@@ -104,7 +106,7 @@ You also need a browser integration:
 | ------------------ | ---------------------------------------------- |
 | Night Light (Flux) | Devices ➡️ Screen Display ➡️ Night Light ➡️ On |
 
-Arbitrary system settings set via the terminal (automatically set by my dotfiles/scripts/install.sh):
+Arbitrary system settings set via the terminal (automatically set by my `dotfiles/scripts/install.sh` script):
 
 ```markdown
 # exfat support

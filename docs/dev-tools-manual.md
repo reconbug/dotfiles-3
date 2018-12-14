@@ -11,6 +11,10 @@
     </em>
 </p>
 
+## Automated Setup
+
+[`scripts/install.sh`](../scripts/install.sh) is the beginnings of me automating the installation of these tools and dotfiles (`.bashrc`|`.zshrc`). I highly recommend using that method.
+
 ## OS level dependencies
 
 ```shell
@@ -29,7 +33,7 @@ cd ~/.asdf
 
 # checkout latest branch
 
-git checkout $(git describe --abbrev=0 --tags)
+git checkout \$(git describe --abbrev=0 --tags)
 ```
 
 Close and reopen your terminal session to now use `asdf`.
@@ -278,4 +282,3 @@ pip install awscli --upgrade --user
 ```
 
 </details>
-

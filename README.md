@@ -76,7 +76,7 @@ For quick setup you can use the `scripts/install.sh` script. It can setup your `
 ```
 
 <details>
-<summary><b>Manual Setup<b></summary>
+<summary><b>Manual Setup</b></summary>
 <br />
 ⚠️ before re-sourcing or rebooting you should complete the installation of the <a href="#development_tools">development tools</a> section as your shell now depends on some other tools.
 

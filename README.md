@@ -13,7 +13,7 @@
 <!-- some tools used -->
 
 <p align="center">
-    :zap: tools for superpowers :zap:<br/>
+    ⚡️ tools for superpowers ⚡️<br/>
     <em>
       <a href="https://github.com/asdf-vm/asdf">asdf</a>
       · <a href="https://github.com/koalaman/shellcheck">shellcheck</a>
@@ -26,28 +26,27 @@
 
 <p align="center">
     <em>
-    :card_file_box: <a href="#dotfiles">dotfiles</a>
-    · :wrench: <a href="#development_tools">development tools</a>
-    · :computer: <a href="./docs/ubuntu-1804.md">ubuntu1804: os & apps</a>
-    · :computer: <a href="./docs/windows-1809.md">win10 & wsl</a>
-    · :metro: <a href="./docs/vscode.md">vscode & extensions</a>
-    · :family_man_woman_girl_boy: <a href="#contribs">contributions</a>
-    · :clipboard: <a href="#license">license</a>
+    🔧 <a href="./docs/dev-tools-manual.md">development tools</a>
+    · 💻 <a href="./docs/ubuntu-1804.md">ubuntu1804: os & apps</a>
+    · 💻 <a href="./docs/windows-1809.md">win10 & wsl</a>
+    · 🚇 <a href="./docs/vscode.md">vscode & extensions</a>
+    · 👨‍👨‍👧‍👦 <a href="#contribs">contributions</a>
+    · 📋 <a href="#license">license</a>
     </em>
 </p>
 
-<h2 id="installation">:building_construction: installation</h2>
+<h2 id="installation">:building_construction: Dotfiles Setup</h2>
 
 ```markdown
 # required dependencies
 
 sudo apt install git curl -y
 
-# make folder dir
+# create project dir
 
 cd ~ && mkdir -p projects
 
-# download dotfiles
+# clone dotfiles
 
 cd ~ && git clone https://github.com/jthegedus/dotfiles "projects/dotfiles"
 ```
@@ -63,7 +62,7 @@ For quick setup you can use the `scripts/install.sh` script. It can setup your `
 
 # optional 2nd param
 
---install-devtools # only works on Ubuntu at this time
+--install-devtools ⚠️ only works on Ubuntu at this time
 ```
 
 ```markdown
@@ -76,20 +75,10 @@ For quick setup you can use the `scripts/install.sh` script. It can setup your `
 ~/projects/dotfiles/scripts/install.sh --zsh --install-devtools
 ```
 
-### repo folder structure
-
-This project assumes a local repository folder structure like the following:
-
-```
-~/projects
-```
-
-Where this `dotfiles` repo is cloned to `~/projects/`, resulting in `~/projects/dotfiles/`. If you wish to use a different folder structure, do a **search and replace** on `/projects`. Other Zsh install guides recommend putting the `/Dotfiles/` folder in your user Home folder `~/`
-
 <details>
-<summary>manual installation</summary>
-
-:warning: before re-sourcing or rebooting you should complete the installation of the <a href="#development_tools">development tools</a> section as your shell now depends on some other tools.
+<summary><b>Manual Setup<b></summary>
+<br />
+⚠️ before re-sourcing or rebooting you should complete the installation of the <a href="#development_tools">development tools</a> section as your shell now depends on some other tools.
 
 #### bash
 
@@ -148,15 +137,30 @@ cd ~ && rm -rf fonts/
 
 </details>
 
-<h2 id="os-and-apps">:computer: os & apps</h2>
+<br />
+
+<details>
+<summary><b>Repo Folder Structure</b></summary>
+
+This project assumes a local repository folder structure like the following:
+
+```
+~/projects
+```
+
+Where this `dotfiles` repo is cloned to `~/projects/`, resulting in `~/projects/dotfiles/`. If you wish to use a different folder structure, do a **search and replace** on `/projects`. Other Zsh install guides recommend putting the `/Dotfiles/` folder in your user Home folder `~/`
+
+</details>
+
+<h2 id="os-and-apps">💻 os & apps</h2>
 
 [Instructions can be found here](/docs/ubuntu-1804.md).
 
-<h2 id="vscode-extensions">:metro: vscode & extensions</h2>
+<h2 id="vscode-extensions">🚇 vscode & extensions</h2>
 
 [Instructions can be found here](/docs/vscode.md).
 
-<h2 id="contribs">:family_man_woman_girl_boy: contributions</h2>
+<h2 id="contribs">👨‍👨‍👧‍👦 contributions</h2>
 
 Contributions of any kind welcome!
 
@@ -169,6 +173,6 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-<h2 id="license">:clipboard: license</h2>
+<h2 id="license">📋 license</h2>
 
-MIT
+[MIT License](LICENSE) © [James Hegedus](https://github.com/jthegedus/)

@@ -58,7 +58,7 @@ cd ~ && git clone https://github.com/jthegedus/dotfiles "projects/dotfiles"
 
 ### Automated Setup
 
-For quick setup you can use the `scripts/install.sh` script. It can setup your `.bashrc`, `.zshrc` and install the [dev tools as listed here](/docs/dev-tools-manual.md).
+For quick setup you can use the `scripts/install.sh` script. It can setup your `.bashrc`, `.zshrc` and install the [dev tools as listed here](/docs/dev-tools-manual.md). 🚨 This is not yet 100% idempotent. I believe the only issue is the Gnome Terminal profiles, but am not 100% sure.
 
 ```markdown
 # required 1st param

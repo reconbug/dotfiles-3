@@ -33,7 +33,8 @@ cd ~/.asdf
 
 # checkout latest branch
 
-git checkout \$(git describe --abbrev=0 --tags)
+<!-- prettier-ignore -->
+git checkout "$(git describe --abbrev=0 --tags)"
 ```
 
 Close and reopen your terminal session to now use `asdf`.
@@ -74,15 +75,8 @@ ensure `source "$HOME/z.sh"` is in your `.bashrc` or `.zshrc`.
 <summary>fzf <a href="https://github.com/junegunn/fzf#using-git">- docs</a> - terminal command fuzzy finder</summary>
 
 ```markdown
-# download
-
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-
-# install
-
-# 🚨 WARNING!!! when prompt, do not update your shell configuration files.
-
-~/.fzf/install
+~/.fzf/install --key-bindings --completion --no-update-rc --no-bash --no-zsh
 ```
 
 </details>
@@ -103,12 +97,13 @@ bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 
 # nodejs LTS & Current
 
-asdf install nodejs 8.12.0
-asdf install nodejs 10.11.0
+asdf install nodejs 6.15.1
+asdf install nodejs 8.14.0
+asdf install nodejs 10.14.2
 
 # set as global default
 
-asdf global nodejs 8.12.0
+asdf global nodejs 10.14.2
 ```
 
 </details>
@@ -132,7 +127,7 @@ sudo apt-get update
 
 # install yarn
 
-sudo apt-get install yarn -y
+sudo apt-get install --no-install-recommends yarn -y
 yarn --version
 ```
 
@@ -184,11 +179,12 @@ asdf plugin-add python https://github.com/tuvistavie/asdf-python.git
 
 # install python
 
-asdf install python 3.6.0
+asdf install python 2.7.15
+asdf install python 3.7.1
 
 # set as global default
 
-asdf global python 3.6.0
+asdf global python 3.7.1 2.7.15
 ```
 
 Ensure `export PATH=~/.local/bin:$PATH` is in your `.bashrc` or `.zshrc`.
@@ -238,6 +234,32 @@ Note: Maven & Gradle installed separately.
 
 <details>
 <summary>Other langs</summary>
+
+```markdown
+### ruby
+
+asdf plugin-add ruby
+asdf install ruby 2.5.3
+asdf global ruby 2.5.3
+
+### golang
+
+asdf plugin-add golang
+asdf install golang 1.11.3
+asdf global golang 1.11.3
+
+### ocaml
+
+asdf plugin-add ocaml
+asdf install ocaml 4.07.0
+asdf global ocaml 4.07.0
+
+### rust
+
+asdf plugin-add rust
+asdf install rust 1.31.0
+asdf global rust 1.31.0
+```
 
 By now you surely get the idea for [setting up another lang or tool](https://github.com/asdf-vm/asdf-plugins) with [asdf](https://github.com/asdf-vm/asdf).
 

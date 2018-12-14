@@ -1,6 +1,6 @@
 <h1 align="center">my os, apps, dotfiles & dev env</h1>
 
-<p align="center">ubuntu 18.04lts, apps & vscode setup with bash & zsh dotfiles<br/>install scripts for the lazy (TBD) or manual instructions for terminal beginners included!</p>
+<p align="center">Ubuntu 18.04/18.10, apps & VSCode setup with Bash & ZSH dotfiles<br/>install scripts for the lazy or manual instructions for terminal beginners included!</p>
 
 <!-- badges -->
 
@@ -35,7 +35,7 @@
     </em>
 </p>
 
-<h2 id="installation">🏗 Dotfiles Setup</h2>
+## 🏗 Dotfiles Setup
 
 ```markdown
 # required dependencies

@@ -75,6 +75,8 @@ For quick setup you can use the `scripts/install.sh` script. It can setup your `
 ~/projects/dotfiles/scripts/install.sh --zsh --install-devtools
 ```
 
+If you use Ubuntu, check out these [Gnome Extensions & Gnome Tweaks settings I use](docs/ubuntu-1804.md#gnome-extensions).
+
 <details>
 <summary><b>Manual Setup</b></summary>
 <br />

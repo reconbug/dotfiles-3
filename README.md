@@ -129,7 +129,7 @@ fonts/install.sh
 cd ~ && rm -rf fonts/
 ```
 
-#### development tools
+#### 🔧 Development Tools
 
 [Instructions can be found here](/docs/dev-tools-manual.md).
 

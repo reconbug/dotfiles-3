@@ -35,7 +35,7 @@
     </em>
 </p>
 
-<h2 id="installation">:building_construction: Dotfiles Setup</h2>
+<h2 id="installation">🏗 Dotfiles Setup</h2>
 
 ```markdown
 # required dependencies

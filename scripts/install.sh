@@ -70,9 +70,15 @@ if [ "$2" = "--install-devtools" ]; then
     libssl-dev libyaml-dev libxslt-dev libffi-dev libtool unixodbc-dev -y
 
     ### asdf
-    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-    cd ~/.asdf
-    git checkout "$(git describe --abbrev=0 --tags)"
+    git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+    if cd ~/.asdf; then
+        git checkout "$(git describe --abbrev=0 --tags)";
+    else
+        echo "ERROR accessing ~/.asdf dir. Possible error while cloning."
+        echo "Try the following command manually:"
+        echo "git clone https://github.com/asdf-vm/asdf.git ~/.asdf"
+        exit
+    fi
 
     ### z
     cd ~ && wget https://raw.githubusercontent.com/rupa/z/master/z.sh

@@ -124,8 +124,6 @@ ln -sv ~/projects/dotfiles/zsh/.zshrc ~/.zshrc
 
 # add fonts for powerline
 
-# sudo apt-get install fonts-powerline
-
 cd ~ && git clone https://github.com/powerline/fonts.git --depth=1
 fonts/install.sh
 cd ~ && rm -rf fonts/

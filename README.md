@@ -42,9 +42,41 @@
 # required dependencies
 
 sudo apt install git curl -y
+
+# make folder dir
+
+cd ~ && mkdir -p projects
+
+# download dotfiles
+
+cd ~ && git clone https://github.com/jthegedus/dotfiles "projects/dotfiles"
 ```
 
-<h3 id="repo_folder_structure">repo folder structure</h3>
+### Automated Setup
+
+For quick setup you can use the `scripts/install.sh` script. It can setup your `.bashrc`, `.zshrc` and install the [dev tools as listed here](/docs/dev-tools-manual.md).
+
+```markdown
+# required 1st param
+
+--bash | --zsh | --skip-shell
+
+# optional 2nd param
+
+--install-devtools # only works on Ubuntu at this time
+```
+
+```markdown
+# bash
+
+~/projects/dotfiles/scripts/install.sh --bash --install-devtools
+
+# zsh
+
+~/projects/dotfiles/scripts/install.sh --zsh --install-devtools
+```
+
+### repo folder structure
 
 This project assumes a local repository folder structure like the following:
 
@@ -54,96 +86,67 @@ This project assumes a local repository folder structure like the following:
 
 Where this `dotfiles` repo is cloned to `~/projects/`, resulting in `~/projects/dotfiles/`. If you wish to use a different folder structure, do a **search and replace** on `/projects`. Other Zsh install guides recommend putting the `/Dotfiles/` folder in your user Home folder `~/`
 
-- To create the folder structure run this command in Bash:
-
-```shell
-cd ~ && mkdir -p projects
-```
-
-<h3 id="install_dotfiles">install these dotfiles</h3>
-
-Clone this repo to `~/projects/`
-
-```shell
-cd ~ && git clone https://github.com/jthegedus/dotfiles "projects/dotfiles"
-```
-
-Now follow either the automated or manual instructions in dotfiles and development tools sections.
-
-<h2 id="dotfiles">:card_file_box: dotfiles</h2>
-
-<h3 id="dotfiles_automatic">automatic installation</h3>
-
-TBD - currently a wip.
-
-```markdown
-# for bash users
-
-...
-
-# for zsh users
-
-...
-```
-
-<h3 id="dotfiles_manual">manual installation</h3>
+<details>
+<summary>manual installation</summary>
 
 :warning: before re-sourcing or rebooting you should complete the installation of the <a href="#development_tools">development tools</a> section as your shell now depends on some other tools.
 
-#### common
-
-- add symlink between `~/.aliases` and `/common/.aliases`
-  ```shell
-  ln -sv ~/projects/dotfiles/common/.aliases ~/.aliases
-  ```
-
 #### bash
 
-- backup existing `.bashrc`
+```markdown
+# backup bashrc
 
-  ```shell
-  mv ~/.bashrc ~/.bashrc.orig
-  ```
+mv ~/.bashrc ~/.bashrc.orig
 
-- add a default `.bashrc` to extend by symlinking between `~/.default_bashrc` and `/bash/.default_bashrc`
+# symlink bashrc
 
-  ```shell
-  ln -sv ~/projects/dotfiles/bash/.default_bashrc ~/.default_bashrc
-  ```
+ln -sv ~/projects/dotfiles/bash/.bashrc_default ~/.bashrc_default
+ln -sv ~/projects/dotfiles/bash/.bashrc ~/.bashrc
 
-- add symlink between `~/.bashrc` and `/bash/.bashrc`:
+# add aliases (zsh uses a oh-my-zsh alias plugin)
 
-  ```shell
-  ln -sv ~/projects/dotfiles/bash/.bashrc ~/.bashrc
-  ```
+ln -sv ~/projects/dotfiles/common/.aliases ~/.aliases
+```
 
 #### zsh
 
-- backup existing `.zshrc`
-
-  ```shell
-  mv ~/.zshrc ~/.zshrc.orig
-  ```
-
-- Add symlink between `~/.zshrc` and `/zsh/.zshrc`:
-
-  ```shell
-  ln -sv ~/projects/dotfiles/zsh/.zshrc ~/.zshrc
-  ```
-
-<h2 id="development_tools">:wrench: development tools</h2>
-
-<h3 id="dev_tools_automatic">automatic installation</h3>
-
-TBD - currently a wip.
-
 ```markdown
-...
+# install oh-my-zsh
+
+sh -c "\$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# change default shell
+
+chsh -s "\$(command -v zsh)"
+
+# install zgen
+
+sudo apt install git
+git clone https://github.com/tarjoilija/zgen.git "\${HOME}/.zgen"
+
+# backup zshrc
+
+mv ~/.zshrc ~/.zshrc.orig
+
+# symlink zshrc
+
+ln -sv ~/projects/dotfiles/zsh/.zshrc_default ~/.zshrc_default
+ln -sv ~/projects/dotfiles/zsh/.zshrc ~/.zshrc
+
+# add fonts for powerline
+
+# sudo apt-get install fonts-powerline
+
+cd ~ && git clone https://github.com/powerline/fonts.git --depth=1
+fonts/install.sh
+cd ~ && rm -rf fonts/
 ```
 
-<h3 id="dev_tools_manual">manual installation</h3>
+#### development tools
 
 [Instructions can be found here](/docs/dev-tools-manual.md).
+
+</details>
 
 <h2 id="os-and-apps">:computer: os & apps</h2>
 

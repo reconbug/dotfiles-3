@@ -129,7 +129,20 @@ if [ "$2" = "--install-devtools" ]; then
     asdf install rust 1.31.0
     asdf global rust 1.31.0
 
+fi
+
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    ### exfat support
+    sudo apt-get install exfat-fuse exfat-utils
+
+    ### increase max watchers
+    echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf
+    sudo sysctl -p
+
     ### terminal Atom-One Light/Dark profiles
     bash -c "$(curl -fsSL https://raw.githubusercontent.com/denysdovhan/gnome-terminal-one/master/one-dark.sh)"
     bash -c "$(curl -fsSL https://raw.githubusercontent.com/denysdovhan/gnome-terminal-one/master/one-light.sh)"
+
+    ### add chrome gnome shell integration
+    sudo apt-get install chrome-gnome-shell -y
 fi

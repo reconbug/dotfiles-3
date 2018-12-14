@@ -26,12 +26,12 @@
 
 <p align="center">
     <em>
-    🔧 <a href="./docs/dev-tools-manual.md">development tools</a>
-    · 💻 <a href="./docs/ubuntu-1804.md">ubuntu1804: os & apps</a>
-    · 💻 <a href="./docs/windows-1809.md">win10 & wsl</a>
-    · 🚇 <a href="./docs/vscode.md">vscode & extensions</a>
-    · 👨‍👨‍👧‍👦 <a href="#contribs">contributions</a>
-    · 📋 <a href="#license">license</a>
+    🔧 <a href="./docs/dev-tools-manual.md">Development Tools</a>
+    · 💻 <a href="./docs/ubuntu-1804.md">Ubuntu 18.04/10: os & apps</a>
+    · 💻 <a href="./docs/windows-1809.md">Win10 & WSL</a>
+    · 🚇 <a href="./docs/vscode.md">VSCode & Extensions</a>
+    · 👨‍👨‍👧‍👦 <a href="#-contributions">Contributions</a>
+    · 📋 <a href="#-license">License</a>
     </em>
 </p>
 
@@ -155,6 +155,10 @@ Where this `dotfiles` repo is cloned to `~/projects/`, resulting in `~/projects/
 <h2 id="os-and-apps">💻 os & apps</h2>
 
 [Instructions can be found here](/docs/ubuntu-1804.md).
+
+<h2 id="win10-wsl">💻 Win10 & WSL</h2>
+
+[Instructions can be found here](/docs/windows-1809.md).
 
 <h2 id="vscode-extensions">🚇 vscode & extensions</h2>
 

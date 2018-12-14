@@ -131,9 +131,10 @@ if [ "$2" = "--install-devtools" ]; then
 
 fi
 
+### Ubuntu specific
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     ### exfat support
-    sudo apt-get install exfat-fuse exfat-utils
+    sudo apt-get install exfat-fuse exfat-utils -y
 
     ### increase max watchers
     echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf

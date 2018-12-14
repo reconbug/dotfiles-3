@@ -1,6 +1,6 @@
 <h1 align="center">my os, apps, dotfiles & dev env</h1>
 
-<p align="center">Ubuntu 18.04/18.10, apps & VSCode setup with Bash & ZSH dotfiles<br/>install scripts for the lazy or manual instructions for terminal beginners included!</p>
+<p align="center">Ubuntu 18.04/18.10, apps & VSCode setup with Bash & ZSH dotfiles,<br/>install scripts for the lazy or manual instructions for terminal beginners included!</p>
 
 <!-- badges -->
 
@@ -30,9 +30,14 @@
     · 💻 <a href="./docs/ubuntu-1804.md">Ubuntu 18.04/10: os & apps</a>
     · 💻 <a href="./docs/windows-1809.md">Win10 & WSL</a>
     · 🚇 <a href="./docs/vscode.md">VSCode & Extensions</a>
-    · 👨‍👨‍👧‍👦 <a href="#-contributions">Contributions</a>
-    · 📋 <a href="#-license">License</a>
     </em>
+</p>
+
+<p align="center">
+  <em>
+  👨‍👨‍👧‍👦 <a href="#-contributions">Contributions</a>
+  · 📋 <a href="#-license">License</a>
+  </em>
 </p>
 
 ## 🏗 Dotfiles Setup

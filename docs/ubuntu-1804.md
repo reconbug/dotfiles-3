@@ -134,7 +134,7 @@ git clone https://github.com/keeferrourke/la-capitaine-icon-theme.git
 
 Now open Gnome Tweak Tool ➡️ Appearance and set the Icons to La-capitaine-icon-theme
 
-**[Yuru](https://github.com/ubuntu/yaru#testing-yarucommunitheme-snap-on-ubuntu-1804-bionic-beaver)**
+**[Yaru](https://github.com/ubuntu/yaru#testing-yarucommunitheme-snap-on-ubuntu-1804-bionic-beaver)**
 
 Install the snap:
 

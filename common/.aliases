@@ -49,7 +49,3 @@ alias path='echo -e ${PATH//:/\\n}'
 alias getpage='wget --no-clobber --page-requisites --html-extension --convert-links --no-host-directories'
 # file with original filename
 alias get="curl -O -L"
-
-
-### Node
-alias node=nodejs

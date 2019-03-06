@@ -29,8 +29,8 @@ alias lg='git log --all --decorate --oneline --graph'
 # go to the /home/$USER (~) directory and clears window of your terminal
 alias q="~ && clear"
 #
-[ -d ~/Pictures ]           && alias pic='cd ~/Pictures'
-[ -d ~/projects ]           && alias pj='cd ~/projects'
+[ -d ~/Pictures ] && alias pic='cd ~/Pictures'
+[ -d ~/projects ] && alias pj='cd ~/projects'
 
 ### folders
 #

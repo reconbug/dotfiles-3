@@ -49,6 +49,7 @@ if ! zgen saved; then
 
   # Load theme
   zgen load denysdovhan/spaceship-zsh-theme spaceship
+  zgen load zsh-users/zsh-syntax-highlighting
 
   # Automaticaly refresh ~/.zshrc and ~/.zshlocal
   if [[ -f ~/.zshlocal ]]; then

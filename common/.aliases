@@ -52,4 +52,4 @@ alias get="curl -O -L"
 
 
 ### Node
-# alias node=nodejs
+alias node=nodejs

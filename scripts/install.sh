@@ -25,13 +25,16 @@ if [ "$1" = "--bash" ]; then
     ln -sv ~/projects/dotfiles/bash/.bashrc_default ~/.bashrc_default
     ln -sv ~/projects/dotfiles/bash/.bashrc ~/.bashrc
 
-    # add aliases (zsh uses a oh-my-zsh alias plugin)
+    # add aliases
     ln -sv ~/projects/dotfiles/common/.aliases ~/.aliases
 fi
 
 ##############################################
 if [ "$1" = "--zsh" ]; then
     echo "Setting up ZSH"
+
+    # add aliases
+    ln -sv ~/projects/dotfiles/common/.aliases ~/.aliases
     
     # install oh-my-zsh
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

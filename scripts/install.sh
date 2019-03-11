@@ -116,7 +116,7 @@ if [ "$2" = "--install-devtools" ]; then
     asdf plugin-add python
     asdf install python 2.7.15
     asdf install python 3.7.1
-    asdf global python 3.7.1 2.7.15
+    asdf global python 3.7.1
 
     ### ruby
     asdf plugin-add ruby

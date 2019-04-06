@@ -74,6 +74,9 @@ if [ -f "/usr/bin/yarn" ]; then
     export PATH="$PATH:$(yarn global bin)"
 fi
 
+### gcloud
+export CLOUDSDK_PYTHON="$(command -v python)"
+
 ### z
 if [ -f "$HOME/z.sh" ]; then
     source "$HOME/z.sh"

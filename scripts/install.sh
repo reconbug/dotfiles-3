@@ -33,6 +33,9 @@ fi
 if [ "$1" = "--zsh" ]; then
     echo "Setting up ZSH"
 
+    # add zsh
+    sudo apt install zsh
+
     # add aliases
     ln -sv ~/projects/dotfiles/common/.aliases ~/.aliases
     
@@ -93,10 +96,10 @@ if [ "$2" = "--install-devtools" ]; then
     ### nodejs
     asdf plugin-add nodejs
     bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
-    asdf install nodejs 6.15.1
-    asdf install nodejs 8.14.0
-    asdf install nodejs 10.14.2
-    asdf global nodejs 10.14.2
+    asdf install nodejs 6.17.1
+    asdf install nodejs 8.15.1
+    asdf install nodejs 10.15.3
+    asdf global nodejs 10.15.3
 
     ### yarn
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
@@ -114,9 +117,9 @@ if [ "$2" = "--install-devtools" ]; then
     xz-utils tk-dev -y
 
     asdf plugin-add python
-    asdf install python 2.7.15
-    asdf install python 3.7.1
-    asdf global python 3.7.1
+    asdf install python 2.7.16
+    asdf install python 3.7.3
+    asdf global python 3.7.3 2.7.16
 
     ### ruby
     asdf plugin-add ruby

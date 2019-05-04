@@ -41,7 +41,7 @@ sudo apt install git curl -y
 | Signal                                  | Signal Private Messenger for Windows, Mac, and Linux                                                            |
 | Slack                                   | Team communication and collaboration                                                                            |
 | [Solaar](https://pwr.github.io/Solaar/) | Browse faster by blocking ads and trackers that violate your privacy and cost you time and money.               |
-| [Synergy](https://symless.com/synergy)  | Share one mouse and keyboard between multiple computers                                                         |
+| [Synergy](https://symless.com/synergy)  | `sudo apt install solaar` - Share one mouse and keyboard between multiple computers                                                         |
 | VLC                                     | Media player                                                                                                    |
 | VSCode                                  | Code Editor                                                                                                     |
 

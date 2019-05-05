@@ -96,8 +96,7 @@ if [ "$2" = "--install-devtools" ]; then
     ### nodejs
     asdf plugin-add nodejs
     bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
-    asdf install nodejs 6.17.1
-    asdf install nodejs 8.15.1
+    asdf install nodejs 8.16.0
     asdf install nodejs 10.15.3
     asdf global nodejs 10.15.3
 

@@ -118,17 +118,17 @@ if [ "$2" = "--install-devtools" ]; then
     asdf plugin-add python
     asdf install python 2.7.16
     asdf install python 3.7.3
-    asdf global python 3.7.3 2.7.16
+    asdf global python 3.7.3
 
     ### ruby
-    asdf plugin-add ruby
-    asdf install ruby 2.5.3
-    asdf global ruby 2.5.3
+    # asdf plugin-add ruby
+    # asdf install ruby 2.5.3
+    # asdf global ruby 2.5.3
 
     ### golang
-    asdf plugin-add golang
-    asdf install golang 1.11.3
-    asdf global golang 1.11.3
+    # asdf plugin-add golang
+    # asdf install golang 1.11.3
+    # asdf global golang 1.11.3
 
     ### ocaml
     asdf plugin-add ocaml
@@ -136,9 +136,9 @@ if [ "$2" = "--install-devtools" ]; then
     asdf global ocaml 4.07.0
 
     ### rust
-    asdf plugin-add rust
-    asdf install rust 1.31.0
-    asdf global rust 1.31.0
+    # asdf plugin-add rust
+    # asdf install rust 1.31.0
+    # asdf global rust 1.31.0
 
 fi
 

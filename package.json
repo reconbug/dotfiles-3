@@ -6,8 +6,6 @@
   "author": "James Hegedus",
   "license": "MIT",
   "scripts": {
-    "contributors:add": "all-contributors add",
-    "contributors:generate": "all-contributors generate",
     "format": "prettier --write **/*.{json,md}"
   },
   "husky": {
@@ -24,11 +22,9 @@
       "shellcheck"
     ]
   },
-  "dependencies": {},
   "devDependencies": {
-    "all-contributors-cli": "^5.4.1",
-    "husky": "^1.2.1",
-    "lint-staged": "^8.1.0",
-    "prettier": "^1.15.3"
+    "husky": "^2.4.0",
+    "lint-staged": "^8.2.0",
+    "prettier": "^1.17.1"
   }
 }

@@ -1,9 +1,13 @@
-#! bin/bash
+#!/bin/sh
 
 ### default zshrc
-if [ -f "$HOME/.default_zshrc" ]; then
-    source "$HOME/.default_zshrc"
+if [ -f "$HOME/.zshrc_default" ]; then
+    source "$HOME/.zshrc_default"
 fi
+
+# Required fix for error:
+# >Insecure completion-dependent directories detected:
+ZSH_DISABLE_COMPFIX="true"
 
 # oh-my-zsh path
 export ZSH=$HOME/.oh-my-zsh
@@ -12,6 +16,7 @@ export ZSH=$HOME/.oh-my-zsh
 export DOTFILES=${DOTFILES:-"$HOME/projects/dotfiles"}
 ZSH_CUSTOM="$DOTFILES/zsh"
 export ZSH_CUSTOM
+
 
 ### ZGEN
 source "${HOME}/.zgen/zgen.zsh"
@@ -91,4 +96,3 @@ fi
 if [ -f "$HOME/.aliases" ]; then
     source "$HOME/.aliases"
 fi
-

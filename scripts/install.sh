@@ -97,8 +97,8 @@ if [ "$2" = "--install-devtools" ]; then
     asdf plugin-add nodejs
     bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
     asdf install nodejs 8.16.0
-    asdf install nodejs 10.15.3
-    asdf global nodejs 10.15.3
+    asdf install nodejs 10.16.0
+    asdf global nodejs 10.16.0
 
     ### yarn
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -

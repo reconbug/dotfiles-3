@@ -66,17 +66,13 @@ Validate the correct WSL version is being used:
 wsl --list --verbose
 ```
 
-⚠️ WIP
-
-<!-- TODO: document WSL 2 setup -->
-
-See the [development on GitHub](https://github.com/microsoft/WSL).
+See the [development of WSL on GitHub](https://github.com/microsoft/WSL).
 
 ### Windows Terminal
 
 Microsoft's new [Terminal application for Windows 10](https://www.microsoft.com/store/productId/9N0DX20HK701) is a modern terminal app with support for different shells, themes, tabs and unicode (read emoji) support.
 
-See the [development on GitHub](https://github.com/microsoft/terminal).
+See the [development of Terminal on GitHub](https://github.com/microsoft/terminal).
 
 <details>
 <summary>Configuring the Terminal</summary>
@@ -99,9 +95,18 @@ See the [VSCode remote server development on GitHub](https://github.com/microsof
 
 ### Prepare for Ubuntu 18.04
 
-⚠️ WIP
+The filesystem used by the Linux shell is hidden deep in your user's AppData folder. To make developing more convenient we will set up a symlink between our `projects` folder across the two environments.
 
-<!-- TODO: document WSL 2 setup -->
+1. create a `projects` folder in your Windows user space. I like to use `C:\Users\<username>\projects`
+   > NB: Ubuntu will mount your `C:` drive to `/mnt/c`
+2. open a Ubuntu Shell
+3. create a symlink by linking your new `projects` folder from Windows to our Ubuntu userspace.
+
+   ```shell
+   ln -sv /mnt/c/Users/<username>/projects ~/projects
+   ```
+
+4. validate the symlink with `ls -la` and creating and editing a file from each userspace to see that the changes are reflected correctly.
 
 ### Last Steps
 

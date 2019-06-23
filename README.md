@@ -1,175 +1,181 @@
-<h1 align="center">my os, apps, dotfiles & dev env</h1>
+<div align="center">
 
-<p align="center">Ubuntu 18.04/18.10, apps & VSCode setup with Bash & ZSH dotfiles,<br/>install scripts for the lazy or manual instructions for terminal beginners included!</p>
+# my os, dotfiles & dev env
+
+Cross-platform dotfiles & dev env for Ubuntu 18.04+ & Windows 10 with WSL2
 
 <!-- badges -->
 
-<p align="center">
-  <a href="https://github.com/prettier/prettier"><img alt="styled with Prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat" /></a>
-  <a href="http://makeapullrequest.com"><img alt="prs welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat" /></a>
-  <a href="contribs"><img alt="All Contributors" src="https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat" /></a>
-</p>
+[![prs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com) [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat)](#contributors)
 
-<!-- some tools used -->
+⚡️ tools for shell superpowers ⚡️<br/>[asdf](https://github.com/asdf-vm/asdf) · [shellcheck](https://github.com/koalaman/shellcheck) · [fzf](https://github.com/junegunn/fzf) · [z](https://github.com/rupa/z)
 
-<p align="center">
-    ⚡️ tools for superpowers ⚡️<br/>
-    <em>
-      <a href="https://github.com/asdf-vm/asdf">asdf</a>
-      · <a href="https://github.com/koalaman/shellcheck">shellcheck</a>
-      · <a href="https://github.com/junegunn/fzf">fzf</a>
-      · <a href="https://github.com/rupa/z">z</a>
-    </em>
-</p>
+</div>
 
-<!-- toc -->
+## Contents
 
-<p align="center">
-    <em>
-    🔧 <a href="./docs/dev-tools-manual.md">Development Tools</a>
-    · 💻 <a href="./docs/ubuntu-1804.md">Ubuntu 18.04/10: os & apps</a>
-    · 💻 <a href="./docs/windows-1809.md">Win10 & WSL</a>
-    · 🚇 <a href="./docs/vscode.md">VSCode & Extensions</a>
-    </em>
-</p>
+- [Preamble](#preamble)
+- [Windows 10 with WSL](#windows-10-with-wsl)
+- [Ubuntu 18.04+](#ubuntu-1804+)
+- [Other](#other)
+- [Contributions](#contributions)
+- [License](#license)
 
-<p align="center">
-  <em>
-  👨‍👨‍👧‍👦 <a href="#-contributions">Contributions</a>
-  · 📋 <a href="#-license">License</a>
-  </em>
-</p>
+## Preamble
 
-## 🏗 Dotfiles Setup
+This "cross-platform" setup of mine is really just a Ubuntu 18.04+ ZSH environment. With Windows 10 and WSL 2 I can reuse most (maybe all, haven't really checked) of my env on both platforms.
 
-```markdown
-# required dependencies
+## Windows 10 with WSL
 
-sudo apt install git curl -y
+### Enable WSL
 
-# create project dir
+1. press `windows key`
+2. type `developer settings` & press `enter`
+3. select `developer mode`
+4. press `windows key`
+5. type `turn windows features on or off` & press `enter`
+6. check `Windows Subsystem for Linux` & then press `ok`
+7. reboot
 
-cd ~ && mkdir -p projects
+### Ubuntu 18.04 on Windows
 
-# clone dotfiles
+Install the [Ubuntu 18.04 Shell](https://www.microsoft.com/store/productId/9N9TNGVNDL3Q).
 
-cd ~ && git clone https://github.com/jthegedus/dotfiles "projects/dotfiles"
+Boot the app and follow any instructions to setup your Ubuntu user profile.
+
+Update Ubuntu deps with: `sudo apt-get update && sudo apt-get upgrade`
+
+### A note on WSL 1 vs WSL 2
+
+This guide will work with WSL version 1 and 2. WSL 2 will be recommended for better Ubuntu support and an improved user experience when it moves into a stable release of Windows 10.
+
+If you intend to use WSL 2, then you will require a Windows build 18917+, currently only available in the Insider Fast ring. [Read more about the requirements in the official release post](https://devblogs.microsoft.com/commandline/wsl-2-is-now-available-in-windows-insiders/).
+
+### Set WSL Version
+
+In powershell (admin) set the WSL version for your Ubuntu shell:
+
+```shell
+# wsl --set-version <Distro> <Version>
+wsl --set-version Ubuntu-18.04 2
 ```
 
-### Automated Setup
+Validate the correct WSL version is being used:
 
-For quick setup you can use the `scripts/install.sh` script. It can setup your `.bashrc`, `.zshrc` and install the [dev tools as listed here](/docs/dev-tools-manual.md). 🚨 This is not yet 100% idempotent. I believe the only issue is the Gnome Terminal profiles, but am not 100% sure.
-
-```markdown
-# required 1st param
-
---bash | --zsh | --skip-shell
-
-# optional 2nd param
-
---install-devtools ⚠️ only works on Ubuntu at this time
+```shell
+wsl --list --verbose
 ```
 
-```markdown
-# bash
+⚠️ WIP
 
-~/projects/dotfiles/scripts/install.sh --bash --install-devtools
+<!-- TODO: document WSL 2 setup -->
 
-# zsh
+See the [development on GitHub](https://github.com/microsoft/WSL).
 
-~/projects/dotfiles/scripts/install.sh --zsh --install-devtools
-```
+### Windows Terminal
 
-If you use Ubuntu, check out these [Gnome Extensions & Gnome Tweaks settings I use](docs/ubuntu-1804.md#gnome-extensions).
+Microsoft's new [Terminal application for Windows 10](https://www.microsoft.com/store/productId/9N0DX20HK701) is a modern terminal app with support for different shells, themes, tabs and unicode (read emoji) support.
+
+See the [development on GitHub](https://github.com/microsoft/terminal).
 
 <details>
-<summary><b>Manual Setup</b></summary>
-<br />
-⚠️ before re-sourcing or rebooting you should complete the installation of the <a href="#development_tools">development tools</a> section as your shell now depends on some other tools.
+<summary>Configuring the Terminal</summary>
 
-#### bash
-
-```markdown
-# backup bashrc
-
-mv ~/.bashrc ~/.bashrc.orig
-
-# symlink bashrc
-
-ln -sv ~/projects/dotfiles/bash/.bashrc_default ~/.bashrc_default
-ln -sv ~/projects/dotfiles/bash/.bashrc ~/.bashrc
-
-# add aliases (zsh uses a oh-my-zsh alias plugin)
-
-ln -sv ~/projects/dotfiles/common/.aliases ~/.aliases
-```
-
-#### zsh
-
-```markdown
-# install oh-my-zsh
-
-sh -c "\$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-# change default shell
-
-chsh -s "\$(command -v zsh)"
-
-# install zgen
-
-sudo apt install git
-git clone https://github.com/tarjoilija/zgen.git "\${HOME}/.zgen"
-
-# backup zshrc
-
-mv ~/.zshrc ~/.zshrc.orig
-
-# symlink zshrc
-
-ln -sv ~/projects/dotfiles/zsh/.zshrc_default ~/.zshrc_default
-ln -sv ~/projects/dotfiles/zsh/.zshrc ~/.zshrc
-
-# add fonts for powerline
-
-cd ~ && git clone https://github.com/powerline/fonts.git --depth=1
-fonts/install.sh
-cd ~ && rm -rf fonts/
-```
-
-#### 🔧 Development Tools
-
-[Instructions can be found here](/docs/dev-tools-manual.md).
+- settings is a JSON file (`profile.json`) so easily syncable over cloud storage or code repository
+- JSON Schema for `profile.json` provides autocompletion in editors for easy discovery of options
+- set the default shell using the `globals.defaultProfile` value with the guid from your desired profile `profile[x].guid`.
+- custom font via `profiles[x].fontFace` & `.fontSize`
+- custom theme per profile with `profiles[x].colorScheme`, set with the desired `schemes[x].name` value. Comes with Solarized Dark/Light, Campbell (MS default theme) and One Half Dark/Light
+- adjustable acrylic opacity (blur)
+- editable key bindings
 
 </details>
 
-<br />
+### VSCode with WSL 2
 
-<details>
-<summary><b>Repo Folder Structure</b></summary>
+With VSCode's remote server feature, we now have native support for WSL within VSCode! Simply run `code .` from within a project folder in any terminal, if VSCode detects it needs to use WSL it will 💯 See the [docs for further information](https://code.visualstudio.com/docs/remote/wsl).
 
-This project assumes a local repository folder structure like the following:
+See the [VSCode remote server development on GitHub](https://github.com/microsoft/vscode-remote-release).
 
-```
-~/projects
-```
+### Prepare for Ubuntu 18.04
 
-Where this `dotfiles` repo is cloned to `~/projects/`, resulting in `~/projects/dotfiles/`. If you wish to use a different folder structure, do a **search and replace** on `/projects`. Other Zsh install guides recommend putting the `/Dotfiles/` folder in your user Home folder `~/`
+⚠️ WIP
 
-</details>
+<!-- TODO: document WSL 2 setup -->
 
-<h2 id="os-and-apps">💻 os & apps</h2>
+### Last Steps
 
-[Instructions can be found here](/docs/ubuntu-1804.md).
+Now that we have WSL 2 working and a Ubuntu 18.04 Bash shell we can essentially follow the below Ubuntu guide below ⬇️
 
-<h2 id="win10-wsl">💻 Win10 & WSL</h2>
+## Ubuntu 18.04+
 
-[Instructions can be found here](/docs/windows-1809.md).
+### Automated installation
 
-<h2 id="vscode-extensions">🚇 vscode & extensions</h2>
+- clone my dotiles into the `projects` dir
 
-[Instructions can be found here](/docs/vscode.md).
+  ```shell
+  cd ~ && git clone https://github.com/jthegedus/dotfiles "projects/dotfiles"
+  ```
 
-<h2 id="contribs">👨‍👨‍👧‍👦 contributions</h2>
+- run the install script
+
+  ```shell
+  # script args
+  # arg 1: required --zsh | --bash | --skip-shell
+  # arg 2: optional --install-devtools
+
+  # bash
+  ~/projects/dotfiles/scripts/install.sh --bash
+  # zsh
+  ~/projects/dotfiles/scripts/install.sh --zsh
+  ```
+
+  add `--install-devtools` if you want to install [asdf](https://github.com/asdf-vm/asdf), Node, Yarn, Python & OCaml tools. If not, you may want to edit your `.zshrc` file after setup to remove the dependencies on some of these tools.
+
+⚠️ development on this script is ongoing to improve ergonomics and add support for macOS.
+
+### Manual Installation
+
+- open `scripts/install.sh` and copy/paste the commands you wish to use from top to bottom. It's fairly straight forward. If there is a tool you're unsure about either see my links at the top of the README or Google them 😉
+
+## Other
+
+Some other development env things:
+
+### VSCode
+
+[My vscode sync-settings can be found here](https://gist.github.com/jthegedus/882fe010b905895f5732e5f91343febb). Some extensions include:
+
+- [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync): Store your config in the cloud making multi-machine and reinstallations a breeze!
+- [One Dark Pro Monokai Darker](https://marketplace.visualstudio.com/items?itemName=eserozvataf.one-dark-pro-monokai-darker): One Dark Pro x Monokai, made darker.
+- [ReasonML language server](https://marketplace.visualstudio.com/items?itemName=jaredly.reason-vscode): written from scratch in Reason for Reason.
+- [shellcheck](https://marketplace.visualstudio.com/items?itemName=timonwong.shellcheck): static analysis your `.sh` scripts. Requires [shellcheck itself](https://github.com/koalaman/shellcheck#shellcheck---a-shell-script-static-analysis-tool).
+
+### Fonts
+
+- [Hack](https://github.com/source-foundry/Hack): mono, free
+- [Fira Code](https://github.com/tonsky/FiraCode): mono, ligatures, free
+- [Dank Mono](https://dank.sh/): mono, ligatures, paid (although reasonable)
+
+### Ubuntu on various hardware
+
+#### Ubuntu 18.04/18.10 on Lenovo ThinkPad E485/E585
+
+Ubuntu will hang on installation on a Lenovo ThinkPad E485/E585. [To solve this, follow these instructions: Ubuntu 18.04 LTS on Lenovo ThinkPad E485](https://medium.com/@jthegedus/ubuntu-18-04-lts-on-lenovo-thinkpad-e485-15e1d601473f)
+
+#### Ubuntu 18.04/18.10 on XPS15 9560
+
+On login the OS may hang. [To fix this follow these instructions: Ubuntu 18.04 on XPS 15 9560](https://medium.com/@jthegedus/ubuntu-18-04-lts-on-a-dell-xps-db4dcee9a2f9).
+
+### Ubuntu 18.04+ apps
+
+- [Solaar](https://pwr.github.io/Solaar/): Logitech Wireless device management. `sudo apt install solaar`
+- [Synergy](https://symless.com/synergy): Cross-platform mouse/keyboard sharing.
+- Gnome Extensions (requires `sudo apt-get install chrome-gnome-shell -y`):
+  - [Alternate Tab](https://extensions.gnome.org/extension/15/alternatetab/): Better alt-tab
+  - [Sound Input & Output Device Chooser](https://extensions.gnome.org/extension/906/sound-output-device-chooser/): Select audio IO from media dropdown
+
+## Contributions
 
 Contributions of any kind welcome!
 
@@ -182,6 +188,6 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-<h2 id="license">📋 license</h2>
+## License
 
 [MIT License](LICENSE) © [James Hegedus](https://github.com/jthegedus/)

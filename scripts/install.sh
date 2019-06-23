@@ -63,6 +63,23 @@ if [ "$1" = "--zsh" ]; then
     cd ~ && rm -rf fonts/
 fi
 
+if [ -z "$1" ]; then
+    echo "Installing git, curl, z, fzf, shellcheck"
+
+    ### prepare
+    sudo apt install git curl
+
+    ### z
+    cd ~ && wget https://raw.githubusercontent.com/rupa/z/master/z.sh
+
+    ### fzf
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install --key-bindings --completion --no-update-rc --no-bash --no-zsh
+
+    ### shellcheck
+    sudo apt install shellcheck -y
+fi
+
 ##############################################
 ### development tools
 if [ -z "$2" ]; then
@@ -86,13 +103,6 @@ if [ "$2" = "--install-devtools" ]; then
         exit
     fi
 
-    ### z
-    cd ~ && wget https://raw.githubusercontent.com/rupa/z/master/z.sh
-
-    ### fzf
-    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-    ~/.fzf/install --key-bindings --completion --no-update-rc --no-bash --no-zsh
-
     ### nodejs
     asdf plugin-add nodejs
     bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
@@ -106,9 +116,6 @@ if [ "$2" = "--install-devtools" ]; then
     sudo apt remove cmdtest -y
     sudo apt-get update -y
     sudo apt-get install --no-install-recommends yarn -y
-
-    ### shellcheck
-    sudo apt install shellcheck -y
 
     ### python
     sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
@@ -152,9 +159,9 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     sudo sysctl -p
 
     ### terminal Atom-One Light/Dark profiles
-    bash -c "$(curl -fsSL https://raw.githubusercontent.com/denysdovhan/gnome-terminal-one/master/one-dark.sh)"
-    bash -c "$(curl -fsSL https://raw.githubusercontent.com/denysdovhan/gnome-terminal-one/master/one-light.sh)"
+    # bash -c "$(curl -fsSL https://raw.githubusercontent.com/denysdovhan/gnome-terminal-one/master/one-dark.sh)"
+    # bash -c "$(curl -fsSL https://raw.githubusercontent.com/denysdovhan/gnome-terminal-one/master/one-light.sh)"
 
     ### add chrome gnome shell integration
-    sudo apt-get install chrome-gnome-shell -y
+    # sudo apt-get install chrome-gnome-shell -y
 fi

@@ -179,6 +179,7 @@ On login the OS may hang. [To fix this follow these instructions: Ubuntu 18.04 o
 - Gnome Extensions (requires `sudo apt-get install chrome-gnome-shell -y`):
   - [Alternate Tab](https://extensions.gnome.org/extension/15/alternatetab/): Better alt-tab
   - [Sound Input & Output Device Chooser](https://extensions.gnome.org/extension/906/sound-output-device-chooser/): Select audio IO from media dropdown
+  - [ShellTile](https://extensions.gnome.org/extension/657/shelltile/): A tiling window extension for GNOME Shell.
 
 ## Contributions
 

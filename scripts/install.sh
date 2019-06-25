@@ -146,11 +146,17 @@ if [ "$2" = "--install-devtools" ]; then
     # asdf plugin-add rust
     # asdf install rust 1.31.0
     # asdf global rust 1.31.0
-
+    
 fi
 
 ### Ubuntu specific
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    ### GCloud
+    # echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+    # sudo apt-get install apt-transport-https ca-certificates -y
+    # curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
+    # sudo apt-get update && sudo apt-get install google-cloud-sdk -y
+
     ### exfat support
     sudo apt-get install exfat-fuse exfat-utils -y
 

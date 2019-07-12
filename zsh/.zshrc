@@ -20,9 +20,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # custom folder instead of $ZSH/custom. path to root of dotfiles repo
 export DOTFILES=${DOTFILES:-"$HOME/projects/dotfiles"}
-ZSH_CUSTOM="$DOTFILES/zsh"
-export ZSH_CUSTOM
-
+export ZSH_CUSTOM="$DOTFILES/zsh"
 
 ### ZGEN
 source_if_exists "${HOME}/.zgen/zgen.zsh"

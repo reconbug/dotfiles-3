@@ -3,7 +3,8 @@
 function add_to_path {
   local path_to_add ="$1"
   
-  # remove from PATH
+  # if in $PATH, remove, regardless of if it is in the right place (at the front) or not.
+  # replace all occurrences - ${parameter//pattern/string}
   [[ "${PATH}:" == *"${path_to_add}"* ]] && PATH="${PATH//$path_to_add/}"
   # add to front of PATH
   PATH="${path_to_add}$PATH"

@@ -1,16 +1,22 @@
 #!/bin/sh
 
+# Will source the provided resource if the resource exists
+source_if_exists () {
+  printf "SOURCING:\\t%s" "$1"
+  if [ -f "$1" ]; then
+    . "$1";
+  fi
+}
+
 ### default zshrc
-if [ -f "$HOME/.zshrc_default" ]; then
-    source "$HOME/.zshrc_default"
-fi
+source_if_exists "$HOME/.zshrc_default"
 
 # Required fix for error:
 # >Insecure completion-dependent directories detected:
 ZSH_DISABLE_COMPFIX="true"
 
 # oh-my-zsh path
-export ZSH=$HOME/.oh-my-zsh
+export ZSH="$HOME/.oh-my-zsh"
 
 # custom folder instead of $ZSH/custom. path to root of dotfiles repo
 export DOTFILES=${DOTFILES:-"$HOME/projects/dotfiles"}
@@ -19,7 +25,7 @@ export ZSH_CUSTOM
 
 
 ### ZGEN
-source "${HOME}/.zgen/zgen.zsh"
+source_if_exists "${HOME}/.zgen/zgen.zsh"
 
 if ! zgen saved; then
   echo "Creating a zgen save..."
@@ -75,24 +81,18 @@ export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 
 ### yarn
 if [ -f "/usr/bin/yarn" ]; then
-    export PATH="$PATH:/opt/yarn-[version]/bin"
-    export PATH="$PATH:$(yarn global bin)"
+  add_path_to_global_path "/opt/yarn-[version]/bin"
+  add_path_to_global_path "$(yarn global bin)"
 fi
 
 ### gcloud
 export CLOUDSDK_PYTHON="$(command -v python)"
 
 ### z
-if [ -f "$HOME/z.sh" ]; then
-    source "$HOME/z.sh"
-fi
+source_if_exists "$HOME/z.sh"
 
 ### fzf
-if [ -f "$HOME/.fzf.zsh" ]; then
-    source "$HOME/.fzf.zsh"
-fi
+source_if_exists "$HOME/.fzf.zsh"
 
 ### aliases
-if [ -f "$HOME/.aliases" ]; then
-    source "$HOME/.aliases"
-fi
+source_if_exists "$HOME/.aliases"

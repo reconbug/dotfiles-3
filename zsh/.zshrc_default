@@ -1,13 +1,14 @@
 #!/bin/sh
 
-function add_to_path {
-  local path_to_add ="$1"
+add_path_to_global_path () {
+  local TO_ADD="$1"
+  echo "LOG: zshrc_default"
   
-  # if in $PATH, remove, regardless of if it is in the right place (at the front) or not.
-  # replace all occurrences - ${parameter//pattern/string}
-  [[ "${PATH}:" == *"${path_to_add}"* ]] && PATH="${PATH//$path_to_add/}"
-  # add to front of PATH
-  PATH="${path_to_add}$PATH"
+  # if in $PATH, remove
+  # replace all occurrences - ${parameter//pattern/string}	
+  [[ ":$PATH:" == *":${TO_ADD}:"* ]] && PATH="${PATH//$TO_ADD:/}"
+  # add to PATH
+  PATH="${TO_ADD}:$PATH"
 }
 
 # If you come from bash you might have to change your $PATH.

@@ -1,5 +1,14 @@
 #!/bin/sh
 
+function add_to_path {
+  local path_to_add ="$1"
+  
+  # remove from PATH
+  [[ "${PATH}:" == *"${path_to_add}"* ]] && PATH="${PATH//$path_to_add/}"
+  # add to front of PATH
+  PATH="${path_to_add}$PATH"
+}
+
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 

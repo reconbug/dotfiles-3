@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# add resource to path (once and only once)
 add_path_to_global_path () {
   local TO_ADD="$1"
   echo "LOG: zshrc_default"
@@ -12,21 +13,18 @@ add_path_to_global_path () {
 }
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+add_path_to_global_path "$HOME/bin"
+add_path_to_global_path "/usr/local/bin"
 
 ### language
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 
-### add bin & usr local bin to path
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 ### completions
 # hyphen-insensitive completion: sensitive completion must be off. _ and - will be interchangeable.
 HYPHEN_INSENSITIVE="true"
 export HYPHEN_INSENSITIVE
-
 
 ### Bind Keypad keys
 # use ctrl+v in the terminal followed by pressing a key to find it's key-code

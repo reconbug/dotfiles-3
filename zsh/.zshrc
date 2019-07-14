@@ -2,7 +2,7 @@
 
 # Will source the provided resource if the resource exists
 source_if_exists () {
-  printf "SOURCING:\\t%s" "$1"
+  printf "SOURCING:\\t%s\\n" "$1"
   if [ -f "$1" ]; then
     . "$1";
   fi

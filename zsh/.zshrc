@@ -85,6 +85,8 @@ fi
 
 ### gcloud
 export CLOUDSDK_PYTHON="$(command -v python)"
+source_if_exists "$HOME/google-cloud-sdk/path.zsh.inc"
+source_if_exists "$HOME/google-cloud-sdk/completion.zsh.inc"
 
 ### z
 source_if_exists "$HOME/z.sh"

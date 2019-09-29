@@ -70,11 +70,11 @@ if [ -z "$1" ]; then
     sudo apt install git curl
 
     ### z
-    cd ~ && wget https://raw.githubusercontent.com/rupa/z/master/z.sh
+    cd ~ && sudo wget https://raw.githubusercontent.com/rupa/z/master/z.sh
 
     ### fzf
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-    ~/.fzf/install --key-bindings --completion --no-update-rc
+    sudo ~/.fzf/install --key-bindings --completion --no-update-rc
 
     ### shellcheck
     sudo apt install shellcheck -y
@@ -89,8 +89,7 @@ fi
 if [ "$2" = "--install-devtools" ]; then
     echo "Setting up development tooling"
 
-    sudo apt install git curl automake autoconf libreadline-dev libncurses-dev \
-    libssl-dev libyaml-dev libxslt-dev libffi-dev libtool unixodbc-dev -y
+    sudo apt install git curl automake autoconf libreadline-dev libncurses-dev libssl-dev libyaml-dev libxslt-dev libffi-dev libtool unixodbc-dev -y
 
     ### asdf
     git clone https://github.com/asdf-vm/asdf.git ~/.asdf
@@ -106,9 +105,10 @@ if [ "$2" = "--install-devtools" ]; then
     ### nodejs
     asdf plugin-add nodejs
     bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
-    asdf install nodejs 8.16.0
-    asdf install nodejs 10.16.0
-    asdf global nodejs 10.16.0
+    asdf install nodejs 8.16.1
+    asdf install nodejs 10.16.3
+    asdf install nodejs 12.11.0
+    asdf global nodejs 12.11.0
 
     ### yarn
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
@@ -124,8 +124,8 @@ if [ "$2" = "--install-devtools" ]; then
 
     asdf plugin-add python
     asdf install python 2.7.16
-    asdf install python 3.7.3
-    asdf global python 3.7.3
+    asdf install python 3.7.4
+    asdf global python 3.7.4
 
     ### ruby
     # asdf plugin-add ruby
@@ -134,8 +134,8 @@ if [ "$2" = "--install-devtools" ]; then
 
     ### golang
     # asdf plugin-add golang
-    # asdf install golang 1.11.3
-    # asdf global golang 1.11.3
+    # asdf install golang 1.13
+    # asdf global golang 1.13
 
     ### ocaml
     asdf plugin-add ocaml
@@ -146,6 +146,12 @@ if [ "$2" = "--install-devtools" ]; then
     # asdf plugin-add rust
     # asdf install rust 1.31.0
     # asdf global rust 1.31.0
+
+    ### gcloud
+    echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+    sudo apt-get install apt-transport-https ca-certificates
+    curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
+    sudo apt-get update && sudo apt-get install google-cloud-sdk -y
     
 fi
 

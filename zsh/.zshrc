@@ -91,7 +91,7 @@ source_if_exists "$HOME/google-cloud-sdk/path.zsh.inc"
 source_if_exists "$HOME/google-cloud-sdk/completion.zsh.inc"
 
 ### z
-source_if_exists "$HOME/.z"
+source_if_exists "$HOME/z.sh"
 
 ### fzf
 source_if_exists "$HOME/.fzf.zsh"

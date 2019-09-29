@@ -34,7 +34,7 @@ if [ "$1" = "--zsh" ]; then
     echo "Setting up ZSH"
 
     # add zsh
-    sudo apt install zsh
+    sudo apt install zsh -y
 
     # add aliases
     ln -sv ~/projects/dotfiles/common/.aliases ~/.aliases
@@ -74,7 +74,7 @@ if [ -z "$1" ]; then
 
     ### fzf
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-    ~/.fzf/install --key-bindings --completion --no-update-rc --no-bash --no-zsh
+    ~/.fzf/install --key-bindings --completion --no-update-rc
 
     ### shellcheck
     sudo apt install shellcheck -y

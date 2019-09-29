@@ -91,10 +91,12 @@ source_if_exists "$HOME/google-cloud-sdk/path.zsh.inc"
 source_if_exists "$HOME/google-cloud-sdk/completion.zsh.inc"
 
 ### z
-source_if_exists "$HOME/z.sh"
+source_if_exists "$HOME/.z"
 
 ### fzf
 source_if_exists "$HOME/.fzf.zsh"
+source_if_exists "$HOME/.fzf/shell/completion.zsh"
+source_if_exists "$HOME/.fzf/shell/key-bindings.zsh"
 
 ### aliases
 source_if_exists "$HOME/.aliases"

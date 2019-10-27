@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -u
-
 # validate args
 if [[ $# -eq 0 ]] ; then
     echo "requires at least 1 arg"
@@ -14,7 +12,6 @@ if [ "$1" = "--skip-shell" ]; then
     echo "Skipping shell installation"
 fi
 
-##############################################
 if [ "$1" = "--bash" ]; then
     echo "Setting up Bash"
 
@@ -29,7 +26,6 @@ if [ "$1" = "--bash" ]; then
     ln -sv ~/projects/dotfiles/common/.aliases ~/.aliases
 fi
 
-##############################################
 if [ "$1" = "--zsh" ]; then
     echo "Setting up ZSH"
 
@@ -46,7 +42,7 @@ if [ "$1" = "--zsh" ]; then
     chsh -s "$(command -v zsh)"
 
     # install zgen
-    sudo apt install git
+    sudo apt install git -y
     git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
 
     # backup zshrc
@@ -67,7 +63,7 @@ if [ -z "$1" ]; then
     echo "Installing git, curl, z, fzf, shellcheck"
 
     ### prepare
-    sudo apt install git curl
+    sudo apt install git curl -y
 
     ### z
     cd ~ && sudo wget https://raw.githubusercontent.com/rupa/z/master/z.sh
@@ -80,8 +76,6 @@ if [ -z "$1" ]; then
     sudo apt install shellcheck -y
 fi
 
-##############################################
-### development tools
 if [ -z "$2" ]; then
     echo "Skipping dev-tool installation"
 fi
@@ -105,10 +99,10 @@ if [ "$2" = "--install-devtools" ]; then
     ### nodejs
     asdf plugin-add nodejs
     bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
-    asdf install nodejs 8.16.1
-    asdf install nodejs 10.16.3
-    asdf install nodejs 12.11.0
-    asdf global nodejs 12.11.0
+    asdf install nodejs 8.16.2
+    asdf install nodejs 10.17.0
+    asdf install nodejs 12.13.0
+    asdf global nodejs 12.13.0
 
     ### yarn
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
@@ -146,22 +140,15 @@ if [ "$2" = "--install-devtools" ]; then
     # asdf plugin-add rust
     # asdf install rust 1.31.0
     # asdf global rust 1.31.0
-
-    ### gcloud
-    echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
-    sudo apt-get install apt-transport-https ca-certificates
-    curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
-    sudo apt-get update && sudo apt-get install google-cloud-sdk -y
-    
 fi
 
 ### Ubuntu specific
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     ### GCloud
-    # echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
-    # sudo apt-get install apt-transport-https ca-certificates -y
-    # curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
-    # sudo apt-get update && sudo apt-get install google-cloud-sdk -y
+    echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+    sudo apt-get install apt-transport-https ca-certificates -y
+    curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
+    sudo apt-get update && sudo apt-get install google-cloud-sdk -y
 
     ### exfat support
     sudo apt-get install exfat-fuse exfat-utils -y
@@ -169,11 +156,4 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     ### increase max watchers
     echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf
     sudo sysctl -p
-
-    ### terminal Atom-One Light/Dark profiles
-    # bash -c "$(curl -fsSL https://raw.githubusercontent.com/denysdovhan/gnome-terminal-one/master/one-dark.sh)"
-    # bash -c "$(curl -fsSL https://raw.githubusercontent.com/denysdovhan/gnome-terminal-one/master/one-light.sh)"
-
-    ### add chrome gnome shell integration
-    # sudo apt-get install chrome-gnome-shell -y
 fi

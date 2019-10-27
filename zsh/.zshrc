@@ -53,6 +53,7 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/aws
   zgen oh-my-zsh plugins/docker
   zgen oh-my-zsh plugins/common-aliases
+  zgen oh-my-zsh plugins/gcloud
   zgen oh-my-zsh plugins/go
   zgen oh-my-zsh plugins/pip
   zgen oh-my-zsh plugins/python

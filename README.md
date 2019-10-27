@@ -184,7 +184,6 @@ On login the OS may hang. Below are the instructions I followed to remedy the is
 - [Solaar](https://pwr.github.io/Solaar/): Logitech Wireless device management. `sudo apt install solaar`
 - [Synergy](https://symless.com/synergy): Cross-platform mouse/keyboard sharing.
 - Gnome Extensions (requires `sudo apt-get install chrome-gnome-shell -y`):
-  - [Alternate Tab](https://extensions.gnome.org/extension/15/alternatetab/): Better alt-tab
   - [Sound Input & Output Device Chooser](https://extensions.gnome.org/extension/906/sound-output-device-chooser/): Select audio IO from media dropdown
   - [ShellTile](https://extensions.gnome.org/extension/657/shelltile/): A tiling window extension for GNOME Shell.
 

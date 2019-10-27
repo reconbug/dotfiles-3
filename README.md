@@ -165,7 +165,7 @@ Some other development env things:
 
 ### Ubuntu on various hardware
 
-#### Ubuntu on Lenovo ThinkPad E485/E585
+#### Lenovo ThinkPad E485/E585
 
 Ubuntu installation will hang on a Lenovo ThinkPad E485/E585. Below are the instructions I followed to remedy the issues:
 
@@ -173,9 +173,11 @@ Ubuntu installation will hang on a Lenovo ThinkPad E485/E585. Below are the inst
 - [19.04](https://medium.com/@jthegedus/ubuntu-19-04-lts-on-lenovo-thinkpad-e485-bf2d6cfd9cad)
 - [19.04 - PopOS!](https://medium.com/@jthegedus/popos-19-04-on-lenovo-thinkpad-e485-ac3951199132)
 
-#### Ubuntu 18.04/18.10 on XPS15 9560
+#### Dell XPS15 9560
 
-On login the OS may hang. [To fix this follow these instructions: Ubuntu 18.04 on XPS 15 9560](https://medium.com/@jthegedus/ubuntu-18-04-lts-on-a-dell-xps-db4dcee9a2f9).
+On login the OS may hang. Below are the instructions I followed to remedy the issues:
+
+- [18.04 / 18.10](https://medium.com/@jthegedus/ubuntu-18-04-lts-on-a-dell-xps-db4dcee9a2f9)
 
 ### Ubuntu 18.04+ apps
 

@@ -149,7 +149,7 @@ Some other development env things:
 
 ### VSCode
 
-[My vscode sync-settings can be found here](https://gist.github.com/jthegedus/882fe010b905895f5732e5f91343febb). Some extensions include:
+[My vscode sync-settings can be found here](https://gist.github.com/jthegedus/21f04da71670c80f39f3f583c87465e0). Some extensions include:
 
 - [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync): Store your config in the cloud making multi-machine and reinstallations a breeze!
 - [One Dark Pro Monokai Darker](https://marketplace.visualstudio.com/items?itemName=eserozvataf.one-dark-pro-monokai-darker): One Dark Pro x Monokai, made darker.
@@ -158,15 +158,20 @@ Some other development env things:
 
 ### Fonts
 
-- [Hack](https://github.com/source-foundry/Hack): mono, free
+- [Cascadia Code](https://github.com/microsoft/cascadia-code): mono, ligatures, free
 - [Fira Code](https://github.com/tonsky/FiraCode): mono, ligatures, free
 - [Dank Mono](https://dank.sh/): mono, ligatures, paid (although reasonable)
+- [Hack](https://github.com/source-foundry/Hack): mono, free
 
 ### Ubuntu on various hardware
 
-#### Ubuntu 18.04/18.10 on Lenovo ThinkPad E485/E585
+#### Ubuntu on Lenovo ThinkPad E485/E585
 
-Ubuntu will hang on installation on a Lenovo ThinkPad E485/E585. [To solve this, follow these instructions: Ubuntu 18.04 LTS on Lenovo ThinkPad E485](https://medium.com/@jthegedus/ubuntu-18-04-lts-on-lenovo-thinkpad-e485-15e1d601473f)
+Ubuntu installation will hang on a Lenovo ThinkPad E485/E585. Below are the instructions I followed to remedy the issues:
+
+- [18.04 / 18.10](https://medium.com/@jthegedus/ubuntu-18-04-lts-on-lenovo-thinkpad-e485-15e1d601473f)
+- [19.04](https://medium.com/@jthegedus/ubuntu-19-04-lts-on-lenovo-thinkpad-e485-bf2d6cfd9cad)
+- [19.04 - PopOS!](https://medium.com/@jthegedus/popos-19-04-on-lenovo-thinkpad-e485-ac3951199132)
 
 #### Ubuntu 18.04/18.10 on XPS15 9560
 

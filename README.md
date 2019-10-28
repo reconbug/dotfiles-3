@@ -192,6 +192,32 @@ On login the OS may hang. Below are the instructions I followed to remedy the is
   - [Sound Input & Output Device Chooser](https://extensions.gnome.org/extension/906/sound-output-device-chooser/): Select audio IO from media dropdown
   - [ShellTile](https://extensions.gnome.org/extension/657/shelltile/): A tiling window extension for GNOME Shell.
 
+#### Firefox Developer Edition
+
+- [download FF DE](https://www.mozilla.org/en-US/firefox/developer/)
+- extract `cd ~/Downloads && tar -xvf firefox-*.tar.bz2`
+- `mv ~/Downloads/firefox-* /opt/firefox_dev`
+- `ln -s /opt/firefox_dev/firefox /usr/local/bin/firefox_dev`
+- `sudo nano /usr/share/applications/firefox-developer.desktop`
+- create this file `~/.local/share/applications/firefox_dev.desktop`
+- desktop entry
+- `chmod +x /usr/share/applications/firefox-developer.desktop`
+
+```
+[Desktop Entry]
+Name=Firefox Developer
+GenericName=Firefox Developer Edition
+Exec=/usr/local/bin/firefox_dev/firefox --class=FirefoxDev
+StartupWMClass=FirefoxDev
+Terminal=false
+Icon=/opt/firefox_dev/firefox/browser/chrome/icons/default/default128.png
+Type=Application
+Categories=Application;Network;X-Developer;
+Comment=Firefox Developer Edition Web Browser
+```
+
+- mark as a trusted executable `chmod +x ~/.local/share/applications/firefox_dev.desktopchmod +x ~/.local/share/applications/firefox_dev.desktop`
+
 ## Contributions
 
 Contributions of any kind welcome!

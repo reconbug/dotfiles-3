@@ -27,6 +27,9 @@ This "cross-platform" setup of mine is really just a Ubuntu 18.04+ ZSH environme
 
 ## Windows 10 with WSL
 
+<details>
+<summary>Expand for Windows Setup</summary>
+
 ### Enable WSL
 
 1. press `windows key`
@@ -111,6 +114,8 @@ The filesystem used by the Linux shell is hidden deep in your user's AppData fol
 ### Last Steps
 
 Now that we have WSL 2 working and a Ubuntu 18.04 Bash shell we can essentially follow the below Ubuntu guide below ⬇️
+
+</details>
 
 ## Ubuntu 18.04+
 

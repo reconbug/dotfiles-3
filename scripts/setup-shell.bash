@@ -54,6 +54,9 @@ esac
 printf "%s oh-my-zsh\n" "${installing_text}"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+printf "%s zsh-syntax-highlighting plugin\n" "${installing_text}"
+git clone "zsh-users/zsh-syntax-highlighting.git" "~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
+
 # add fonts for powerline
 printf "\n%s powerline fonts" "${installing_text}"
 cd ~ && git clone https://github.com/powerline/fonts.git --depth=1

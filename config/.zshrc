@@ -166,6 +166,7 @@ source_if_exists "$HOME/z.sh"
 source_if_exists "$HOME/.aliases"
 
 ### VSCode
+# WIP. See here for now - https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
 # add_path_to_global_path "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 ### https://starship.rs

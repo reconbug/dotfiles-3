@@ -165,6 +165,8 @@ and all system dependencies required by each of the above tools.
 
 ## VSCode
 
+Add VSCode to macOS path: https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
+
 [My vscode sync-settings can be found here](https://gist.github.com/jthegedus/a692812095d3bf7efa132c5a1bfe8d71). Choice extensions include:
 
 - [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync): Store your config in the cloud making multi-machine and reinstallations a breeze!

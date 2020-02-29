@@ -12,15 +12,19 @@ osType="$(uname -s)"
 
 ############ BEGIN: Tools
 # z
-if [ ! -f "~/z.sh" ]; then
+if [ -f "${HOME}/z.sh" ]; then
+    printf "✅  z.sh already exists\\n"
+else
     printf "%s z\\n" "${installing_text}"
-    cd ~ && wget https://raw.githubusercontent.com/rupa/z/master/z.sh
+    wget -O https://raw.githubusercontent.com/rupa/z/master/z.sh "${HOME}"
 fi
 
 # fzf
-if [ ! -d "~/.fzf" ]; then
+if [ -d "${HOME}/.fzf" ]; then
+    printf "✅  fzf already exists\\n"
+else
     printf "%s fzf\\n" "${installing_text}"
-    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    git clone --depth 1 https://github.com/junegunn/fzf.git "${HOME}/.fzf"
     ~/.fzf/install --key-bindings --completion --no-update-rc --no-bash --no-zsh
 fi
 
@@ -29,9 +33,10 @@ if [ -d "${HOME}/.asdf" ]; then
     printf "✅  asdf already exists\\n"
 else
     printf "%s asdf\\n" "${installing_text}"
-    git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+    git clone https://github.com/asdf-vm/asdf.git "${HOME}/.asdf"
     cd ~/.asdf
     git checkout "$(git describe --abbrev=0 --tags)"
+    cd ~
     printf "%s asdf\\n" "${successful_text}"
     printf "ℹ️  Shell must be restarted before asdf is available on your PATH. Re-run this script."
     exit 0

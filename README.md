@@ -1,12 +1,8 @@
 <div align="center">
 
-# my os, dotfiles & dev env
+# Dotfiles & Developer Environment
 
-Cross-platform dotfiles & dev env for Ubuntu 18.04+ & Windows 10 with WSL2
-
-<!-- badges -->
-
-[![prs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
+Cross-platform dotfiles & developer environment for Ubuntu 18.04+, macOS Catalina & Windows 10 with WSL
 
 ⚡️ tools for shell superpowers ⚡️<br/>[asdf](https://github.com/asdf-vm/asdf) · [shellcheck](https://github.com/koalaman/shellcheck) · [fzf](https://github.com/junegunn/fzf) · [z](https://github.com/rupa/z)
 

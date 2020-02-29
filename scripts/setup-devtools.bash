@@ -25,9 +25,12 @@ if [ ! -d "~/.fzf" ]; then
 fi
 
 # asdf
-if [ ! -d "~/.asdf" ]; then
+if [ -d "${HOME}/.asdf" ]; then
+    printf "✅  asdf already exists\\n"
+else
     printf "%s asdf\\n" "${installing_text}"
     git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+    cd ~/.asdf
     git checkout "$(git describe --abbrev=0 --tags)"
     printf "%s asdf\\n" "${successful_text}"
     printf "ℹ️  Shell must be restarted before asdf is available on your PATH. Re-run this script."

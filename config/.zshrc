@@ -169,5 +169,4 @@ source_if_exists "$HOME/.fzf/shell/key-bindings.zsh"
 source_if_exists "$HOME/.aliases"
 
 ### https://starship.rs
-export STARSHIP_CONFIG=~/.starship
 eval "$(starship init zsh)"

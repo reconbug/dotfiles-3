@@ -67,6 +67,8 @@ ln -sv ~/projects/dotfiles/config/.aliases ~/.aliases
 
 # starship theme
 printf "\n%s starship theme" "${installing_text}"
+mkdir -p ~/.config
+ln -sv ~/projects/dotfiles/config/.starship.toml ~/.config/starship.toml
 curl -fsSL https://starship.rs/install.sh | bash
 
 printf "\n\n🏁  Fin"

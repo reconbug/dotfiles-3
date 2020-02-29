@@ -37,8 +37,18 @@ esac
 printf "\n%s dependencies" "${successful_text}"
 
 ############ BEGIN: ZSH
-printf "\n%s ZSH" "${installing_text}"
-sudo apt install zsh
+case "${osType}" in
+Linux*)
+    printf "%s ZSH\n" "${installing_text}"
+    sudo apt install zsh
+    ;;
+Darwin*)
+    printf "ℹ️  macOS Catalina comes with ZSH as the default shell.\n"
+    ;;
+*)
+    printf "%s\n" "${os_support_errors}"
+    ;;
+esac
 
 # install oh-my-zsh
 printf "\n%s oh-my-zsh" "${installing_text}"

@@ -19,4 +19,5 @@ rm -rf ~/z.sh
 printf "ℹ️  removing oh-my-zsh\\n"
 uninstall_oh_my_zsh
 
+printf "🚨 🚨 🚨  You will likely need to reboot your machine. I've seen weird behaviour when not rebooting."
 printf "🏁  Fin\\n"

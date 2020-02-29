@@ -13,30 +13,30 @@ osType="$(uname -s)"
 ############ BEGIN: Tools
 # z
 if [ ! -f "~/z.sh" ]; then
-    printf "%s z\n" "${installing_text}"
+    printf "%s z\\n" "${installing_text}"
     cd ~ && wget https://raw.githubusercontent.com/rupa/z/master/z.sh
 fi
 
 # fzf
 if [ ! -d "~/.fzf" ]; then
-    printf "%s fzf\n" "${installing_text}"
+    printf "%s fzf\\n" "${installing_text}"
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
     ~/.fzf/install --key-bindings --completion --no-update-rc --no-bash --no-zsh
 fi
 
 # asdf
 if [ ! -d "~/.asdf" ]; then
-    printf "%s asdf\n" "${installing_text}"
+    printf "%s asdf\\n" "${installing_text}"
     git clone https://github.com/asdf-vm/asdf.git ~/.asdf
     git checkout "$(git describe --abbrev=0 --tags)"
-    printf "%s asdf\n" "${successful_text}"
+    printf "%s asdf\\n" "${successful_text}"
     printf "ℹ️  Shell must be restarted before asdf is available on your PATH. Re-run this script."
     exit 0
 fi
 
 # nodejs
-printf "%s NodeJS\n" "${installing_text}"
-printf "%s default-npm-packages\n" "${symlink_text}"
+printf "%s NodeJS\\n" "${installing_text}"
+printf "%s default-npm-packages\\n" "${symlink_text}"
 ln -sv ~/projects/dotfiles/config/.default-npm-packages ~/.default-npm-packages
 case "${osType}" in
 Linux*)
@@ -47,7 +47,7 @@ Darwin*)
     brew install gpg
     ;;
 *)
-    printf "%s\n" "${os_support_errors}"
+    printf "%s\\n" "${os_support_errors}"
     ;;
 esac
 asdf plugin-add nodejs
@@ -55,10 +55,10 @@ bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 asdf install nodejs 10.19.0
 asdf install nodejs 12.16.1
 asdf global nodejs 12.16.1
-printf "%s NodeJS\n" "${successful_text}"
+printf "%s NodeJS\\n" "${successful_text}"
 
 # Python
-printf "%s Python\n" "${installing_text}"
+printf "%s Python\\n" "${installing_text}"
 case "${osType}" in
 Linux*)
     sudo apt-get update
@@ -72,27 +72,27 @@ Darwin*)
     brew install openssl readline sqlite3 xz zlib
     ;;
 *)
-    printf "%s\n" "${os_support_errors}"
+    printf "%s\\n" "${os_support_errors}"
     ;;
 esac
 asdf plugin-add python
 asdf install python 3.8.2
 asdf global python 3.8.2
-printf "%s Python\n" "${successful_text}"
+printf "%s Python\\n" "${successful_text}"
 
 # OCaml
-printf "%s OCaml\n" "${installing_text}"
+printf "%s OCaml\\n" "${installing_text}"
 asdf plugin-add ocaml
 asdf install ocaml 4.07.0
 asdf global ocaml 4.07.0
-printf "%s OCaml\n" "${successful_text}"
+printf "%s OCaml\\n" "${successful_text}"
 
 # Terraform
-printf "%s Terraform\n" "${installing_text}"
+printf "%s Terraform\\n" "${installing_text}"
 asdf plugin-add terraform
 asdf install terraform 0.12.21
 asdf global terraform 0.12.21
-printf "%s Terraform\n" "${successful_text}"
+printf "%s Terraform\\n" "${successful_text}"
 
 # GCloud
 # echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
@@ -101,7 +101,7 @@ printf "%s Terraform\n" "${successful_text}"
 # sudo apt-get update && sudo apt-get install google-cloud-sdk -y
 
 # Extras
-printf "%s Extras\n" "${installing_text}"
+printf "%s Extras\\n" "${installing_text}"
 case "${osType}" in
 Linux*)
     # exfat support
@@ -116,10 +116,10 @@ Darwin*)
     brew install openssl readline sqlite3 xz zlib
     ;;
 *)
-    printf "%s\n" "${os_support_errors}"
+    printf "%s\\n" "${os_support_errors}"
     ;;
 esac
-printf "%s Extras\n" "${successful_text}"
+printf "%s Extras\\n" "${successful_text}"
 ############ END: Tools
 
-printf "🏁  Fin\n"
+printf "🏁  Fin\\n"

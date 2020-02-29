@@ -6,7 +6,7 @@ Cross-platform dotfiles & dev env for Ubuntu 18.04+ & Windows 10 with WSL2
 
 <!-- badges -->
 
-[![prs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com) [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat)](#contributors)
+[![prs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
 
 ⚡️ tools for shell superpowers ⚡️<br/>[asdf](https://github.com/asdf-vm/asdf) · [shellcheck](https://github.com/koalaman/shellcheck) · [fzf](https://github.com/junegunn/fzf) · [z](https://github.com/rupa/z)
 
@@ -17,15 +17,17 @@ Cross-platform dotfiles & dev env for Ubuntu 18.04+ & Windows 10 with WSL2
 - [Preamble](#preamble)
 - [Windows 10 with WSL](#windows-10-with-wsl)
 - [Ubuntu 18.04+](#ubuntu-1804+)
-- [Other](#other)
+- [VSCode](#vscode)
+- [Fonts](#fonts)
+- [Ubuntu on various hardware](#ubuntu-on-various-hardware)
 - [Contributions](#contributions)
 - [License](#license)
 
 ## Preamble
 
-This "cross-platform" setup of mine is really just a Ubuntu 18.04+ ZSH environment. With Windows 10 and WSL 2 I can reuse most (maybe all, haven't really checked) of my env on both platforms.
+This "cross-platform" setup of mine is really just a Ubuntu 18.04+ ZSH environment. Everything is reusable on Windows 10 with WSL 2 👌
 
-## Windows 10 with WSL
+## Windows 10 with WSL(1|2)
 
 <details>
 <summary>Expand for Windows Setup</summary>
@@ -52,9 +54,9 @@ Update Ubuntu deps with: `sudo apt-get update && sudo apt-get upgrade`
 
 This guide will work with WSL version 1 and 2. WSL 2 will be recommended for better Ubuntu support and an improved user experience when it moves into a stable release of Windows 10.
 
-If you intend to use WSL 2, then you will require a Windows build 18917+, currently only available in the Insider Fast ring. [Read more about the requirements in the official release post](https://devblogs.microsoft.com/commandline/wsl-2-is-now-available-in-windows-insiders/).
+If you intend to use WSL 2, then you will require a Windows build 18917+, currently available in the Insider Slow or Fast ring. [Read more about the requirements in the official release post](https://devblogs.microsoft.com/commandline/wsl-2-is-now-available-in-windows-insiders/).
 
-### Set WSL Version
+### Set WSL2 Version
 
 In powershell (admin) set the WSL version for your Ubuntu shell:
 
@@ -119,58 +121,64 @@ Now that we have WSL 2 working and a Ubuntu 18.04 Bash shell we can essentially 
 
 ## Ubuntu 18.04+
 
-### Automated installation
+### Automated Installation
 
 - clone my dotiles into the `projects` dir
 
   ```shell
-  cd ~ && git clone https://github.com/jthegedus/dotfiles "projects/dotfiles"
+  cd ~ && git clone https://github.com/jthegedus/dotfiles "~/projects/dotfiles"
   ```
 
-- run the install script
+- run the `setup-shell.bash` script
 
   ```shell
-  # script args
-  # arg 1: required --zsh | --bash | --skip-shell
-  # arg 2: optional --install-devtools
-
-  # bash
-  ~/projects/dotfiles/scripts/install.sh --bash
-  # zsh
-  ~/projects/dotfiles/scripts/install.sh --zsh
+  ~/projects/dotfiles/scripts/setup-shell.bash
   ```
 
-  add `--install-devtools` if you want to install [asdf](https://github.com/asdf-vm/asdf), Node, Yarn, Python & OCaml tools. If not, you may want to edit your `.zshrc` file after setup to remove the dependencies on some of these tools.
+- run the `setup-devtools.bash` script
 
-⚠️ development on this script is ongoing to improve ergonomics and add support for macOS.
+  ```shell
+  ~/projects/dotfiles/scripts/setup-devtools.bash
+  ```
+
+- run the `setup-devtools.bash` script again (this is because `asdf` requires a shell restart to take effect. The script accounts for re-running)
+
+  ```shell
+  ~/projects/dotfiles/scripts/setup-devtools.bash
+  ```
+
+### Automated Cleanup
+
+- run the `cleanup.bash` script
+
+```shell
+~/projects/dotfiles/scripts/cleanup.bash
+```
 
 ### Manual Installation
 
 - open `scripts/install.sh` and copy/paste the commands you wish to use from top to bottom. It's fairly straight forward. If there is a tool you're unsure about either see my links at the top of the README or Google them 😉
 
-## Other
+## VSCode
 
-Some other development env things:
-
-### VSCode
-
-[My vscode sync-settings can be found here](https://gist.github.com/jthegedus/21f04da71670c80f39f3f583c87465e0). Some extensions include:
+[My vscode sync-settings can be found here](https://gist.github.com/jthegedus/a692812095d3bf7efa132c5a1bfe8d71). Some extensions include:
 
 - [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync): Store your config in the cloud making multi-machine and reinstallations a breeze!
-- [One Dark Pro Monokai Darker](https://marketplace.visualstudio.com/items?itemName=eserozvataf.one-dark-pro-monokai-darker): One Dark Pro x Monokai, made darker.
-- [ReasonML language server](https://marketplace.visualstudio.com/items?itemName=jaredly.reason-vscode): written from scratch in Reason for Reason.
 - [shellcheck](https://marketplace.visualstudio.com/items?itemName=timonwong.shellcheck): static analysis your `.sh` scripts. Requires [shellcheck itself](https://github.com/koalaman/shellcheck#shellcheck---a-shell-script-static-analysis-tool).
+- [shell format](https://github.com/foxundermoon/vs-shell-format): formats `.sh`, `.bash`, `Dockerfiles`, ignore files, amongst others.
+- [ReasonML language server](https://marketplace.visualstudio.com/items?itemName=jaredly.reason-vscode): written from scratch in Reason for Reason.
 
-### Fonts
+## Fonts
 
-- [Cascadia Code](https://github.com/microsoft/cascadia-code): mono, ligatures, free
+- [Microsoft's Cascadia Code with Powerlines](https://github.com/microsoft/cascadia-code): mono, ligatures, free
+- [JetBrains Mono](https://www.jetbrains.com/lp/mono/#how-to-install): mono, ligatures, free
 - [Fira Code](https://github.com/tonsky/FiraCode): mono, ligatures, free
 - [Dank Mono](https://dank.sh/): mono, ligatures, paid (although reasonable)
 - [Hack](https://github.com/source-foundry/Hack): mono, free
 
-### Ubuntu on various hardware
+## Ubuntu on various hardware
 
-#### Lenovo ThinkPad E485/E585
+### Lenovo ThinkPad E485/E585
 
 Ubuntu installation will hang on a Lenovo ThinkPad E485/E585. Below are the instructions I followed to remedy the issues:
 
@@ -178,7 +186,7 @@ Ubuntu installation will hang on a Lenovo ThinkPad E485/E585. Below are the inst
 - [19.04](https://medium.com/@jthegedus/ubuntu-19-04-lts-on-lenovo-thinkpad-e485-bf2d6cfd9cad)
 - [19.04 - PopOS!](https://medium.com/@jthegedus/popos-19-04-on-lenovo-thinkpad-e485-ac3951199132)
 
-#### Dell XPS15 9560
+### Dell XPS15 9560
 
 On login the OS may hang. Below are the instructions I followed to remedy the issues:
 
@@ -192,7 +200,8 @@ On login the OS may hang. Below are the instructions I followed to remedy the is
   - [Sound Input & Output Device Chooser](https://extensions.gnome.org/extension/906/sound-output-device-chooser/): Select audio IO from media dropdown
   - [ShellTile](https://extensions.gnome.org/extension/657/shelltile/): A tiling window extension for GNOME Shell.
 
-#### Firefox Developer Edition
+<details>
+<summary>Firefox Developer Edition</summary>
 
 - [download FF DE](https://www.mozilla.org/en-US/firefox/developer/)
 - extract `cd ~/Downloads && tar -xvf firefox-*.tar.bz2`
@@ -217,6 +226,8 @@ Comment=Firefox Developer Edition Web Browser
 ```
 
 - mark as a trusted executable `chmod +x ~/.local/share/applications/firefox_dev.desktopchmod +x ~/.local/share/applications/firefox_dev.desktop`
+
+</details>
 
 ## Contributions
 

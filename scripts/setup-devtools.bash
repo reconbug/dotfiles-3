@@ -3,10 +3,10 @@
 set -u
 
 # logging text
-installing_text="[INFO] Installing"
-successful_text="[INFO] Successfully installed"
-symlink_text="[INFO] Symlinking"
-os_support_error="[ERROR] Script only supports macOS and Ubuntu"
+installing_text="\nℹ️  Installing"
+successful_text="\n✅  Successfully installed"
+symlink_text="\nℹ️  Symlinking"
+os_support_error="\n🚨  Script only supports macOS and Ubuntu"
 
 osType="$(uname -s)"
 
@@ -30,7 +30,7 @@ if [ ! -d "~/.asdf" ]; then
     git clone https://github.com/asdf-vm/asdf.git ~/.asdf
     git checkout "$(git describe --abbrev=0 --tags)"
     printf "%s asdf" "${successful_text}"
-    printf "[INFO] Shell must be restarted before asdf is available on your PATH. Re-run this script."
+    printf "ℹ️  Shell must be restarted before asdf is available on your PATH. Re-run this script."
     exit 0
 fi
 
@@ -122,4 +122,4 @@ esac
 printf "%s Extras" "${successful_text}"
 ############ END: Tools
 
-echo "[INFO] Fin"
+printf "\n🏁  Fin"

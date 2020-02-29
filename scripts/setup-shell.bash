@@ -3,10 +3,10 @@
 set -u
 
 # logging text
-installing_text="[INFO] Installing"
-successful_text="[INFO] Successfully installed"
-symlink_text="[INFO] Symlinking"
-os_support_error="[ERROR] Script only supports macOS and Ubuntu"
+installing_text="\nℹ️  Installing"
+successful_text="\n✅  Successfully installed"
+symlink_text="\nℹ️  Symlinking"
+os_support_error="\n🚨  Script only supports macOS and Ubuntu"
 
 # Dependencies
 printf "%s dependencies" "${installing_text}"
@@ -56,7 +56,7 @@ mv ~/.zshrc ~/.zshrc.orig
 ln -sv ~/projects/dotfiles/zsh/.zshrc ~/.zshrc
 
 # change default shell
-printf "[INFO] Setting default shell to ZSH"
+printf "\nℹ️  Setting default shell to ZSH"
 chsh -s "$(command -v zsh)"
 printf "%s ZSH" "${successful_text}"
 ############ END: ZSH
@@ -69,4 +69,4 @@ ln -sv ~/projects/dotfiles/config/.aliases ~/.aliases
 printf "%s starship theme" "${installing_text}"
 curl -fsSL https://starship.rs/install.sh | bash
 
-echo "[INFO] Fin"
+printf "\n🏁  Fin"

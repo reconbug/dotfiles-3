@@ -72,6 +72,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   docker
+  fzf
   gcloud
   git
   go
@@ -161,13 +162,11 @@ source_if_exists "$HOME/google-cloud-sdk/completion.zsh.inc"
 ### z
 source_if_exists "$HOME/z.sh"
 
-### fzf
-source_if_exists "$HOME/.fzf.zsh"
-source_if_exists "$HOME/.fzf/shell/completion.zsh"
-source_if_exists "$HOME/.fzf/shell/key-bindings.zsh"
-
 ### aliases
 source_if_exists "$HOME/.aliases"
+
+### VSCode
+# add_path_to_global_path "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 ### https://starship.rs
 eval "$(starship init zsh)"

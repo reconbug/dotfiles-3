@@ -55,7 +55,7 @@ Darwin*)
     brew install gpg
     ;;
 *)
-    printf "%s\\n" "${os_support_errors}"
+    printf "%s\\n" "${os_support_error}"
     ;;
 esac
 asdf plugin-add nodejs
@@ -80,7 +80,7 @@ Darwin*)
     brew install openssl readline sqlite3 xz zlib
     ;;
 *)
-    printf "%s\\n" "${os_support_errors}"
+    printf "%s\\n" "${os_support_error}"
     ;;
 esac
 asdf plugin-add python
@@ -116,7 +116,7 @@ Darwin*)
     printf "⚠️  TODO: add automated setup for GCloud\\n"
     ;;
 *)
-    printf "%s\\n" "${os_support_errors}"
+    printf "%s\\n" "${os_support_error}"
     ;;
 esac
 printf "%s GCloud\\n" "${successful_text}"
@@ -137,7 +137,7 @@ Darwin*)
     brew install openssl readline sqlite3 xz zlib
     ;;
 *)
-    printf "%s\\n" "${os_support_errors}"
+    printf "%s\\n" "${os_support_error}"
     ;;
 esac
 printf "%s Extras\\n" "${successful_text}"

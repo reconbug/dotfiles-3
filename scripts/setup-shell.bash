@@ -31,7 +31,7 @@ Darwin*)
         unzip curl
     ;;
 *)
-    printf "%s\\n" "${os_support_errors}"
+    printf "%s\\n" "${os_support_error}"
     ;;
 esac
 printf "%s dependencies\\n" "${successful_text}"
@@ -46,7 +46,7 @@ Darwin*)
     printf "ℹ️  macOS Catalina comes with ZSH as the default shell.\\n"
     ;;
 *)
-    printf "%s\\n" "${os_support_errors}"
+    printf "%s\\n" "${os_support_error}"
     ;;
 esac
 

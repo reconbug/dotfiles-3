@@ -53,7 +53,7 @@ cd ~ && rm -rf fonts/
 # symlink zshrc
 printf "%s zshrc" "${symlink_text}"
 mv ~/.zshrc ~/.zshrc.orig
-ln -sv ~/projects/dotfiles/zsh/.zshrc ~/.zshrc
+ln -sv ~/projects/dotfiles/config/.zshrc ~/.zshrc
 
 # change default shell
 printf "\nℹ️  Setting default shell to ZSH"

@@ -2,7 +2,7 @@
 
 # Dotfiles & Developer Environment
 
-Cross-platform dotfiles & developer environment for Ubuntu 18.04+, macOS Catalina & Windows 10 with WSL
+Cross-platform dotfiles & developer environment for Ubuntu 18.04+, macOS Catalina & Windows 10 with WSL2
 
 ⚡️ tools for shell superpowers ⚡️<br/>[asdf](https://github.com/asdf-vm/asdf) · [shellcheck](https://github.com/koalaman/shellcheck) · [fzf](https://github.com/junegunn/fzf) · [z](https://github.com/rupa/z)
 
@@ -21,9 +21,9 @@ Cross-platform dotfiles & developer environment for Ubuntu 18.04+, macOS Catalin
 
 ## Preamble
 
-This "cross-platform" setup of mine is really just a Ubuntu 18.04+ ZSH environment. Everything is reusable on Windows 10 with WSL 2 👌
+This "cross-platform" setup of mine is really just a Ubuntu 18.04+ ZSH environment. macOS is supported by installing dependencies with `brew` where required. Windows 10 is supported with Ubuntu 18.04+ via WSL 2 👌
 
-## Windows 10 with WSL(1|2)
+## Windows 10 with WSL2
 
 <details>
 <summary>Expand for Windows Setup</summary>

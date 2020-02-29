@@ -9,7 +9,7 @@ symlink_text="ℹ️  Symlinking"
 os_support_error="🚨  Script only supports macOS and Ubuntu"
 
 # Dependencies
-printf "\n%s dependencies" "${installing_text}"
+printf "%s dependencies\n" "${installing_text}"
 # get machine type - https://stackoverflow.com/a/3466183
 osType="$(uname -s)"
 case "${osType}" in
@@ -31,10 +31,10 @@ Darwin*)
         unzip curl
     ;;
 *)
-    printf "\n%s" "${os_support_errors}"
+    printf "%s\n" "${os_support_errors}"
     ;;
 esac
-printf "\n%s dependencies" "${successful_text}"
+printf "%s dependencies\n" "${successful_text}"
 
 ############ BEGIN: ZSH
 case "${osType}" in
@@ -51,8 +51,8 @@ Darwin*)
 esac
 
 # install oh-my-zsh
-printf "\n%s oh-my-zsh" "${installing_text}"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+printf "%s oh-my-zsh\n" "${installing_text}"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # add fonts for powerline
 printf "\n%s powerline fonts" "${installing_text}"
@@ -61,24 +61,24 @@ fonts/install.sh
 cd ~ && rm -rf fonts/
 
 # symlink zshrc
-printf "\n%s zshrc" "${symlink_text}"
+printf "%s zshrc\n" "${symlink_text}"
 mv ~/.zshrc ~/.zshrc.orig
 ln -sv ~/projects/dotfiles/config/.zshrc ~/.zshrc
 
 # change default shell
-printf "\n\nℹ️  Setting default shell to ZSH"
+printf "ℹ️  Setting default shell to ZSH\n"
 chsh -s "$(command -v zsh)"
-printf "\n%s ZSH" "${successful_text}"
+printf "%s ZSH\n" "${successful_text}"
 ############ END: ZSH
 
 # symlink aliases
-printf "\n%s aliases" "${symlink_text}"
+printf "%s aliases\n" "${symlink_text}"
 ln -sv ~/projects/dotfiles/config/.aliases ~/.aliases
 
 # starship theme
-printf "\n%s starship theme" "${installing_text}"
+printf "%s starship theme\n" "${installing_text}"
 mkdir -p ~/.config
 ln -sv ~/projects/dotfiles/config/starship.toml ~/.config/starship.toml
 curl -fsSL https://starship.rs/install.sh | bash
 
-printf "\n\n🏁  Fin"
+printf "🏁  Fin\n"

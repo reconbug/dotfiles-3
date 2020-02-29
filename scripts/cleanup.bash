@@ -2,18 +2,18 @@
 
 set -u
 
-printf "\n⚠️  This script does not remove packages/tools installed with apt-get or brew"
+printf "⚠️  This script does not remove packages/tools installed with apt-get or brew\n"
 
-printf "\nℹ️  removing symlinks"
+printf "ℹ️  removing symlinks\n"
 rm -f ~/.zshrc ~/.aliases ~/.default-npm-packages ~/.config/starship.toml
 
-printf "\nℹ️  removing asdf"
+printf "ℹ️  removing asdf\n"
 rm -rf ~/.asdf ~/.tool-versions
 
-printf "\nℹ️  removing fzf"
+printf "ℹ️  removing fzf\n"
 rm -rf ~/.fzf
 
-printf "\nℹ️  removing z"
+printf "ℹ️  removing z\n"
 rm -rf ~/z.sh
 
-printf "\n🏁  Fin"
+printf "🏁  Fin\n"

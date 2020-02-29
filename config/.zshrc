@@ -1,4 +1,5 @@
 #!/bin/bash
+# shellcheck disable=SC2034
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -138,6 +139,7 @@ add_path_to_global_path() {
 # Will source the provided resource if the resource exists
 source_if_exists() {
   if [ -f "$1" ]; then
+    # shellcheck disable=SC1090
     . "$1"
     printf "✅  Sourced:\\t%s\\n" "$1"
   else
@@ -155,7 +157,8 @@ export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 source_if_exists "$HOME/.asdf/asdf.sh"
 
 ### gcloud
-export CLOUDSDK_PYTHON="$(command -v python)"
+python_sdk="$(command -v python)"
+export CLOUDSDK_PYTHON="${python_sdk}"
 
 ### z
 source_if_exists "$HOME/z.sh"

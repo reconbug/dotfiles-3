@@ -222,14 +222,7 @@ Comment=Firefox Developer Edition Web Browser
 
 Contributions of any kind welcome!
 
-Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
-| [<img src="https://avatars2.githubusercontent.com/u/20798510?v=4" width="100px;"/><br /><sub><b>James Hegedus</b></sub>](https://medium.com/@jthegedus)<br />[📖](https://github.com/jthegedus/dotfiles/commits?author=jthegedus "Documentation") [📝](#blog-jthegedus "Blogposts") [🎨](#design-jthegedus "Design") [💻](https://github.com/jthegedus/dotfiles/commits?author=jthegedus "Code") |
-| :---: |
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+[Thanks goes to these contributors](https://github.com/jthegedus/dotfiles/graphs/contributors)!
 
 ## License
 

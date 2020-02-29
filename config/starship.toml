@@ -9,7 +9,7 @@ symbol = "➜"
 [cmd_duration]
 min_time = 500
 
-[time]
-disabled = false
-format = "🕙[ %T ]"
-utc_time_offset = +10
+# [time]
+# disabled = false
+# format = "🕙[ %T ]"
+# utc_time_offset = +10

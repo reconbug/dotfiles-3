@@ -123,11 +123,11 @@ Now that we have WSL 2 working and a Ubuntu 18.04 Bash shell we can essentially 
 
 Items installed in the following scripts include:
 
-- shell: zsh, oh-my-zsh, powerline fonts, starship cross-shell theme
-- tools: asdf, shellcheck, fzf, z
-- tools with asdf: NodeJS 12, Python 3, OCaml 4, Terraform 0.12
+- shell: [`zsh`](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) · [`oh-my-zsh`](https://github.com/ohmyzsh/ohmyzsh) · [`powerline`](https://github.com/powerline/fonts) fonts · [`starship`](https://starship.rs/) cross-shell theme
+- tools: [`asdf`](https://github.com/asdf-vm/asdf) · [`shellcheck`](https://github.com/koalaman/shellcheck) · [`fzf`](https://github.com/junegunn/fzf) · [`z`](https://github.com/rupa/z)
+- tools with asdf: NodeJS 12 · Python 3 · OCaml 4 · Terraform 0.12
 
-and all system dependencies to required by each of the above tools.
+and all system dependencies required by each of the above tools.
 
 ### Automated Installation
 

@@ -119,7 +119,7 @@ Now that we have WSL 2 working and a Ubuntu 18.04 Bash shell we can essentially 
 
 Items installed in the following scripts include:
 
-- shell: [`zsh`](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) · [`oh-my-zsh`](https://github.com/ohmyzsh/ohmyzsh) · [`powerline`](https://github.com/powerline/fonts) fonts · [`starship`](https://starship.rs/) cross-shell theme
+- shell: [`zsh`](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) · [`oh-my-zsh`](https://github.com/ohmyzsh/ohmyzsh) · [`powerline fonts`](https://github.com/powerline/fonts) · [`starship cross-shell theme`](https://starship.rs/)
 - tools: [`asdf`](https://github.com/asdf-vm/asdf) · [`shellcheck`](https://github.com/koalaman/shellcheck) · [`fzf`](https://github.com/junegunn/fzf) · [`z`](https://github.com/rupa/z)
 - tools with asdf: NodeJS 12 · Python 3 · OCaml 4 · Terraform 0.12
 

@@ -4,6 +4,8 @@
 
 Cross-platform dotfiles & developer environment for Ubuntu 18.04+, macOS Catalina & Windows 10 with WSL2
 
+![Shellcheck](https://github.com/jthegedus/dotfiles/workflows/Shellcheck/badge.svg)
+
 ⚡️ tools for shell superpowers ⚡️<br/>[asdf](https://github.com/asdf-vm/asdf) · [shellcheck](https://github.com/koalaman/shellcheck) · [fzf](https://github.com/junegunn/fzf) · [z](https://github.com/rupa/z)
 
 </div>

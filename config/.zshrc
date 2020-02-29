@@ -83,8 +83,6 @@ plugins=(
   zsh-syntax-highlighting
 )
 
-source $ZSH/oh-my-zsh.sh
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -127,24 +125,27 @@ HISTFILE=~/.zsh_history
 # add resource to path (once and only once)
 add_path_to_global_path() {
   local TO_ADD="$1"
-  printf "ADD TO PATH:\\t%s\\n" "$1"
 
   # if in $PATH, remove
   # replace all occurrences - ${parameter//pattern/string}
   [[ ":$PATH:" == *":${TO_ADD}:"* ]] && PATH="${PATH//$TO_ADD:/}"
   # add to PATH
   PATH="${TO_ADD}:$PATH"
+  printf "\n✅  added to global path:\\t%s" "$1"
 }
 
 # Will source the provided resource if the resource exists
 source_if_exists() {
   if [ -f "$1" ]; then
-    printf "SOURCING:\\t%s\\n" "$1"
     . "$1"
+    printf "\n✅  Sourced:\\t%s" "$1"
   else
-    printf "ERROR SOURCING: %s\n" "$1"
+    printf "\n🚨  Failed to source: %s" "$1"
   fi
 }
+
+###
+source_if_exists "$ZSH/oh-my-zsh.sh"
 
 ### ssh
 export SSH_KEY_PATH="$HOME/.ssh/rsa_id"

@@ -16,4 +16,7 @@ rm -rf ~/.fzf
 printf "ℹ️  removing z\n"
 rm -rf ~/z.sh
 
-printf "🏁  Fin\n"
+printf "ℹ️  removing oh-my-zsh\\n"
+uninstall_oh_my_zsh
+
+printf "🏁  Fin\\n"

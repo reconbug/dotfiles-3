@@ -131,16 +131,16 @@ add_path_to_global_path() {
   [[ ":$PATH:" == *":${TO_ADD}:"* ]] && PATH="${PATH//$TO_ADD:/}"
   # add to PATH
   PATH="${TO_ADD}:$PATH"
-  printf "\n✅  added to global path:\\t%s" "$1"
+  printf "✅  added to global path:\\t%s\\n" "$1"
 }
 
 # Will source the provided resource if the resource exists
 source_if_exists() {
   if [ -f "$1" ]; then
     . "$1"
-    printf "\n✅  Sourced:\\t%s" "$1"
+    printf "✅  Sourced:\\t%s\\n" "$1"
   else
-    printf "\n🚨  Failed to source: %s" "$1"
+    printf "🚨  Failed to source: %s\\n" "$1"
   fi
 }
 
@@ -171,3 +171,6 @@ source_if_exists "$HOME/.aliases"
 
 ### https://starship.rs
 eval "$(starship init zsh)"
+
+printf "Environment Variables: \\n"
+printenv

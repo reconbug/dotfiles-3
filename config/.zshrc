@@ -145,7 +145,7 @@ source_if_exists() {
   fi
 }
 
-###
+### oh-my-zsh
 source_if_exists "$ZSH/oh-my-zsh.sh"
 
 ### ssh

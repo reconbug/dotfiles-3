@@ -119,7 +119,15 @@ Now that we have WSL 2 working and a Ubuntu 18.04 Bash shell we can essentially 
 
 </details>
 
-## Ubuntu 18.04+
+## Ubuntu 18.04+ or macOS Catalina
+
+Items installed in the following scripts include:
+
+- shell: zsh, oh-my-zsh, powerline fonts, starship cross-shell theme
+- tools: asdf, shellcheck, fzf, z
+- tools with asdf: NodeJS 12, Python 3, OCaml 4, Terraform 0.12
+
+and all system dependencies to required by each of the above tools.
 
 ### Automated Installation
 
@@ -157,11 +165,11 @@ Now that we have WSL 2 working and a Ubuntu 18.04 Bash shell we can essentially 
 
 ### Manual Installation
 
-- open `scripts/install.sh` and copy/paste the commands you wish to use from top to bottom. It's fairly straight forward. If there is a tool you're unsure about either see my links at the top of the README or Google them 😉
+- open `scripts/setup-shell.bash` and `scripts/setup-devtools.bash` and copy/paste the commands you wish to use from top to bottom. It's fairly straight forward. If there is a tool you're unsure about either see my links at the top of the README or Google them 😉
 
 ## VSCode
 
-[My vscode sync-settings can be found here](https://gist.github.com/jthegedus/a692812095d3bf7efa132c5a1bfe8d71). Some extensions include:
+[My vscode sync-settings can be found here](https://gist.github.com/jthegedus/a692812095d3bf7efa132c5a1bfe8d71). Choice extensions include:
 
 - [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync): Store your config in the cloud making multi-machine and reinstallations a breeze!
 - [shellcheck](https://marketplace.visualstudio.com/items?itemName=timonwong.shellcheck): static analysis your `.sh` scripts. Requires [shellcheck itself](https://github.com/koalaman/shellcheck#shellcheck---a-shell-script-static-analysis-tool).

@@ -87,6 +87,13 @@ asdf install ocaml 4.07.0
 asdf global ocaml 4.07.0
 printf "%s OCaml" "${successful_text}"
 
+# Terraform
+printf "%s Terraform" "${installing_text}"
+asdf plugin-add terraform
+asdf install terraform 0.12.21
+asdf global terraform 0.12.21
+printf "%s Terraform" "${successful_text}"
+
 # GCloud
 # echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
 # sudo apt-get install apt-transport-https ca-certificates -y

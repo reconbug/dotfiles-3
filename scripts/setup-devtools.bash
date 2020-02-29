@@ -103,10 +103,23 @@ asdf global terraform 0.12.21
 printf "%s Terraform\\n" "${successful_text}"
 
 # GCloud
-# echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
-# sudo apt-get install apt-transport-https ca-certificates -y
-# curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
-# sudo apt-get update && sudo apt-get install google-cloud-sdk -y
+printf "%s GCloud\\n" "${installing_text}"
+case "${osType}" in
+Linux*)
+    printf "⚠️  TODO: add automated setup for GCloud\\n"
+    # echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+    # sudo apt-get install apt-transport-https ca-certificates gnupg
+    # curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
+    # sudo apt-get update && sudo apt-get install google-cloud-sdk
+    ;;
+Darwin*)
+    printf "⚠️  TODO: add automated setup for GCloud\\n"
+    ;;
+*)
+    printf "%s\\n" "${os_support_errors}"
+    ;;
+esac
+printf "%s GCloud\\n" "${successful_text}"
 
 # Extras
 printf "%s Extras\\n" "${installing_text}"

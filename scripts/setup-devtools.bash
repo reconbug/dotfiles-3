@@ -8,6 +8,7 @@ successful_text="✅  Successfully installed"
 symlink_text="ℹ️  Symlinking"
 os_support_error="🚨  Script only supports macOS and Ubuntu"
 
+# get OS name
 osType="$(uname -s)"
 
 ############ BEGIN: Tools
@@ -34,9 +35,15 @@ if [ -d "${HOME}/.asdf" ]; then
 else
     printf "%s asdf\\n" "${installing_text}"
     git clone https://github.com/asdf-vm/asdf.git "${HOME}/.asdf"
-    cd ~/.asdf
+    cd "${HOME}/.asdf" || {
+        printf "❌  Could not find .asdf" 1>&2
+        exit 1
+    }
     git checkout "$(git describe --abbrev=0 --tags)"
-    cd ~
+    cd "${HOME}" || {
+        printf "❌  Could not find %s" "${HOME}" 1>&2
+        exit 1
+    }
     printf "%s asdf\\n" "${successful_text}"
     printf "ℹ️  Shell must be restarted before asdf is available on your PATH. Re-run this script."
     exit 0

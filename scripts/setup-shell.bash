@@ -22,6 +22,7 @@ Linux*)
         unzip -y
     ;;
 Darwin*)
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     xcode-select --install
     brew install curl
     brew install shellcheck

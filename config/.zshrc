@@ -156,10 +156,6 @@ export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 ### asdf
 source_if_exists "$HOME/.asdf/asdf.sh"
 
-### gcloud
-python_sdk="$(command -v python)"
-export CLOUDSDK_PYTHON="${python_sdk}"
-
 ### z
 source_if_exists "$HOME/z.sh"
 

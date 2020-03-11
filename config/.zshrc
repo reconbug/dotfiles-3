@@ -169,5 +169,5 @@ source_if_exists "$HOME/.aliases"
 ### https://starship.rs
 eval "$(starship init zsh)"
 
-printf "\\n🏞  Environment Variables: \\n\\n"
-printenv
+# printf "\\n🏞  Environment Variables: \\n\\n"
+# printenv

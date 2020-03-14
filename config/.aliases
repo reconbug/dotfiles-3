@@ -45,6 +45,7 @@ alias l="ls -CF"
 #
 # pretty print $PATH
 alias path="print -l $path"
+alias fpath="print -l $fpath"
 
 ### download
 #

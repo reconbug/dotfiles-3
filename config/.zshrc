@@ -72,9 +72,10 @@ HIST_STAMPS="mm/dd/yyyy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  asdf
   docker
   fzf
-  gcloud
+  # gcloud
   git
   go
   node
@@ -152,9 +153,6 @@ source_if_exists "$ZSH/oh-my-zsh.sh"
 
 ### ssh
 export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
-
-### asdf
-source_if_exists "$HOME/.asdf/asdf.sh"
 
 ### z
 source_if_exists "$HOME/z.sh"

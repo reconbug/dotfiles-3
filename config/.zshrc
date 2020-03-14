@@ -165,6 +165,7 @@ source_if_exists "$HOME/.aliases"
 # add_path_to_global_path "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 ### https://starship.rs
+printf "🚀  Load Starship shell prompt\\n"
 eval "$(starship init zsh)"
 
 # printf "\\n🏞  Environment Variables: \\n\\n"

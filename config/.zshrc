@@ -157,6 +157,10 @@ export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 ### z
 source_if_exists "$HOME/z.sh"
 
+### asdf plugins
+#### JAVA_HOME
+source_if_exists "$HOME/.asdf/plugins/java/set-java-home.sh"
+
 ### aliases
 source_if_exists "$HOME/.aliases"
 

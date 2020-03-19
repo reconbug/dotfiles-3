@@ -18,6 +18,7 @@ Cross-platform dotfiles & developer environment for Ubuntu 18.04+, macOS Catalin
 - [VSCode](#vscode)
 - [Fonts](#fonts)
 - [Ubuntu on various hardware](#ubuntu-on-various-hardware)
+- [Resources worth reading](#resources-worth-reading)
 - [Contributions](#contributions)
 - [License](#license)
 
@@ -236,6 +237,13 @@ Comment=Firefox Developer Edition Web Browser
 - mark as a trusted executable `chmod +x ~/.local/share/applications/firefox_dev.desktopchmod +x ~/.local/share/applications/firefox_dev.desktop`
 
 </details>
+
+## Resources worth Reading
+
+ZSH:
+
+- [Bash 2 ZSH reference card](http://www.bash2zsh.com/zsh_refcard/refcard.pdf): Bash user's guide to ZSH
+- [ZSH Lovers](http://grml.org/zsh/zsh-lovers.html): Z Shell tips and tricks
 
 ## Contributions
 

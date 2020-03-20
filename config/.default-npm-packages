@@ -1,6 +1,6 @@
 dialogflow
 firebase-tools
-google-cloud-bigquery-storage
+@google-cloud/bigquery-storage
 @google-cloud/compute
 @google-cloud/cloudbuild
 @google-cloud/monitoring

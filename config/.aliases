@@ -27,6 +27,9 @@ fi
 #
 alias lg="git log --all --decorate --oneline --graph"
 
+# gcloud
+alias gcurl='curl --header "Authorization: Bearer $(gcloud auth print-identity-token)"'
+
 ### navigation
 #
 # go to the /home/$USER (~) directory and clears window of your terminal

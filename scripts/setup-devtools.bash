@@ -65,7 +65,7 @@ Darwin*)
     printf "%s\\n" "${os_support_error}"
     ;;
 esac
-asdf plugin-add nodejs
+asdf plugin add nodejs
 bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 asdf install nodejs 10.19.0
 asdf install nodejs 12.16.1
@@ -90,43 +90,60 @@ Darwin*)
     printf "%s\\n" "${os_support_error}"
     ;;
 esac
-asdf plugin-add python
+asdf plugin add python
 asdf install python 3.8.2
 asdf global python 3.8.2
 printf "%s Python\\n" "${successful_text}"
 
+# firebase
+printf "%s Firebase\\n" "${installing_text}"
+asdf plugin add firebase
+asdf install firebase 7.15.1 # would be good to get `latest` support in asdf-firebase
+asdf global firebase 7.15.1
+printf "%s Firebase\\n" "${successful_text}"
+
+# gcloud
+printf "%s gcloud\\n" "${installing_text}"
+asdf plugin add gcloud
+asdf install gcloud 285.0.1 # would be good to get `latest` support in asdf-gcloud
+asdf global gcloud 285.0.1
+printf "%s gcloud\\n" "${successful_text}"
+
+# hadolint
+printf "%s hadolint\\n" "${installing_text}"
+asdf plugin add hadolint
+asdf install hadolint v1.17.5 # this plugin is doing some weird stuff and could be replaced.
+asdf global hadolint v1.17.5
+printf "%s hadolint\\n" "${successful_text}"
+
+# java
+printf "%s Java, Gradle, Maven\\n" "${installing_text}"
+asdf plugin add java
+asdf install java adopt-openjdk-11.0.6+10
+asdf global java adopt-openjdk-11.0.6+10
+
+asdf plugin add maven
+asdf install maven 3.6.3
+asdf global maven 3.6.3
+
+asdf plugin add gradle
+asdf install gradle 6.2.2
+asdf global gradle 6.2.2
+printf "%s Java, Gradle, Maven\\n" "${successful_text}"
+
 # OCaml
 printf "%s OCaml\\n" "${installing_text}"
-asdf plugin-add ocaml
+asdf plugin add ocaml
 asdf install ocaml 4.07.0
 asdf global ocaml 4.07.0
 printf "%s OCaml\\n" "${successful_text}"
 
 # Terraform
 printf "%s Terraform\\n" "${installing_text}"
-asdf plugin-add terraform
-asdf install terraform 0.12.21
-asdf global terraform 0.12.21
+asdf plugin add terraform
+asdf install terraform 0.12.23
+asdf global terraform 0.12.23
 printf "%s Terraform\\n" "${successful_text}"
-
-# GCloud
-printf "%s GCloud\\n" "${installing_text}"
-case "${osType}" in
-Linux*)
-    printf "⚠️  TODO: add automated setup for GCloud\\n"
-    # echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
-    # sudo apt-get install apt-transport-https ca-certificates gnupg
-    # curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
-    # sudo apt-get update && sudo apt-get install google-cloud-sdk
-    ;;
-Darwin*)
-    printf "⚠️  TODO: add automated setup for GCloud\\n"
-    ;;
-*)
-    printf "%s\\n" "${os_support_error}"
-    ;;
-esac
-printf "%s GCloud\\n" "${successful_text}"
 
 # Extras
 printf "%s Extras\\n" "${installing_text}"

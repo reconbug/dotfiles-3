@@ -104,6 +104,7 @@ printf "%s Firebase\\n" "${successful_text}"
 
 # gcloud
 printf "%s gcloud\\n" "${installing_text}"
+ln -sv ~/projects/dotfiles/config/.default-cloud-sdk-components ~/.config/gcloud/.default-cloud-sdk-components
 asdf plugin add gcloud
 asdf install gcloud 285.0.1 # would be good to get `latest` support in asdf-gcloud
 asdf global gcloud 285.0.1

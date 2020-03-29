@@ -1,17 +1,15 @@
 #!/usr/bin/env bash
 
-set -u
+set -euo pipefail
 
-# logging text
-installing_text="ℹ️  Installing"
-successful_text="✅  Successfully installed"
-symlink_text="ℹ️  Symlinking"
-os_support_error="🚨  Script only supports macOS and Ubuntu"
+# shellcheck source=./utils.bash
+source "$(dirname "$0")/utils.bash"
 
-# Dependencies
-printf "%s dependencies\\n" "${installing_text}"
 # get machine type - https://stackoverflow.com/a/3466183
 osType="$(uname -s)"
+
+# Dependencies
+log_info "ℹ️  Installing dependencies"
 case "${osType}" in
 Linux*)
     sudo apt install git curl shellcheck -y
@@ -32,57 +30,58 @@ Darwin*)
         unzip curl
     ;;
 *)
-    printf "%s\\n" "${os_support_error}"
+    log_failure_and_exit "🚨  Script only supports macOS and Ubuntu"
     ;;
 esac
-printf "%s dependencies\\n" "${successful_text}"
+log_success "✅  Successfully installed dependencies"
 
 ############ BEGIN: ZSH
 case "${osType}" in
 Linux*)
-    printf "%s ZSH\\n" "${installing_text}"
+    log_info "ℹ️  Installing ZSH"
     sudo apt install zsh
     ;;
 Darwin*)
-    printf "ℹ️  macOS Catalina comes with ZSH as the default shell.\\n"
+    log_info "ℹ️  macOS Catalina comes with ZSH as the default shell."
     ;;
 *)
-    printf "%s\\n" "${os_support_error}"
+    log_failure_and_exit "🚨  Script only supports macOS and Ubuntu"
     ;;
 esac
 
 # install oh-my-zsh
-printf "%s oh-my-zsh\\n" "${installing_text}"
+log_info "ℹ️  Installing oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-printf "%s zsh-syntax-highlighting plugin\\n" "${installing_text}"
+log_info "ℹ️  Installing zsh-syntax-highlighting plugin"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
 # add fonts for powerline
-printf "%s powerline fonts\\n" "${installing_text}"
+log_info "ℹ️  Installing powerline fonts"
 cd ~ && git clone https://github.com/powerline/fonts.git --depth=1
 fonts/install.sh
 cd ~ && rm -rf fonts/
 
 # symlink zshrc
-printf "%s zshrc\\n" "${symlink_text}"
+log_info "ℹ️  Installing .zshrc"
 mv ~/.zshrc ~/.zshrc.orig
 ln -sv ~/projects/dotfiles/config/.zshrc ~/.zshrc
 
 # change default shell
-printf "ℹ️  Setting default shell to ZSH\\n"
+log_info "ℹ️  Setting default shell to ZSH"
 chsh -s "$(command -v zsh)"
-printf "%s ZSH\\n" "${successful_text}"
+log_success "Successfully installed ZSH"
 ############ END: ZSH
 
 # symlink aliases
-printf "%s aliases\\n" "${symlink_text}"
+log_info "ℹ️  Symlinking aliases"
 ln -sv ~/projects/dotfiles/config/.aliases ~/.aliases
 
 # starship theme
-printf "%s starship theme\\n" "${installing_text}"
+
+log_info "🚀  Installing Starship theme"
 mkdir -p ~/.config
 ln -sv ~/projects/dotfiles/config/starship.toml ~/.config/starship.toml
 curl -fsSL https://starship.rs/install.sh | bash
 
-printf "🏁  Fin\\n"
+log_info "🏁  Fin"

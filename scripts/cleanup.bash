@@ -1,23 +1,26 @@
 #!/usr/bin/env bash
 
-set -u
+set -euo pipefail
 
-printf "⚠️  This script does not remove packages/tools installed with apt-get or brew\\n"
+# shellcheck source=./utils.bash
+source "$(dirname "$0")/utils.bash"
 
-printf "ℹ️  removing symlinks\\n"
+log_info "⚠️  This script does not remove packages/tools installed with apt-get or brew"
+
+log_info "ℹ️  removing symlinks"
 rm -f ~/.zshrc ~/.aliases ~/.default-npm-packages ~/.config/starship.toml
 
-printf "ℹ️  removing asdf\\n"
+log_info "ℹ️  removing asdf"
 rm -rf ~/.asdf ~/.tool-versions
 
-printf "ℹ️  removing fzf\\n"
+log_info "ℹ️  removing fzf"
 rm -rf ~/.fzf
 
-printf "ℹ️  removing z\\n"
+log_info "ℹ️  removing z"
 rm -rf ~/z.sh
 
-printf "ℹ️  removing oh-my-zsh\\n"
+log_info "ℹ️  removing oh-my-zsh"
 uninstall_oh_my_zsh
 
-printf "🚨 🚨 🚨  You will likely need to reboot your machine. I've seen weird behaviour when not rebooting."
-printf "🏁  Fin\\n"
+log_failure "You will likely need to reboot your machine. I've seen weird behaviour when not rebooting."
+log_info "🏁  Fin"

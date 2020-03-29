@@ -1,12 +1,9 @@
 #!/usr/bin/env bash
 
-set -u
+set -euo pipefail
 
-# logging text
-installing_text="ℹ️  Installing"
-successful_text="✅  Successfully installed"
-symlink_text="ℹ️  Symlinking"
-os_support_error="🚨  Script only supports macOS and Ubuntu"
+# shellcheck source=./utils.bash
+source "$(dirname "$0")/utils.bash"
 
 # get OS name
 osType="$(uname -s)"
@@ -14,44 +11,44 @@ osType="$(uname -s)"
 ############ BEGIN: Tools
 # z
 if [ -f "${HOME}/z.sh" ]; then
-    printf "✅  z.sh already exists\\n"
+    log_success "z.sh already exists"
 else
-    printf "%s z\\n" "${installing_text}"
+    log_info "ℹ️  Installing z"
     wget -O https://raw.githubusercontent.com/rupa/z/master/z.sh "${HOME}"
 fi
 
 # fzf
 if [ -d "${HOME}/.fzf" ]; then
-    printf "✅  fzf already exists\\n"
+    log_success "fzf already exists"
 else
-    printf "%s fzf\\n" "${installing_text}"
+    log_info "ℹ️  Installing fzf"
     git clone --depth 1 https://github.com/junegunn/fzf.git "${HOME}/.fzf"
     ~/.fzf/install --key-bindings --completion --no-update-rc --no-bash --no-zsh
 fi
 
+# navi - https://github.com/denisidoro/navi
+
 # asdf
 if [ -d "${HOME}/.asdf" ]; then
-    printf "✅  asdf already exists\\n"
+    log_success "asdf already exists"
 else
-    printf "%s asdf\\n" "${installing_text}"
+    log_info "ℹ️  Installing asdf"
     git clone https://github.com/asdf-vm/asdf.git "${HOME}/.asdf"
     cd "${HOME}/.asdf" || {
-        printf "❌  Could not find .asdf" 1>&2
-        exit 1
+        log_failure_and_exit "Could not find .asdf" 1>&2
     }
     git checkout "$(git describe --abbrev=0 --tags)"
     cd "${HOME}" || {
-        printf "❌  Could not find %s" "${HOME}" 1>&2
-        exit 1
+        log_failure_and_exit "Could not find ${HOME}" 1>&2
     }
-    printf "%s asdf\\n" "${successful_text}"
-    printf "ℹ️  Shell must be restarted before asdf is available on your PATH. Re-run this script."
+    log_success "Successfully installed asdf"
+    log_info "ℹ️  Shell must be restarted before asdf is available on your PATH. Re-run this script."
     exit 0
 fi
 
 # nodejs
-printf "%s NodeJS\\n" "${installing_text}"
-printf "%s default-npm-packages\\n" "${symlink_text}"
+log_info "ℹ️  Installing NodeJS"
+log_ingo "ℹ️  Symlinking default-npm-packages"
 ln -sv ~/projects/dotfiles/config/.default-npm-packages ~/.default-npm-packages
 case "${osType}" in
 Linux*)
@@ -62,7 +59,7 @@ Darwin*)
     brew install gpg
     ;;
 *)
-    printf "%s\\n" "${os_support_error}"
+    log_failure_and_exit "Script only supports macOS and Ubuntu"
     ;;
 esac
 asdf plugin add nodejs
@@ -70,10 +67,10 @@ bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 asdf install nodejs 10.19.0
 asdf install nodejs 12.16.1
 asdf global nodejs 12.16.1
-printf "%s NodeJS\\n" "${successful_text}"
+log_success "Successfully installed NodeJS"
 
 # Python
-printf "%s Python\\n" "${installing_text}"
+log_info "ℹ️  Installing Python"
 case "${osType}" in
 Linux*)
     sudo apt-get update
@@ -87,38 +84,38 @@ Darwin*)
     brew install openssl readline sqlite3 xz zlib
     ;;
 *)
-    printf "%s\\n" "${os_support_error}"
+    log_failure_and_exit "Script only supports macOS and Ubuntu"
     ;;
 esac
 asdf plugin add python
 asdf install python 3.8.2
 asdf global python 3.8.2
-printf "%s Python\\n" "${successful_text}"
+log_success "Successfully installed Python"
 
 # firebase
-printf "%s Firebase\\n" "${installing_text}"
+log_info "ℹ️  Installing Firebase"
 asdf plugin add firebase
 asdf install firebase 7.15.1 # would be good to get `latest` support in asdf-firebase
 asdf global firebase 7.15.1
-printf "%s Firebase\\n" "${successful_text}"
+log_success "Successfully installed Firebase"
 
 # gcloud
-printf "%s gcloud\\n" "${installing_text}"
+log_info "ℹ️  Installing gcloud"
 ln -sv ~/projects/dotfiles/config/.default-cloud-sdk-components ~/.config/gcloud/.default-cloud-sdk-components
 asdf plugin add gcloud
 asdf install gcloud 285.0.1 # would be good to get `latest` support in asdf-gcloud
 asdf global gcloud 285.0.1
-printf "%s gcloud\\n" "${successful_text}"
+log_success "Successfully installed gcloud"
 
 # hadolint
-printf "%s hadolint\\n" "${installing_text}"
+log_info "ℹ️  Installing hadolint"
 asdf plugin add hadolint
 asdf install hadolint v1.17.5 # this plugin is doing some weird stuff and could be replaced.
 asdf global hadolint v1.17.5
-printf "%s hadolint\\n" "${successful_text}"
+log_success "Successfully installed hadolint"
 
 # java
-printf "%s Java, Gradle, Maven\\n" "${installing_text}"
+log_info "ℹ️  Installing Java,
 asdf plugin add java
 asdf install java adopt-openjdk-11.0.6+10
 asdf global java adopt-openjdk-11.0.6+10
@@ -130,24 +127,24 @@ asdf global maven 3.6.3
 asdf plugin add gradle
 asdf install gradle 6.2.2
 asdf global gradle 6.2.2
-printf "%s Java, Gradle, Maven\\n" "${successful_text}"
+log_success "Successfully installed Java,
 
 # OCaml
-printf "%s OCaml\\n" "${installing_text}"
+log_info "ℹ️  Installing OCaml"
 asdf plugin add ocaml
 asdf install ocaml 4.07.0
 asdf global ocaml 4.07.0
-printf "%s OCaml\\n" "${successful_text}"
+log_success "Successfully installed OCaml"
 
 # Terraform
-printf "%s Terraform\\n" "${installing_text}"
+log_info "ℹ️  Installing Terraform"
 asdf plugin add terraform
 asdf install terraform 0.12.23
 asdf global terraform 0.12.23
-printf "%s Terraform\\n" "${successful_text}"
+log_success "Successfully installed Terraform"
 
 # Extras
-printf "%s Extras\\n" "${installing_text}"
+log_info "ℹ️  Installing Extras"
 case "${osType}" in
 Linux*)
     # exfat support
@@ -162,10 +159,10 @@ Darwin*)
     brew install openssl readline sqlite3 xz zlib
     ;;
 *)
-    printf "%s\\n" "${os_support_error}"
+    log_failure_and_exit "Script only supports macOS and Ubuntu"
     ;;
 esac
-printf "%s Extras\\n" "${successful_text}"
+log_success "Successfully installed Extras"
 ############ END: Tools
 
-printf "🏁  Fin\\n"
+log_info "🏁  Fin"

@@ -115,7 +115,7 @@ asdf global hadolint v1.17.5
 log_success "Successfully installed hadolint"
 
 # java
-log_info "ℹ️  Installing Java,
+log_info "ℹ️  Installing Java"
 asdf plugin add java
 asdf install java adopt-openjdk-11.0.6+10
 asdf global java adopt-openjdk-11.0.6+10
@@ -127,7 +127,7 @@ asdf global maven 3.6.3
 asdf plugin add gradle
 asdf install gradle 6.2.2
 asdf global gradle 6.2.2
-log_success "Successfully installed Java,
+log_success "Successfully installed Java"
 
 # OCaml
 log_info "ℹ️  Installing OCaml"

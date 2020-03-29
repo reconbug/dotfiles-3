@@ -16,4 +16,4 @@ jobs:
           sudo cp "shellcheck-${scversion}/shellcheck" /usr/bin/
           shellcheck --version
       - name: Shellcheck
-        run: shellcheck -x config/.zshrc scripts/*
+        run: shellcheck -x config/.zshrc scripts/* -P scripts/

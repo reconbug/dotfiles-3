@@ -39,7 +39,7 @@ log_success "✅  Successfully installed dependencies"
 case "${osType}" in
 Linux*)
     log_info "ℹ️  Installing ZSH"
-    sudo apt install zsh
+    sudo apt install zsh -y
     ;;
 Darwin*)
     log_info "ℹ️  macOS Catalina comes with ZSH as the default shell."

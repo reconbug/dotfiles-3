@@ -29,7 +29,7 @@ fi
 
 # nodejs
 log_info "ℹ️  Installing NodeJS"
-log_ingo "ℹ️  Symlinking default-npm-packages"
+log_info "ℹ️  Symlinking default-npm-packages"
 ln -sv ~/projects/dotfiles/config/.default-npm-packages ~/.default-npm-packages
 case "${osType}" in
 Linux*)

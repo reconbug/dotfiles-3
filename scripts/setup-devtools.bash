@@ -31,7 +31,7 @@ fi
 log_info "ℹ️  Installing NodeJS"
 log_info "ℹ️  Symlinking default-npm-packages"
 
-if ! [ -L "~/.default-npm-packages" ]; then
+if ! [ -L "${HOME}/.default-npm-packages" ]; then
     ln -fsv ~/projects/dotfiles/config/.default-npm-packages ~/.default-npm-packages
 fi
 case "${osType}" in
@@ -85,7 +85,7 @@ log_success "Successfully installed Firebase"
 
 # gcloud
 log_info "ℹ️  Installing gcloud"
-if ! [ -L "~/.config/gcloud/.default-cloud-sdk-components" ]; then
+if ! [ -L "${HOME}/.config/gcloud/.default-cloud-sdk-components" ]; then
     ln -fsv ~/projects/dotfiles/config/.default-cloud-sdk-components ~/.config/gcloud/.default-cloud-sdk-components
 fi
 asdf plugin add gcloud
@@ -143,7 +143,7 @@ Linux*)
     ;;
 Darwin*)
     brew install openssl readline sqlite3 xz zlib
-    if [ -f "$HOME/.Brewfile" ]; then
+    if [ -f "${HOME}/.Brewfile" ]; then
         log_info "ℹ️  Installing Homebrew packages/casks and apps from the Mac App Store"
         brew bundle install --global
     fi

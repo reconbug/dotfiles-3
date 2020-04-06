@@ -133,7 +133,7 @@ and all system dependencies required by each of the above tools.
 - clone my dotiles into the `projects` dir
 
   ```shell
-  cd ~ && git clone https://github.com/jthegedus/dotfiles "~/projects/dotfiles"
+  cd ~ && git clone https://github.com/jthegedus/dotfiles ~/projects/dotfiles
   ```
 
 - run the `setup-shell.bash` script

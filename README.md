@@ -236,6 +236,7 @@ Ubuntu installation will hang on a Lenovo ThinkPad E485/E585. Below are the inst
 - [18.04 / 18.10](https://medium.com/@jthegedus/ubuntu-18-04-lts-on-lenovo-thinkpad-e485-15e1d601473f)
 - [19.04](https://medium.com/@jthegedus/ubuntu-19-04-lts-on-lenovo-thinkpad-e485-bf2d6cfd9cad)
 - [19.04 - PopOS!](https://medium.com/@jthegedus/popos-19-04-on-lenovo-thinkpad-e485-ac3951199132)
+- 20.04: it just works!
 
 ### Dell XPS15 9560
 

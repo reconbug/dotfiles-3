@@ -143,6 +143,8 @@ and all system dependencies required by each of the above tools.
   ~/projects/dotfiles/scripts/setup-shell.bash
   ```
 
+- update `config/initial-asdf-plugins.txt` with the desired `asdf` plugins you wish to use. The defaults are listed at the beginning of this section.
+
 - run the `setup-devtools.bash` script
 
   ```shell

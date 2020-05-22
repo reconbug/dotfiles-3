@@ -7,4 +7,4 @@ dialogflow
 @google-cloud/scheduler
 @google-cloud/spanner
 @google-cloud/storage
-now
+vercel

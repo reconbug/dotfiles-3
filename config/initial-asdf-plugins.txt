@@ -9,3 +9,4 @@ python latest
 shellcheck latest
 terraform latest
 gcloud latest
+deno latest

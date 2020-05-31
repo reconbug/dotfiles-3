@@ -142,29 +142,29 @@ and all system dependencies required by each of the above tools.
 
 - clone my dotiles into the `projects` dir
 
-  ```shell
-  cd ~ && git clone https://github.com/jthegedus/dotfiles ~/projects/dotfiles
-  ```
+      	  	```shell
+      	  	cd ~ && git clone https://github.com/jthegedus/dotfiles ~/projects/dotfiles
+      	  	```
 
 - run the `setup-shell.bash` script
 
-  ```shell
-  ~/projects/dotfiles/scripts/setup-shell.bash
-  ```
+      	  	```shell
+      	  	~/projects/dotfiles/scripts/setup-shell.bash
+      	  	```
 
 - update `config/initial-asdf-plugins.txt` with the desired `asdf` plugins you wish to use. The defaults are listed at the beginning of this section.
 
 - run the `setup-devtools.bash` script
 
-  ```shell
-  ~/projects/dotfiles/scripts/setup-devtools.bash
-  ```
+      	  	```shell
+      	  	~/projects/dotfiles/scripts/setup-devtools.bash
+      	  	```
 
 - run the `setup-devtools.bash` script again (this is because `asdf` requires a shell restart to take effect. The script accounts for re-running)
 
-  ```shell
-  ~/projects/dotfiles/scripts/setup-devtools.bash
-  ```
+      	  	```shell
+      	  	~/projects/dotfiles/scripts/setup-devtools.bash
+      	  	```
 
 ### Automated Cleanup
 
@@ -210,12 +210,7 @@ From the Ubuntu Store (snaps):
 
 - [Solaar](https://pwr.github.io/Solaar/): Logitech Wireless device management. `sudo apt install solaar`.
 - [Barrier](https://snapcraft.io/barrier): Cross-platform mouse/keyboard sharing. [Synergy](https://symless.com/synergy): The commercial reimplementation.
-- Gnome Extensions (requires `sudo apt-get install chrome-gnome-shell -y`):
-  - [Sound Input & Output Device Chooser](https://extensions.gnome.org/extension/906/sound-output-device-chooser/): Select audio IO from media dropdown.
-  - [ShellTile](https://extensions.gnome.org/extension/657/shelltile/): A tiling window extension for GNOME Shell.
-  - [Caffeine](https://extensions.gnome.org/extension/517/caffeine/): Disable the screensaver and auto suspend.
-  - [Frippery Move Clock](https://extensions.gnome.org/extension/2/move-clock/): Move clock to left of status menu button.
-  - [Panel OSD](https://extensions.gnome.org/extension/708/panel-osd/): Configuring where on the (main) screen notifications will appear, instead of just above the message tray.
+- Gnome Extensions (requires `sudo apt-get install chrome-gnome-shell -y`): - [Sound Input & Output Device Chooser](https://extensions.gnome.org/extension/906/sound-output-device-chooser/): Select audio IO from media dropdown. - [ShellTile](https://extensions.gnome.org/extension/657/shelltile/): A tiling window extension for GNOME Shell. - [Caffeine](https://extensions.gnome.org/extension/517/caffeine/): Disable the screensaver and auto suspend. - [Frippery Move Clock](https://extensions.gnome.org/extension/2/move-clock/): Move clock to left of status menu button. - [Panel OSD](https://extensions.gnome.org/extension/708/panel-osd/): Configuring where on the (main) screen notifications will appear, instead of just above the message tray.
 
 ## VSCode
 

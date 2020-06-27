@@ -81,7 +81,7 @@ plugins=(
   fzf
   # gcloud
   git
-  go
+  golang
   node
   npm
   npx

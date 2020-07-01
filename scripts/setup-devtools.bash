@@ -15,7 +15,7 @@ function asdf_plugin_setup() {
 	# install nodejs deps
 	if [[ "${plugin_name}" == "nodejs" ]]; then
 		if [ -n "$LINUX" ]; then
-			apt-get install dirmngr gpg -y
+			sudo apt-get install dirmngr gpg -y
 		elif [ -n "$MACOS" ]; then
 			brew install coreutils
 			brew install gpg

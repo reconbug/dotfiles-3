@@ -1,12 +1,11 @@
 firebase latest
-gradle latest
+golang latest
 hadolint v1.17.5
-java adopt-openjdk-11.0.6+10
-maven latest
+java adoptopenjdk-11.0.6+10.1
 nodejs 12.16.1
-ocaml latest
 python latest
 shellcheck latest
+shfmt latest
 terraform latest
 gcloud latest
 deno latest

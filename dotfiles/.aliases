@@ -40,7 +40,7 @@ alias q="cd ~ && clear"
 
 ### folders
 #
-alias ll="ls -alF"
+alias ll="ls -AlFh"
 alias la="ls -A"
 alias l="ls -CF"
 

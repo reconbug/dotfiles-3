@@ -9,7 +9,7 @@ source "$(dirname "$0")/utils.bash"
 log_info "Installing dependencies"
 if [ -n "$LINUX" ]; then
 	sudo apt update -y
-	sudo apt install git curl shellcheck fontconfig -y
+	sudo apt install git curl unzip fontconfig -y
 	sudo apt install \
 		automake autoconf libreadline-dev \
 		libncurses-dev libssl-dev libyaml-dev \
@@ -18,8 +18,7 @@ if [ -n "$LINUX" ]; then
 elif [ -n "$MACOS" ]; then
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	xcode-select --install
-	brew install curl
-	brew install shellcheck
+	brew install curl unzip
 	brew install \
 		coreutils automake autoconf openssl \
 		libyaml readline libxslt libtool unixodbc \

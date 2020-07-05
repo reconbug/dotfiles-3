@@ -47,7 +47,9 @@ alias l="ls -CF"
 ### PATH
 #
 # pretty print $PATH
+# shellcheck disable=SC2139,SC2154
 alias path="print -l $path"
+# shellcheck disable=SC2139,SC2154
 alias fpath="print -l $fpath"
 
 ### download

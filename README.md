@@ -106,7 +106,7 @@ and all system dependencies required by each of the above tools.
 
 ### Automated Installation
 
-1. clone my dotiles into the `projects` dir
+1. clone my dotfiles into the `projects` dir
 
     ```shell
     cd ~ && git clone https://github.com/jthegedus/dotfiles ~/projects/dotfiles

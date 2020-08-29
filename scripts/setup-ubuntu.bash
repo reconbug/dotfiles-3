@@ -13,9 +13,7 @@ sudo snap install code --classic
 sudo snap install gitkraken --classic
 gitkraken_icon_path="Icon=/snap/gitkraken/current/usr/share/gitkraken/gitkraken.png"
 gitkraken_snap_path="/var/lib/snapd/desktop/applications/gitkraken_gitkraken.desktop"
-if ! grep -q "${gitkraken_icon_path}" "${gitkraken_snap_path}"; then
-	sudo printf "\n%s" "${gitkraken_icon_path}" >>"${gitkraken_snap_path}"
-fi
+# sudo printf "\n%s" "${gitkraken_icon_path}" >>"${gitkraken_snap_path}"
 
 # Barrier (cross-platform keyboard-mouse network sharing)
 sudo snap install barrier

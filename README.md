@@ -208,7 +208,9 @@ Contributions of any kind welcome!
 
 ### Why are there Node deps here?
 
-I decided the value of commitlint & husky was greater than not including these dev deps. Not only this, but dogfooding `asdf` for dev deps makes this less of an issue.
+I decided the value of [commitlint](https://commitlint.js.org/#/) & [husky](https://typicode.github.io/husky/#/) was greater than not including these dev deps. Not only this, but dogfooding `asdf` for dev deps makes this less of an issue.
+
+After clone, run `asdf install`, then `npm i` and you're good to go :)
 
 ## License
 

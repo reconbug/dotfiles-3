@@ -10,9 +10,9 @@ if [ -n "$MARKDOWN_JS_FILES" ]; then
 	echo "$MARKDOWN_JS_FILES" | xargs git add
 fi
 
-if [ -z "$SHELL_FILES" ]; then
+if [ -n "$SHELL_FILES" ]; then
 	# Shfmt changed files, stage modified
-	echo "$SHELL_FILES" | xargs shfmt -w -ln=bash
+	echo "$SHELL_FILES" | xargs shfmt -w
 	echo "$SHELL_FILES" | xargs git add
 fi
 

@@ -1,5 +1,6 @@
 {
   "name": "dotfiles",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jthegedus/dotfiles.git"
@@ -14,6 +15,9 @@
     "@commitlint/config-conventional": "^12.0.0",
     "husky": "^5.1.1",
     "prettier": "^2.2.1"
+  },
+  "scripts": {
+          "prepare": "husky install"
   },
   "prettier": {
     "useTabs": true

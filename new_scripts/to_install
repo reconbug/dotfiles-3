@@ -1,0 +1,4 @@
+sudo apt install kubectx
+
+brew install kubectx
+brew install stern

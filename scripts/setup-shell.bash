@@ -83,20 +83,20 @@ fi
 ############ END: ZSH
 
 # starship theme
-if is_installed starship; then
-	log_success "Starship theme already installed"
-else
-	log_info "Installing Starship theme 🚀"
-	curl -fsSL https://starship.rs/install.sh | bash
-fi
+# if is_installed starship; then
+# 	log_success "Starship theme already installed"
+# else
+# 	log_info "Installing Starship theme 🚀"
+# 	curl -fsSL https://starship.rs/install.sh | bash
+# fi
 
-# install z
-if [ -f "${HOME}/z.sh" ]; then
-	log_success "z.sh already installed"
-else
-	log_info "Installing z"
-	wget -P "${HOME}" https://raw.githubusercontent.com/rupa/z/HEAD/z.sh
-fi
+# # install z
+# if [ -f "${HOME}/z.sh" ]; then
+# 	log_success "z.sh already installed"
+# else
+# 	log_info "Installing z"
+# 	wget -P "${HOME}" https://raw.githubusercontent.com/rupa/z/HEAD/z.sh
+# fi
 
 # navi - https://github.com/denisidoro/navi
 if [ -n "$MACOS" ]; then
@@ -110,7 +110,7 @@ fi
 
 # dynamically symlink all config/dotfiles to home directory
 # shellcheck source=./symlink-dotfiles.bash
-source "$(dirname "$0")/symlink-dotfiles.bash"
+# source "$(dirname "$0")/symlink-dotfiles.bash"
 
 log_info "🏁  Fin"
 
